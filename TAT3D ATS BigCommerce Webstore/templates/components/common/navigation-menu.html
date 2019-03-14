@@ -1,0 +1,58 @@
+<nav class="navPages">
+    <ul class="navPages-list{{#if theme_settings.navigation_design '!==' 'simple'}} navPages-list-depth-max{{/if}}">
+        {{#each categories}}
+            <li class="navPages-item">
+            {{#if ../theme_settings.navigation_design '===' 'simple'}}
+                {{> components/common/navigation-list}}
+            {{/if}}
+            {{#if ../theme_settings.navigation_design '===' 'alternate'}}
+                {{> components/common/navigation-list-alternate}}
+            {{/if}}
+            </li>
+        {{/each}}
+        {{#unless theme_settings.hide_content_navigation}}
+            {{#each pages}}
+                 <li class="navPages-item navPages-item-page">
+                     <a class="navPages-action" href="{{url}}">{{name}}</a>
+                 </li>
+             {{/each}}
+        {{/unless}}
+    </ul>
+    <ul class="navPages-list navPages-list-mobile">
+        <li class="navPages-item">
+            <a class="navPages-action" href="{{urls.account.wishlists.all}}">{{lang 'account.nav.wishlists'}}</a>
+        </li>
+        <li class="navPages-item">
+            <a class="navPages-action" href="/contact-us/">Store Locator</a>
+        </li>
+        <li class="navPages-item">
+            <a class="navPages-action" href="tel:{{settings.phone_number}}">Contact us: {{settings.phone_number}}</a>
+        </li>
+        {{#if currency_selector.currencies.length '>' 1}}
+            <li class="navPages-item">
+                <a class="navPages-action" id="currency_dropdown" href="#">
+                    {{{currency_selector.active_currency_flag}}}<span class="text">{{currency_selector.active_currency_code}}</span>
+                    <i class="icon navPages-action-moreIcon" aria-hidden="true"><svg><use xlink:href="#icon-chevron-down" /></svg></i>
+                </a>
+                <div class="navPage-subMenu">
+                    <ul class="navPage-subMenu-list">
+                        {{#each currency_selector.currencies}}
+                        <li class="navPage-subMenu-item">
+                            <a class="navPage-subMenu-action navPages-action" href="{{{switch_url}}}">
+                                {{#if is_active}}
+                                {{{flag}}} <span class="text"><strong>{{name}}</strong></span>
+                                {{else}}
+                                {{{flag}}} <span class="text">{{name}}</span>
+                                {{/if}}
+                            </a>
+                        </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </li>
+        {{/if}}
+        <li class="navPages-item">
+            {{> components/common/social-links}}
+        </li>
+    </ul>
+</nav>

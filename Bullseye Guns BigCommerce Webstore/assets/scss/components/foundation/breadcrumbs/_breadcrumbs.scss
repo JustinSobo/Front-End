@@ -1,0 +1,57 @@
+// =============================================================================
+// BREADCRUMBS (CSS)
+// =============================================================================
+//
+//
+// 1. Hide breadcrumbs on mobile-sized screens to improve screen real estate.
+//
+// 2. Since our breadcrumbs are centred with a variable width, we need to use
+//    display: inline-block; on the breadcrumbs. Hence needing to remove the
+//    white-space with font-size: 0;
+//    The font-size is reset in the breadcrumb settings file.
+//
+// -----------------------------------------------------------------------------
+
+
+.breadcrumbs {
+    font-size: 0; // 2
+    text-align: center;
+    background-color: $color-white;
+    border-radius:4px;
+    padding: 10px 10px;
+    margin-bottom: 30px;
+    width:100%;
+
+    @include breakpoint("small") {
+        display: block; // 1
+    }
+}
+
+.breadcrumb {
+    display: inline-block;
+    float: none;
+    display: inline-block !important;
+    float: left;
+    margin-bottom: 0 !important;
+    background-color: transparent !important;
+    padding: 0 !important;
+
+    a{
+        color:$color-black;
+    }
+    a:hover{
+        color:$color-primary;
+    }
+
+    &.is-active {
+
+        // scss-lint:disable NestingDepth
+        > .breadcrumb-label {
+            cursor: text;
+        }
+    }
+}
+
+.breadcrumb-label {
+    text-decoration: none;
+}

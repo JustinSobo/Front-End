@@ -1,0 +1,13 @@
+<ul class="productGrid">
+    {{#each wishlist.items}}
+    <li class="product">
+        {{> components/products/card show_compare=../show_compare show_rating=../settings.show_product_rating theme_settings=../theme_settings customer=../customer}}
+        
+        {{#if ../show_remove}}
+            <form action="{{remove_url}}" class="form removewish" method="post">
+                <button type="submit" value="" /><i class="fa fa-close"></i></button>
+            </form>
+        {{/if}}
+    </li>
+    {{/each}}
+</ul>

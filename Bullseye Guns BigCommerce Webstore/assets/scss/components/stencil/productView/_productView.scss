@@ -1,0 +1,604 @@
+// =============================================================================
+// PRODUCT VIEW (CSS)
+// =============================================================================
+
+
+// Container
+// -----------------------------------------------------------------------------
+.productView hr{
+    margin:20px 0px;
+}
+.icon.icon--ratingEmpty i,.icon.icon--ratingFull i{
+    color: $color-primary;
+    font-size: 14px;
+}
+
+@media(max-width:800px){
+    .productView-details{
+        margin-bottom:10px !important;
+    }
+
+    .repro .productCarousel-slide .card,.repro .tabs-contents{
+        margin-bottom:0;
+    }
+}
+.productView-thumbnails .slick-next {
+    right: -6px;
+}
+.productView-thumbnails .slick-prev {
+    left: -8px !important;
+}
+.productView-thumbnails .slick-next,.productView-thumbnails .slick-prev {
+    height: 25px;
+    width: 25px;
+    padding: 0;
+    background-color: $color-black;
+    border: 1px solid $color-black;
+    top: auto;
+    padding: 0 0 0 5px;
+    bottom: 30%;
+}
+.productView-thumbnails .slick-prev::before,.productView-thumbnails .slick-next::before {
+    font-size:20px;
+    color:$color-white;
+    left:0px;
+    top:-1px;
+    position:relative;
+}
+.productView-thumbnails .slick-prev::after {
+    display:none;
+}
+.repro {
+    float:left;
+    width:100%;    
+}
+
+.form-wishlist .button{
+    padding: 12px 12px;
+}
+
+#product-reviews{
+    border: none;
+    background-color: $color-white;
+    border-radius: 5px;
+    padding: 15px 15px 15px 15px;
+    margin-bottom: 30px;
+    margin-top:25px;
+}
+#product-reviews h4{
+    margin-bottom:0;
+    font-size: 16px;
+    font-weight: 500;
+}
+// Images
+// -----------------------------------------------------------------------------
+@media(min-width: 992px){
+    .sticky {
+        position: sticky !important;
+        top: 15px !important;
+    }
+}
+.tab.is-active{
+    border:none;
+}
+.tab{
+    border:none;
+    display:inline-block;
+}
+.repro{
+    padding:0 !important;
+}
+.pro-tab .tabs {
+    border-bottom: 1px solid $color-greyLight;
+    position: relative;
+    padding: 12px 0;
+}
+.pro-tab .tabs .tab.is-active a::before {
+    background-color: $color-primary;
+    height: 2px;
+    width: 60px;
+}
+.pro-tab .tabs .tab a{
+    font-weight: 400;
+    color: $color-black;
+}
+
+.pro-tab .tabs .tab.is-active a{
+    color: $color-primary;
+    font-weight: 400;
+}
+.pro-tab .tabs .tab a::before {
+    background-color: transparent;
+    content: "";
+    height: 2px;
+    margin: 0 auto;
+    position: absolute;
+    top: 32px;
+    transition: all 0.4s ease-out 0s;
+    width: 3px;
+}
+.toggleLink i{
+    font-size:24px;
+}
+.pro-tab .tab-title{
+    padding:0;
+    margin-right:20px;
+}
+.productView .socialLinks .icon svg {
+    fill: $color-black;
+    transition: all 0.15s ease;
+    width:15px;
+    height:15px;
+}
+.productView .socialLinks li:hover svg{
+    fill: $color-primary;
+}
+.productView .socialLinks li {
+    margin: 0;
+    padding: 0;
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, .2);
+    height: 2.5rem;
+    width: 2.5rem;
+    display: inline-block;
+    background-color: $color-white;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 4px;
+}
+.productView .form-option{
+    padding:0;
+    border-radius: 4px;
+}
+[data-product-attribute="set-rectangle"] .form-option {
+    min-width: 36px;
+    height: 36px;
+    text-align: center;
+    line-height: 34px;
+    font-size: 16px;
+}
+.productView-options .form-label--alternate{
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: capitalize;
+    font-weight: 500;
+    color: $color-black;
+}
+.productView .price{
+    font-size:18px;
+    color:$color-primary;
+}
+.productView .proprice{
+    height: auto;
+}
+.productView-reviewLink.readreview {
+    border-left: 1px solid $color-grey;
+    border-right: 1px solid $color-grey;
+    padding: 0 15px;
+    font-size:14px;
+}
+.productView-info{
+    margin-bottom:0;
+}
+.proqt {
+    margin-top: 4px;
+    margin-bottom: 0;
+}
+.prduct-de dt,.proqt,dt.productView-info-name,.productView-info-value {
+    display:inline-block;
+    min-width: 160px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform:capitalize;
+    color:$color-black;
+    font-weight:500;
+}
+.prduct-de {
+    line-height: 25px;
+    vertical-align: middle;
+}
+.prduct-de dd {
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform:capitalize;
+    display:inline-block;
+}
+.proqt {
+    display:inline-block;
+    position: relative;
+    top: 4px;
+}
+.productView .form-increment{
+    display:inline-block;
+}
+.productView .form-increment .button {
+    border-radius: 4px;
+    min-height: 32px;
+    min-width: 32px;
+    border: 1px solid stencilColor("input-border-color");
+}
+.productView .form-increment input{
+    border: 1px solid stencilColor("input-border-color");
+    border-radius: 4px;
+    margin:0 5px;
+    min-height: 32px;
+    min-width: 32px;
+    -webkit-padding-after: 3px;
+    -webkit-padding-before: 3px;
+}
+
+// Images
+// -----------------------------------------------------------------------------
+
+.productView-images {
+    margin-bottom: 20px;
+}
+
+.productView-image {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    position: relative;
+    border-radius:4px;
+
+    + .productView-thumbnails {
+        margin-top: spacing("half");
+        margin-right:0;
+        margin-left:0;
+    }
+
+    @media (min-width: $screen-xxsmall) and (max-width: $screen-medium) {
+        pointer-events: none;
+    }
+}
+
+.productView-img-container {
+    position: relative;
+    margin: auto;
+    max-width: get-width(stencilString('product_size'));
+    width: 100%;
+
+    img {
+        @include lazy-loaded-img;
+        max-height: 100%;
+        width: auto;
+    }
+
+    @include lazy-loaded-padding('product_size');
+}
+
+.productView-thumbnails {
+    @include u-listBullets("none");
+    @include grid-row($behavior: "nest");
+
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.productView-thumbnail {
+    @include grid-column(3);
+    padding-left: spacing("quarter");
+    padding-right: spacing("quarter");
+    text-align: center;
+
+    @include breakpoint("large") {
+        width: 20%;
+    }
+}
+
+.productView-thumbnail-link {
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    width: 100%;
+
+    &:hover,
+    &.is-active {
+        border-color: color("greys", "darker");
+    }
+}
+
+
+// Details
+// -----------------------------------------------------------------------------
+
+.productView-details {
+    margin-bottom: spacing("single") + spacing("third");
+}
+
+
+// Details - Product details
+// -----------------------------------------------------------------------------
+
+.productView-product {
+    @include breakpoint("medium") {
+        padding-bottom: 0;
+    }
+}
+
+.productView-title {
+    font-size: 16px;
+    text-transform: capitalize;
+    color: $color-black;
+    letter-spacing: 1px;
+    margin-top: 0;
+}
+
+.productView-brand {
+    color: $color-primary;
+    font-size: fontSize("smaller");
+    margin:0;
+
+    @include breakpoint("large") {
+        font-size: fontSize("small");
+        margin: 0;
+    }
+
+    a{
+        color: $color-primary;
+
+        // scss-lint:disable NestingDepth
+        &:hover {
+            color: $color-black;
+        }
+    }
+}
+.productView-info-value a{
+    color: $color-primary;
+}
+.productView-info-value a:hover{
+    color: $color-black;
+}
+// Details - Product price
+// -----------------------------------------------------------------------------
+.productView .price-section--withTax{
+    display:inline-block;
+}
+.productView-price {
+    font-size: fontSize("smaller");
+    margin-bottom: spacing("third");
+    margin-top: 15px;
+
+    @include breakpoint("medium") {
+        font-size: 18px;
+        margin-bottom: spacing("base");
+    }
+
+    .price-section--saving {
+        font-size: fontSize("smaller");
+        display:inline-block;
+    span{
+        color:$color-black;
+        font-size:16px;
+    }
+
+    }
+
+    abbr {
+        border: 0;
+        color: inherit;
+        font-size: inherit;
+    }
+}
+
+.productView-reviewLink {
+    display: inline-block;
+    margin-left: spacing("half");
+    vertical-align: middle;
+
+    + .productView-reviewLink {
+        display: block;
+        margin-left: auto;
+
+        @include breakpoint("small") {
+            display: inline-block;
+            margin-left: spacing("half");
+        }
+    }
+
+    > a {
+        color: $color-black;
+        text-transform: capitalize;
+        font-size:14px;
+        // scss-lint:disable NestingDepth
+        &:hover {
+            color: stencilColor("color-primary");
+        }
+    }
+}
+
+
+// Details - Product Information
+// -----------------------------------------------------------------------------
+
+.productView-info {
+    @include clearfix;
+
+    @include breakpoint("small") {
+        margin-top: 0;
+    }
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.productView-info-name,
+.productView-info-value {
+    float: left;
+
+    @include breakpoint("small") {
+        float: none;
+    }
+}
+
+.productView-info-name {
+    clear: both;
+    margin-bottom: spacing("eighth");
+    margin-right: spacing("quarter");
+
+    @include breakpoint("small") {
+        font-size: fontSize("smallest");
+        font-weight: fontWeight("normal");
+    }
+}
+
+.productView-info-value {
+    margin-bottom:0;
+
+    @include breakpoint("small") {
+        margin-bottom: 0
+    }
+}
+
+
+// Details - Product options
+// -----------------------------------------------------------------------------
+//
+// 1. Align the product options list item radios vertically.
+// 2. Resetting font due to inline-block whitespace issue.
+// 3. File upload button does not properly display in IE if font-size is 0
+//
+// -----------------------------------------------------------------------------
+
+.productView-options {
+    @include clearfix;
+    margin-bottom: 0;
+    text-align: left;
+
+    .form-input[type="number"] {
+        @include breakpoint("small") {
+            width: grid-calc(2, $total-columns);
+        }
+    }
+
+    .form {
+        display: inline;
+        margin-bottom:0;
+    }
+
+    input[type="file"] {
+        font-size: fontSize("smallest"); // 3
+    }
+
+    .form-field {
+        font-size: 0; // 2
+        margin-bottom: 0;
+
+        // scss-lint:disable SelectorDepth, NestingDepth
+        > .form-checkbox + .form-label,
+        > .form-radio + .form-label {
+            display: inline-block;
+            margin-left: spacing("single");
+            width: auto;
+
+            @include breakpoint("small") {
+                margin-left: 0;
+                width: 100%;
+            }
+        }
+
+        > .form-label:nth-of-type(2) {
+            margin-left: 0;
+        }
+    }
+
+    .form-action {
+
+        display: inline-block;
+            margin-top: 1rem;
+
+        @include breakpoint("medium") {
+            float: none;
+            padding: 0;
+            width: auto;
+        }     
+      
+
+        // scss-lint:disable SelectorDepth, NestingDepth
+        .button {
+            width: 100%;
+            padding: 10px 8px;
+            font-weight:500;
+            text-transform: capitalize;
+
+            @include breakpoint("large") {
+                margin-right: spacing("half");
+                width: auto;
+                margin-bottom:0;
+
+            }
+        }
+    }
+}
+
+.form-wishlist .button{
+    border: 1px solid stencilColor("input-border-color") !important;
+}
+
+// Product list (with images)
+// -----------------------------------------------------------------------------
+
+.productOptions-list {
+    border: $productOptions-list-border;
+    list-style: none;
+    margin: 0;
+}
+
+.productOptions-list-item {
+    padding: $productOptions-list-item-padding;
+
+    + .productOptions-list-item {
+        border-top: $productOptions-list-item-borderTop;
+    }
+
+    .form-label {
+        text-align: left;
+        top: -2px; // 1
+    }
+}
+
+.productOptions-list-item-figure,
+.productOptions-list-item-content {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.productOptions-list-item-figure {
+    width: $productOptions-list-item-figure-width;
+}
+
+.productOptions-list-item-content {
+    padding-left: $productOptions-list-item-content-paddingLeft;
+}
+
+
+// Share products
+// -----------------------------------------------------------------------------
+
+.shareProduct {
+    text-align: center;
+}
+
+
+// EasyZoom settings for zoomable product image
+// -----------------------------------------------------------------------------
+
+.productView-image .easyzoom-flyout {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    img {
+        max-width: none;
+        width: auto;
+    }
+}
+
+@media(max-width:599px){
+    .prduct-de dt, .proqt, dt.productView-info-name,.prduct-de dd{
+        min-width: auto !important;
+        font-size:13px;
+    }
+}

@@ -1,0 +1,230 @@
+// =============================================================================
+// SIDEBAR BLOCKS (CSS)
+// =============================================================================
+
+
+// Block
+// -----------------------------------------------------------------------------
+
+.page-sidebar {
+	line-height: 24px;
+	ul {
+		margin: 0;
+		list-style: none;
+		> li {
+			float: none;
+			display: block;
+			position: relative;
+			line-height: 24px;
+			margin-bottom: 5px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+			> a {
+				padding: 0;
+				font-size: $body-fontSize;
+				font-weight: 400;
+				vertical-align: top;
+				display: inline-block;
+				text-transform: capitalize;
+				color: stencilColor("color-textBase");
+				&:hover {
+					color: stencilColor("color-textBase--hover");
+				}
+			}
+			@media (min-width: 1025px) {
+				line-height: 30px;
+			}
+		}
+	}
+	.accordion--navList ul > li > a {
+		padding-left: 20px;
+	}
+	
+}
+
+.sidebarBlock {
+    + .sidebarBlock {
+        margin-top: 50px;
+    }
+	> ul {
+		margin-top: -5px;
+	}
+}
+
+.icon-plus {
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	text-align: center;
+	display: inline-block;
+	transition: all 0.3s ease;
+	&:before,
+	&:after {
+		top: 50%;
+		left: 50%;
+		content: "";
+		position: absolute;
+		background-color: #bababa;
+		transition: all 0.5s ease;
+		transform: translate3D(-50%, -50%, 0) rotate(0);
+		-webkit-transform: translate3D(-50%, -50%, 0) rotate(0);
+	}
+	&:before {
+		width: 10px;
+		height: 2px;
+	}
+	&:after {
+		width: 2px;
+		height: 10px;
+	}
+}
+
+.is-clicked {
+	> .icon-plus {
+		&:before {
+			transform: translate3D(-50%, -50%, 0) rotate(180deg);
+		}
+		&:after {
+			transform: translate3D(-50%, -50%, 0) rotate(90deg);
+		}
+	}
+}
+
+.sidebarBlock-heading {
+	font-size: 16px;
+	line-height: 1.5;
+	font-weight: 600;
+	padding: 0 0 7px 0;
+	margin: 0 0 20px 0;
+	letter-spacing: 0.8px;
+	text-transform: uppercase;
+	border-bottom: 1px solid #ebebeb;
+	font-family: $fontFamily-headings;
+    color: stencilColor('color-textHeading');
+/*    @media (min-width: 1025px) {
+    	padding: 7px 0;
+    }*/
+}
+
+.all-categories-list {
+	margin: 0;
+	list-style: none;
+	.navPages-item {
+		float: none;
+		display: block;
+		position: relative;
+		margin-bottom: 10px;
+		a {
+			padding: 0;
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: 0.26px;
+			vertical-align: top;
+			display: inline-block;
+			text-transform: capitalize;
+			color: stencilColor('color-textHeading');
+		}
+		.icon-plus {
+			top: 0;
+			right: 0;
+			z-index: 10;
+			position: absolute;
+			@media (max-width: 1024px) {
+				height: 24px;
+			}
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	.dropdown-category-list {
+		margin: 5px 0 0 0;
+		display: none;
+		list-style: none;
+		overflow: hidden;
+		padding-left: 15px;
+		.navPage-subMenu-item {
+			width: 100%;
+			float: none;
+			display: block;
+			position: relative;
+			padding-left: 0;
+			padding-right: 0;
+			a {
+				font-size: 12px;
+				font-weight: 400;
+				color: stencilColor('color-textBase');
+			}
+			.navPage-subMenu-action {
+				margin: 0;
+				width: auto;
+				border: none;
+				color: stencilColor("main-text-color");
+			}
+		}
+	}
+}
+
+.navList {
+	.view_all {
+		a {
+			font-weight: 600;
+			color: stencilColor('color-textHeading');
+			&:before {
+				left: 0;
+				width: 0;
+				bottom: 7px;
+				content:"";
+				height: 1px;
+				position: absolute;
+				transition: all 0.3s ease;
+				background-color: #bababa;
+			}
+			&:hover {
+				color: stencilColor("color-textBase--hover");
+				&:before {
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+.cms-image {
+	img {
+		margin-left: auto;
+		margin-right: auto;
+	}
+}
+
+.themevale_sidebar-mobile {
+	display: none;
+	@media (max-width: 1024px) {
+		display: inline-block;
+		padding: 10px 0;
+		> .icon {
+			width: 20px;
+			height: 20px;
+			display: inline-block;
+			vertical-align: middle;
+			fill: stencilColor('color-textHeading');
+			+ .text {
+				margin-left: 10px;
+			}
+		}
+		> .text {
+			font-size: 13px;
+			font-weight: 600;
+			letter-spacing: 0.64px;
+			display: inline-block;
+			vertical-align: middle;
+			text-transform: uppercase;
+			color: stencilColor('color-textHeading');
+		}
+	}
+	@media (max-width: 600px) {
+		padding: 0;
+	}
+}
+

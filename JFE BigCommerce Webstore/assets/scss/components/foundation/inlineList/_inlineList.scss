@@ -1,0 +1,15 @@
+// =============================================================================
+// INLINE LIST (CSS)
+// =============================================================================
+
+
+.inlineList--labels {
+    margin-bottom: 0;
+    > li {
+    	vertical-align: top;
+    	display: inline-block !important;
+    	margin-left: 0;
+        margin-bottom: spacing("half") !important;
+        margin-right: spacing("half");
+    }
+}

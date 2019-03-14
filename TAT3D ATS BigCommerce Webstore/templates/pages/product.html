@@ -1,0 +1,43 @@
+---
+product:
+    videos:
+        limit: {{theme_settings.productpage_videos_count}}
+    reviews:
+        limit: {{theme_settings.productpage_reviews_count}}
+    related_products:
+        limit: {{theme_settings.productpage_related_products_count}}
+    similar_by_views:
+        limit: {{theme_settings.productpage_similar_by_views_count}}
+---
+{{#partial "page"}}
+<div class="page-heading-wrapper-2">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+</div>
+<div class="page">
+    <div class="themevale_container">
+        {{#each product.shipping_messages}}
+            {{> components/common/alert-info message}}
+        {{/each}}
+        <div itemscope itemtype="http://schema.org/Product">
+            {{> components/products/product-view schema=true}}
+            {{#if product.related_products}}
+            <section id="relatedProducts" class="themevale-section">
+                <div class="themevale_page-heading-wrapper">
+                    <h2 class="themevale_page-heading">{{lang 'products.related_products'}}</h2>
+                </div>
+                {{> components/products/carousel products=product.related_products columns=4 arrows=true dots=true}}
+            </section>
+            {{/if}}
+            {{#if product.similar_by_views}}
+            <section id="similarByViews" class="themevale-section">
+                <div class="themevale_page-heading-wrapper">
+                    <h2 class="themevale_page-heading">{{lang 'products.similar_by_views'}}</h2>
+                </div>
+                {{> components/products/carousel products=product.similar_by_views columns=4 arrows=true dots=true}}
+            </section>
+            {{/if}}
+        </div>
+    </div>
+</div>
+{{/partial}}
+{{> layout/base}}

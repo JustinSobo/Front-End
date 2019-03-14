@@ -1,0 +1,147 @@
+// =============================================================================
+// PRODUCT Sale Badges (CSS)
+// =============================================================================
+
+// BURST BADGE
+// -----------------------------------------------------------------------------
+.sale-flag-star,
+.sale-flag-star:before,
+.sale-flag-star:after {
+    background: stencilColor("color_badge_product_sale_badges");
+    content: "";
+    display: block;
+    height: rem-calc(40px);
+    left: 0;
+    overflow: visible;
+    position: absolute;
+    top: 0;
+    transform: scaleX(1) scaleY(1) scaleZ(1);
+    transform-origin: 50% 50% 0;
+    width: rem-calc(40px);
+    z-index: zIndex("lower");
+}
+
+.sale-flag-star:before {
+    transform: rotateZ(30deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+
+.sale-flag-star:after {
+    transform: rotateZ(60deg) scaleX(1) scaleY(1) scaleZ(1);
+}
+
+.starwrap {
+    height: rem-calc(40px);
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: rem-calc(40px);
+}
+
+.sale-text-burst {
+    color: stencilColor("color_text_product_sale_badges");
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    letter-spacing: 0.5px;
+    z-index: zIndex("high");
+    transform: translate3D(-50%, -50%, 0);
+}
+
+// -----------------------------------------------------------------------------
+// TOP LEFT BADGE
+// -----------------------------------------------------------------------------
+
+.sale-flag-side {
+    background: stencilColor("color_badge_product_sale_badges");
+    color: stencilColor("color_text_product_sale_badges");
+    z-index: zIndex("lower");
+    border-radius: 2px;
+    font-size: 12px;
+    font-weight: 500;
+    height: 20px;
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    position: absolute;
+    transition: all 0.5s ease;
+    top: 0px;
+    right: 0px;
+    letter-spacing: 0.5px;
+}
+
+// -----------------------------------------------------------------------------
+// SASH BADGE
+// -----------------------------------------------------------------------------
+
+.sale-flag-sash {
+    background: stencilColor("color_badge_product_sale_badges");
+    color: stencilColor("color_text_product_sale_badges");
+    font-size: 12px;
+    font-weight: 500;
+    height: 20px;
+    right: -30px;
+    line-height: 20px;
+    position: absolute;
+    text-align: center;
+    top: 20px;
+    transform: rotate(45deg);
+    transition: all 0.5s ease;
+    width: rem-calc(119px);
+    z-index: zIndex("lower");
+    letter-spacing: 0.5px;
+}
+
+.product {
+    overflow: hidden;
+}
+
+@media (min-width: 1025px) {
+    .product:hover .sale-flag-side,
+    .card:hover .sale-flag-side {
+        background: stencilColor("color_hover_product_sale_badges");
+    }
+
+    .product:hover .sale-flag-sash,
+    .card:hover .sale-flag-sash {
+        background: stencilColor("color_hover_product_sale_badges");
+    }
+}
+
+@media (max-width: 414px) {
+    .sale-flag-sash {
+        top: 15px;
+        right: -20px;
+        height: 16px;
+        font-size: 11px;
+        line-height: 16px;
+        width: rem-calc(80px);
+    }
+    .sale-flag-side {
+        top: 0px;
+        height: 16px;
+        font-size: 11px;
+        line-height: 16px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 2px;
+    }
+
+    .sale-text-burst {
+        font-size: 10px;
+    }
+
+    .sale-flag-star,
+    .sale-flag-star:before,
+    .sale-flag-star:after {
+        width: rem-calc(30px);
+        height: rem-calc(30px);
+    }
+
+    .starwrap {
+        width: rem-calc(30px);
+        height: rem-calc(30px);
+    }
+}

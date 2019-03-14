@@ -1,0 +1,34 @@
+<div class="row cate-top">
+	<div class="col-md-6 col-5 wb-grid-list">
+		<span id="gridProduct" class="active"><svg width="24px" height="24px"><use xlink:href="#cgrid"/></svg></span>
+   		<span id="listProduct"><svg width="24px" height="24px"><use xlink:href="#clist"/></svg></span>
+   	</div>
+   	<div class="col-md-6 col-7" {{#if product_results.products.length}}
+    {{> components/products/filter sort=pagination.product_results.sort}}
+{{/if}}</div>
+</div>
+<form action="{{urls.compare}}" method='POST' data-product-compare>
+        {{> components/products/grid products=product_results.products show_compare=product_results.show_compare theme_settings=theme_settings}}
+        {{> components/products/list products=product_results.products show_compare=product_results.show_compare theme_settings=theme_settings}}
+</form>
+
+{{> components/common/paginator pagination.product_results}}
+
+
+
+<script>
+	$(document).ready(function(){
+	 $("#gridProduct").click(function(event) {
+        $('.productList').hide();
+        $('.productGrid').show();
+        $("#gridProduct").addClass("active");
+        $("#listProduct").removeClass("active");
+    });
+    $("#listProduct").click(function(event) {
+       $('.productGrid').hide();
+       $('.productList').show() ;
+       $("#listProduct").addClass("active");
+       $("#gridProduct").removeClass("active");
+    });
+  });
+</script>

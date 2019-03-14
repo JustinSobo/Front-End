@@ -1,0 +1,10 @@
+
+<div class="webileftbanner">
+	<div class="beffect">
+		{{#if (lang 'webileftbanner.banner1.image') '!=' ' '}}
+		<a href="{{url}}"><img class="img-fluid lazyload" data-sizes="auto" src="{{cdn '/product_images/theme_images/hero-1.2.png'}}" data-src="{{cdn (lang 'http://bullseyegun.com/product_images/theme_images/hero-1.2.png')}}"  alt="{{title}}"  /></a>
+		{{else}}
+		<a href="{{url}}"><img class="img-fluid lazyload" data-sizes="auto" src="{{cdn '/product_images/theme_images/hero-1.2.png'}}" data-src="{{cdn (lang 'http://bullseyegun.com/product_images/theme_images/hero-1.2.png')}}" alt="{{title}}"  /></a>
+		{{/if}}
+	</div>
+</div>

@@ -1,0 +1,104 @@
+<div class="dropdown dropdown--quickSearch" id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
+    {{{ snippet "forms_search"}}}
+    <form class="form" action="{{urls.search}}">
+        <fieldset class="form-fieldset">
+            <div class="form-field">
+                <label class="is-srOnly" for="search_query2">{{lang "search.quick_search.input_label"}}</label>
+                <input class="form-input" data-search-quick name="search_query" id="search_query2" data-error-message="{{lang 'search.error.empty_field'}}" placeholder="{{lang 'search.quick_search.input_placeholder'}}" autocomplete="off">
+                <button type="submit"><span class="text">{{lang "search.quick_search.input_label"}}</span><svg class="icon"><use xlink:href="#icon-search"></use></svg></button>
+            </div>
+        </fieldset>
+    </form>
+    <div class="quickSearchResults" data-bind="html: results"></div>
+</div>
+<header class="header">
+    {{#if theme_settings.top-bar-promotion}}
+        <div id="top-bar-promotion">
+            <div class="themevale_container">
+                <div class="banner">
+                    <p class="banner-header-top">Free Express Shipping on all orders. No minimum purchase*</p>
+                </div>
+            </div>
+        </div>
+    {{/if}}
+    {{> components/common/navigation}}
+    <div class="themevale_middleHeader">
+        <div class="middleHeader-item middleHeader-item-mobile text-left">
+            <div class="items">
+                <a class="mobileMenu-toggle" href="#" data-mobile-menu-toggle="menu">
+                    <span class="mobileMenu-toggleIcon">Toggle menu</span>
+                </a>
+            </div>
+            <div class="items">
+                <a class="search-icon" href="#" data-search="quickSearch" aria-controls="quickSearch" aria-expanded="false">
+                    search icon
+                    <svg class="icon icon-close"><use xlink:href="#icon-close"></use></svg>
+                    <svg class="icon icon-search"><use xlink:href="#icon-search"></use></svg>
+                </a>
+            </div>
+        </div>
+        <div class="middleHeader-item">
+            {{#if page_type '===' 'default'}}
+                <h1 class="header-logo">
+                    {{> components/common/store-logo}}
+                </h1>
+            {{else}}
+                <div class="header-logo">
+                    {{> components/common/store-logo}}
+                </div>
+            {{/if}}
+        </div>
+        <div class="middleHeader-item middleHeader-item-mobile text-right">
+            <div class="items">
+                <a class="account-icon" href="javascript:void(0)">
+                    account
+                    <svg class="icon"><use xlink:href="#user"/></svg>
+                </a>
+            </div>
+            <div class="items">
+                <a class="cart-icon" href="{{urls.cart}}">
+                    cart
+                    <svg class="icon"><use xlink:href="#shopping-bag"></use></svg><span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    {{{region name="header_bottom"}}}
+    <div class="navPages-container">
+        <div class="themevale_navPages-item text-left">
+            {{#if page_type '===' 'default'}}
+                <h1 class="header-logo">
+                    {{> components/common/store-logo}}
+                </h1>
+            {{else}}
+                <div class="header-logo">
+                    {{> components/common/store-logo}}
+                </div>
+            {{/if}}
+        </div> 
+        <div class="themevale_navPages-item" id="menu" data-menu>
+            {{> components/common/navigation-menu}}
+        </div>
+        <div class="themevale_navPages-item text-right">
+            <div class="items">
+                <a class="navPages-icon" href="#" data-search="quickSearch" aria-controls="quickSearch" aria-expanded="false">
+                    <span class="text-hidden">search icon</span>
+                    <svg class="icon"><use xlink:href="#icon-search"></use></svg>
+                </a>
+            </div>
+            <div class="items navUser-item--cart">
+                <a
+                    class="navPages-icon"
+                    data-cart-preview
+                    data-options="align:right"
+                    href="{{urls.cart}}">
+                    <span class="text-hidden">cart icon</span>
+                    <div class="navUser-item-cartIcon">
+                        <svg class="icon"><use xlink:href="#shopping-bag"></use></svg><span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+                    </div>
+                </a>
+                <div class="dropdown-cart" id="cart-preview-dropdown2" aria-hidden="true"></div>
+            </div>
+        </div>
+    </div>
+</header>

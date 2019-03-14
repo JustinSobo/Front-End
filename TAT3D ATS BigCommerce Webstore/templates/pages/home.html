@@ -1,0 +1,140 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+blog:
+    recent_posts:
+        limit: {{theme_settings.homepage_blog_posts_count}}
+---
+{{#partial "hero"}}
+    {{#if carousel}}
+        {{> components/carousel}}
+    {{/if}}
+{{/partial}}
+{{#partial "page"}}
+    {{#each shipping_messages}}
+        
+    {{/each}}
+<div class="main full">
+    <div class="themevale-section">
+        <div class="themevale_container-full">
+            <div class="themevale_banner-list">
+                <div class="banner-item">
+                    <div class="themevale_banner-wrapper">
+                        <a class="banner-link" href="/target-systems/">
+                        <img data-src="/product_images/uploaded_images/section-1.jpg" class="lazyload" src="https://cdn11.bigcommerce.com/s-ph8cutvdkm/stencil/57afaf80-a960-0136-66e2-7f863fb15774/e/cc7ca1a0-f27c-0136-75c2-2b2a80a14c4d//img/1pixel.png" alt="banners 1">
+                        <div class="banner-content">
+                            <h3 class="banner-title">Ta rget Systems</h3>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-item">
+                    <div class="themevale_banner-wrapper">
+                        <a class="banner-link" href="/accessories/">
+                        <img data-src="/product_images/uploaded_images/section-2.jpg" class="lazyload" src="https://cdn11.bigcommerce.com/s-ph8cutvdkm/stencil/57afaf80-a960-0136-66e2-7f863fb15774/e/cc7ca1a0-f27c-0136-75c2-2b2a80a14c4d//img/1pixel.png" alt="banners 2">
+                        <div class="banner-content">
+                            <h3 class="banner-title">Accessories</h3>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="banner-item item-last">
+                    <div class="themevale_banner-wrapper">
+                        <a class="banner-link" href="/government-sales/">
+                        <img data-src="/product_images/uploaded_images/section-3.jpg" class="lazyload" src="https://cdn11.bigcommerce.com/s-ph8cutvdkm/stencil/57afaf80-a960-0136-66e2-7f863fb15774/e/cc7ca1a0-f27c-0136-75c2-2b2a80a14c4d//img/1pixel.png" alt="banners 3">
+                        <div class="banner-content">
+                            <h3 class="banner-title">Government Sales</h3>
+                        </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{#if products.new}}
+        {{> components/products/new products=products.new columns=theme_settings.homepage_new_products_column_count}}
+    {{/if}}
+    <div class="themevale-section">
+        <div class="themevale_container">
+            <div class="banner-parallax">
+                <div class="image-parallax-wrapper">
+                    <!--- <img class="image-parallax lazyload" data-src="/product_images/uploaded_images/parallax-1.jpg" src="{{cdn 'img/1pixel.png'}}" alt="banners-parallax"> -->
+                    <div class="white-banner" data-parallax="{&quot;x&quot;: 150 , &quot;smoothness&quot;: 50}"></div>
+                </div>
+
+                <div class="content-parallax-wrapper">
+                    <label class="label">TAT3D Advanced Targeting Systems</label>
+                    <h1 class="title">About Us</h1>
+                    <p class="text">TAT3D ATS specializes in mechanical modeling and molds for tactical training. Our realistic humanoid targets are three-dimensional (3-D). We uses optical scanners on human models in order to create life like molds; which result in providing extremely realistic and proportional targets.</p>
+                    <a class="button" href="/about-us/">
+                        <span>Learn more</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {{#if products.featured}}
+        {{> components/products/featured products=products.featured columns=4 arrows=false dots=true}}
+    {{/if}}
+
+<!––
+    
+-->
+    <div class="themevale-section">
+        <div class="themevale_container">
+            <div class="wrapper-brands">
+                <div class="brands-slider" data-slick='{
+                    "dots": false,
+                    "arrows": true,
+                    "autoplay": false,
+                    "slidesToShow": 2, 
+                    "slidesToScroll": 2, 
+                    "mobileFirst": true,
+                    "nextArrow": "<svg class=&apos;slick-next slick-arrow&apos;><use xlink:href=&apos;#slick-arrow-next&apos;></use></svg>", 
+                    "prevArrow": "<svg class=&apos;slick-prev slick-arrow&apos;><use xlink:href=&apos;#slick-arrow-prev&apos;></use></svg>",
+                    "responsive": [
+                        {
+                            "breakpoint": 1260,
+                            "settings": {
+                                "dots": false,
+                                "arrows": true,
+                                "slidesToShow": 5,
+                                "slidesToScroll": 5
+                            }
+                        },
+                        {
+                            "breakpoint": 993,
+                            "settings": {
+                                "dots": false,
+                                "arrows": true,
+                                "slidesToShow": 4,
+                                "slidesToScroll": 4
+                            }
+                        },
+                        {
+                            "breakpoint": 500,
+                            "settings": {
+                                "dots": false,
+                                "arrows": true,
+                                "slidesToShow": 3,
+                                "slidesToScroll": 3
+                            }
+                        }
+                    ] }'>
+                    <a><img data-src="/product_images/uploaded_images/brand-1.jpg" class="lazyload" src="{{cdn 'img/loading.svg'}}" alt="brand-1" /></a> 
+                    <a><img data-src="/product_images/uploaded_images/brand-2.jpg" class="lazyload" src="{{cdn 'img/loading.svg'}}" alt="brand-2" /></a> 
+                    <a><img data-src="/product_images/uploaded_images/brand-3.jpg" class="lazyload" src="{{cdn 'img/loading.svg'}}" alt="brand-3" /></a> 
+                    <a><img data-src="/product_images/uploaded_images/brand-4.jpg" class="lazyload" src="{{cdn 'img/loading.svg'}}" alt="brand-4" /></a>
+                    <a><img data-src="/product_images/uploaded_images/brand-5.jpg" class="lazyload" src="{{cdn 'img/loading.svg'}}" alt="brand-5" /></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{/partial}}
+{{> layout/base}}

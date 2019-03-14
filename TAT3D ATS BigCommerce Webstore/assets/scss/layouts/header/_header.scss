@@ -1,0 +1,353 @@
+// =============================================================================
+// HEADER (CSS)
+//
+// 1. Setting font size of header-logo to 0, since wrapper element may vary, and
+//    inline-block whitespace messes with header height. Font-size is reset to
+//    appropriate size on header-logo-text.
+// 2. Needs left/right margin so it doesn't cover left/right nav bar toggles
+// 3. Offset the letter-spacing on the last character by adding a right negative
+//    margin. This centers the text logo properly.
+// 4. When the word "cart" is added to the mobile header's cart link, add more
+//    margin to compensate.
+// 5. When logo size is set to "original", we don't have advance knowledge of the
+//    image size, so we can't use absolute positioning + padding to reserve space
+//    for lazy loading.
+//
+// -----------------------------------------------------------------------------
+
+.header {
+    background-color: #000000;
+    border-bottom: container("border");
+    overflow: visible;
+    position: relative;
+    width: 100%;
+    z-index: zIndex("high");
+    transition: all 0.3s ease;
+    @media (min-width: 1025px){
+        z-index: zIndex("low");
+        .navPages-container {
+            position: relative;
+        }
+        .navPages-icon {
+            display: block;
+            padding: 12px 5px;
+            .icon {
+                width: 25px;
+                height: 25px;
+            }
+        }
+        &.is-sticky {
+            top: 0;
+            position: fixed;
+            #top-bar-promotion,
+            .navUser,
+            .themevale_middleHeader {
+                display: none;
+            }
+            .header-logo {
+                margin: 0;
+                text-align: left;
+                .header-logo-text {
+                    font-size: 36px;
+                    line-height: 1;
+                }
+                .header-logo-image {
+                  max-height: 24px;  
+                }
+            }
+            .navPages-item > .navPages-action {
+                padding: 15px;
+            }
+            .navPages-container {
+                display: flex;
+                flex-wrap: wrap;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                -ms-flex-wrap: wrap;
+                align-items: right;
+                padding: 0px 30px;
+                .themevale_navPages-item {
+                    flex-basis: 0;
+                    flex-grow: 8;
+                    max-width: 100%;
+                    > .items {
+                        display: inline-block;
+                        vertical-align: middle;
+                        + .items {
+                            margin-left: 12px;
+                        }
+                    }
+                }
+                .themevale_navPages-item.text-right,
+                .themevale_navPages-item.text-left {
+                    display: block;
+                    flex-grow: 2;
+                }
+            }
+        }
+    }
+}
+
+.header-logo {
+    margin: 0;
+    font-size: 0;   // 1
+    text-align: center;
+    > a {
+        @include clearfix;
+        color: $storeName-color;
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        text-decoration: none;
+        z-index: zIndex("low");
+    }
+    @media (min-width: 1025px) {
+        margin: 10px 0 15px 0;
+    }
+}
+
+.header-logo-text {
+    display: block;
+    font-size: 28px;
+    line-height: 1;
+    font-family: $fontFamily-hero;
+    font-weight: 500;
+    letter-spacing: remCalc(2.5px);
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-transform: uppercase;
+    white-space: nowrap;
+    @include breakpoint("small") {
+        font-size: 36px;
+        font-weight: stencilFontWeight("logo-font");
+    }
+    @media (min-width: 1025px) {
+        font-size: fontSize("hero");   // 1
+        line-height: lineHeight("hero");   // 2 
+    }
+}
+
+.header-logo-image-container {
+    position: relative;
+    padding: 5px;
+    display: block;
+}
+
+.header-logo-image {
+    max-height: 30px;
+    @media (min-width: 768px) {
+        max-height: 40px;
+    }
+}
+
+.header-logo-image-unknown-size { // 5
+    max-height: remCalc($header-height) - $header-logo-marginVertical * 2;
+
+    @include breakpoint("medium") {
+        max-height: none;
+    }
+}
+
+//
+// Mobile Menu Toggle
+//
+// 1. Animate lines from 'x' to hamburger
+// -----------------------------------------------------------------------------
+
+.mobileMenu-toggle {
+    width: 27px;
+    height: 27px;
+    font-size: 0;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    z-index: zIndex("high");
+    background-color: transparent;
+    outline: none;
+    box-shadow: none;
+
+    .mobileMenu-toggleIcon,
+    .mobileMenu-toggleIcon::before,
+    .mobileMenu-toggleIcon::after {
+        background: $header-font-color;
+        content: "";
+        display: block;
+        height: 2px;
+        width: 100%;
+        position: absolute;
+        transform: rotate(0deg);
+        transition: transform 100ms ease-in, top 100ms ease-in 150ms, bottom 100ms ease-in 150ms; // 1
+    }
+
+    .mobileMenu-toggleIcon {
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background-color 10ms ease-in 100ms;
+    }
+
+    .mobileMenu-toggleIcon::before {
+        top: -8px;
+    }
+
+    .mobileMenu-toggleIcon::after {
+        bottom: -8px;
+    }
+
+    &.is-open .mobileMenu-toggleIcon {
+        background-color: transparent;
+        transition-delay: 100ms;
+
+        // scss-lint:disable NestingDepth
+        &::before,
+        &::after {
+            background-color: $header-font-color;
+            bottom: auto;
+            top: auto;
+            transition: transform 100ms ease-in 150ms, top 100ms ease-in, bottom 100ms ease-in; // Animate lines from hamburger to 'x'
+        }
+
+        &::before {
+            top: 0;
+            transform: rotate(45deg);
+        }
+
+        &::after {
+            bottom: 0;
+            transform: rotate(-45deg);
+        }
+
+    }
+    @include breakpoint("small") {
+        width: 30px;
+        height: 30px;
+
+        .mobileMenu-toggleIcon::before {
+            top: -10px;
+        }
+
+        .mobileMenu-toggleIcon::after {
+            bottom: -10px;
+        }
+    }
+    @media (min-width: 1025px) {
+        display: none;
+    }
+}
+
+
+/*=========================================
+=            www.themevale.com            =
+=========================================*/
+    
+    /*--------  1.0 Topbar Promotion  ---*/
+        #top-bar-promotion {
+            padding: 6px 0;
+            font-size: 11px;
+            font-weight: 400;
+            line-height: 18px;
+            text-align: center;
+            color: #ffffff;
+            background-color: #323232;
+            text-transform: capitalize;
+            p {
+                margin-bottom: 0;
+            }
+            @include breakpoint("small") {
+                padding: 8px 0;
+                font-size: 12px;
+                line-height: 20px;
+                letter-spacing: 0.6px;
+            }
+        }
+
+    /*--------  2.0 Header Mobile  ------*/
+        .themevale_middleHeader {
+            .search-icon {
+                .icon-close {
+                    display: none;
+                }
+            }
+            .themevale_quickSearch & {
+                .search-icon {
+                    .icon-close {
+                        display: inline-block;
+                        + .icon-search {
+                            display: none;
+                        }
+                    }
+                }
+            }
+            @media (min-width: 1025px) {
+                display: block;
+                .middleHeader-item-mobile {
+                    display: none;
+                }
+            }
+            @media (max-width: 1024px) {
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 10px 15px;
+                .middleHeader-item {
+                    -ms-flex-preferred-size: 0;
+                    flex-basis: 0;
+                    -webkit-box-flex: 1;
+                    -ms-flex-positive: 1;
+                    flex-grow: 1;
+                    max-width: 100%;
+                    > .items {
+                        display: inline-block;
+                        vertical-align: middle;
+                        font-size: 0;
+                        > a {
+                            width: 30px;
+                            height: 30px;
+                            display: block;
+                            line-height: 30px;
+                            text-align: center;
+                        }
+                        + .items {
+                            margin-left: 12px;
+                        }
+                    }
+                }
+                .icon {
+                    width: 25px;
+                    height: 25px;
+                    fill: $header-font-color;
+                }
+                .cart-icon {
+                    .icon {
+                        width: 27px;
+                        height: 27px;
+                    }
+                }
+            }
+            @media (max-width: 550px) {
+                .middleHeader-item {
+                    > .items {
+                        a {
+                            width: 27px;
+                            height: 27px;
+                            line-height: 27px;
+                        }
+                        + .items {
+                            margin-left: 10px;
+                        }
+                    }
+                }
+                .icon {
+                    width: 22px;
+                    height: 22px;
+                }
+                .cart-icon {
+                    .icon {
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+        }
+    

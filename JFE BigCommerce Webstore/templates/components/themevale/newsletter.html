@@ -1,0 +1,32 @@
+<div id="themevale_newsletter" class="hide">
+    <div class="popup-overlay"></div>
+    <div class="newsletter-popup-container">
+        <a href="#" class="modal-close" aria-label="{{lang 'common.close'}}" role="button" data-close-newsletter-popup>
+            <span aria-hidden="true">&#215;</span>
+        </a>
+        <div class="newsletter-content">
+            <h2 class="newsletter-heading">Subscribe to our newsletter</h2>
+            <p class="newsletter-sub-heading">Get the latest updates on new products and upcoming sales</p>
+            <div id="popupSubcribeForm">
+                <form class="form" action="{{urls.subscribe.action}}" method="post" id="popupSubcribeFormSubmit">
+                    <fieldset class="form-fieldset">
+                        <input type="hidden" name="action" value="subscribe">
+                        <input type="hidden" name="nl_first_name" value="bc">
+                        <input type="hidden" name="check" value="1">
+                        <div class="form-field">
+                            <div class="form-wrap">
+                                <input class="form-input" id="nl_email" name="nl_email" type="email" placeholder="{{lang 'newsletter.email_placeholder'}}">
+                                <input class="button button-transparent" type="submit" value="{{lang 'newsletter.subscribe_submit'}}">
+                                <div class="button" data-close-newsletter-popup> no, thanks</div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="black-icons">
+                {{> components/common/social-links}}
+            </div>
+            <p class="newsletter-message">We promise to only send you good things!</p>
+        </div>
+    </div>
+</div>

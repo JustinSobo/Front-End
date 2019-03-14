@@ -1,0 +1,80 @@
+// =============================================================================
+// BRAND GRID (CSS)
+// =============================================================================
+
+
+/*=========================================
+=            www.themevale.com            =
+=========================================*/
+
+    .brandGrid {
+        list-style: none;
+        margin: 0 -8px;
+        max-width: none;
+        width: auto;
+        font-size: 0;
+        margin-bottom: 0;
+        @media (min-width: 1025px) {
+            margin: 0 -15px;
+        }
+        > .brand {
+            width: 50%;
+            font-size: $body-fontSize;
+            padding: 0 8px;
+            display: inline-block;
+            vertical-align: top;
+            @media (min-width: 601px) {
+                width: 33.333333%;
+            }
+            @media (min-width: 993px) {
+                width: 33.333333%;
+            }
+            @media (min-width: 1025px) {
+                padding-left: 15px;
+                padding-right: 15px;
+                width: 25%;
+            }
+        }
+    }
+
+    .brand {
+        .card {
+            border-radius: 0;
+            text-align: center;
+            border: 1px solid #eaeaea;
+            .card-figure {
+                padding-bottom: 0;
+            }
+            .card-img-container {
+                margin-left: auto;
+                margin-right: auto;
+                position: relative;
+            }
+            .card-title {
+                margin: 0;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 20px;
+                text-transform: uppercase;
+                font-family: $fontFamily-headings;
+                color: stencilColor('color-textHeading');
+                a {
+                    color: inherit;
+                }
+            }
+            .card-body {
+                padding: 11px 5px 9px 5px;
+                text-align: center;
+                background-color: #fafafa;
+            }
+            @media (min-width: 415px) {
+                .card-title {
+                    font-size: 13px;
+                    line-height: 24px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+
+/*=====  End of www.themevale.com  ======*/

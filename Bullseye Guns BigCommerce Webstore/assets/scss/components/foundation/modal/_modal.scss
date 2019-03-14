@@ -1,0 +1,75 @@
+// =============================================================================
+// MODAL (CSS)
+// =============================================================================
+
+
+.modal {
+    // scss-lint:disable ImportantRule
+    left: 50% !important;
+    margin: 0 auto;
+    max-height: 90%;
+    max-width: 95%;
+    min-height: 240px;
+    outline: none;
+    // overflow: hidden;
+    padding: 0;
+    right: 0;
+    bottom: auto !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%);
+}
+
+.modal--large {
+    @include breakpoint("large") {
+        width: $modal-width--large;
+    }
+}
+
+.modal-header {
+    padding-left: $reveal-modal-paddingHorizontal;
+    padding-right: remCalc($reveal-close-height) + $reveal-close-side;
+}
+
+.modal-header-title {
+    font-size: 16px;
+    text-align: center;
+}
+
+.modal-close {
+    @include square($reveal-close-height);
+    color: stencilColor("icon-color");
+    font-size: 26px;
+    line-height: 0;
+    padding: 0;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    z-index: zIndex("high");
+
+    @include breakpoint("medium") {
+        font-size: 32px;
+    }
+
+    &:hover {
+        color: $color-primary;
+    }
+}
+
+.modal-body {
+    overflow: auto;
+    max-height:870px !important;
+    -webkit-overflow-scrolling: touch;
+}
+
+@media(max-width:1950px){
+    .modal-body{
+        max-height: 640px !important;
+        overflow-x:hidden;
+    }
+}
+@media(max-width:800px){
+    .modal-body{
+        max-height: 430px !important;
+        overflow-x:hidden;
+    }
+}

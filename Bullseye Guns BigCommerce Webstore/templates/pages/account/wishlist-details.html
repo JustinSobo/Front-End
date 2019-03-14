@@ -1,0 +1,61 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+---
+
+{{#partial "page"}}
+<div class="row">
+
+        <aside class="page-sidebar col-sm-4 col-lg-3 col-md-4 col-xs-12 ">
+            <div class="left-category-menu">
+                {{> components/common/webicategorylist}}
+            </div>
+             <!-- prodcut -->
+            {{#if products.top_sellers}}
+                    {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+           {{/if}}
+            <!-- top rated -->
+            {{#if products.featured}}
+                    {{> components/products/toprated products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+            {{/if}}
+           
+        </aside>
+<div class="account page col-sm-8 col-lg-9 col-md-8 col-xs-12 wishproduct page-content home-top">
+
+    {{#if wishlist.is_editable}}
+        {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    {{/if}}
+    <div class="allpagebg">
+    <h2 class="page-heading">{{lang 'account.wishlists.view_heading' name=wishlist.name}}</h2>
+    {{#if wishlist.is_editable}}
+        {{> components/account/navigation account_page='wishlists'}}
+    {{/if}}
+
+    {{#if wishlist.is_editable}}
+        {{#if wishlist.is_public '>' 0}}
+            <div class="panel share-wishlist">
+                <div class="panel-body">
+                    <h5>{{lang 'account.wishlists.share_intro'}}</h5>
+                    <input class="form-input" value="{{settings.base_url}}{{wishlist.share_url}}" readonly>
+                </div>
+            </div>
+        {{/if}}
+    {{/if}}
+
+    {{#if wishlist.items}}
+        {{> components/account/wishlist-item-list show_remove=wishlist.is_editable}}
+    {{else}}
+        {{> components/common/alert-info (lang 'account.wishlists.empty_wishlist')}}
+    {{/if}}
+</div>
+
+</div>
+</div>
+{{/partial}}
+{{> layout/base}}

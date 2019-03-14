@@ -1,0 +1,90 @@
+// =============================================================================
+// CUSTOMS (CSS)
+//
+// 1. Please style your css in there
+//
+// =============================================================================
+
+/*=========================================
+=            www.themevale.com            =
+=========================================*/
+
+
+
+
+.themevale_bottomFooter {
+    display: none !important;
+    visibility: none !important;
+    opacity: 0 !important;
+}
+
+.page-heading-wrapper  {
+    background-color: transparent !important;
+    color: #000000 !important;
+} 
+ .page-heading {
+     color: #000000 !important;
+}
+
+.breadcrumbs, .breadcrumb, .is-active, .breadcrumb-label  {
+    color: #252525 !important;
+}
+
+.navUser-action, .navUser-action--quickSearch {
+    color: #ffffff !important;
+}
+
+.page-heading-wrapper .breadcrumb a, .page-heading-wrapper .breadcrumb.is-active>.breadcrumb-label, .page-heading-wrapper .breadcrumb:before, .page-heading-wrapper .page-heading, .page-heading-wrapper p {
+    color: #000000 !important;
+}
+
+.themevalte_productView-images .productView-img-container>a img {
+    height: auto !important;
+}
+
+.themevalte_productView-images .productView-for .productView-thumbnail>a img {
+    height: auto !important;
+}
+
+.navPages-item-page {
+}
+
+.service-wrapper {
+    display: none;
+}
+
+.banner-header-top {
+    
+}
+
+.themevale_tabToggle productCustomTab2 {
+    display: none;
+}
+
+#productCustomTab-content2 {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .navPages-action {
+        color: #646464;
+    }
+}
+
+@media only screen and (min-width: 1025px) {
+    .navPages-action {
+        color: #fff;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+

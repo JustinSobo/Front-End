@@ -1,0 +1,65 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+---
+
+{{#partial "page"}}
+    <div class="row">
+        <aside class="page-sidebar col-sm-4 col-lg-3 col-md-4 col-xs-12 ">
+            <div class="left-category-menu">
+                {{> components/common/webicategorylist}}
+            </div>
+             <!-- prodcut -->
+            {{#if products.top_sellers}}
+                    {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+           {{/if}}
+            <!-- top rated -->
+            {{#if products.featured}}
+                    {{> components/products/toprated products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+            {{/if}}
+           
+        </aside>
+        <main class="page col-sm-8 col-lg-9 col-md-8 col-xs-12 crwidth page-content home-top">
+            {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+
+            <div class="allpagebg">
+
+                <h1 class="page-heading">{{lang 'sitemap.page_title'}}</h1>
+
+                <ul class="list-unstyled row site">
+                {{#each sitemap}}
+                    <li class="col-md-4 col-sm-6 col-12">
+                        <h3 class="page-heading">{{label}}</h3>
+                        <ul>
+                            {{#each body}}
+                            <li>
+                                <a href="{{url}}">{{label}}</a>
+                                {{#if children}}
+                                    <ul>
+                                    {{#each children}}
+                                        {{> components/sitemap/links}}
+                                    {{/each}}
+                                    </ul>
+                                {{/if}}
+                            </li>
+                            {{/each}}
+                            {{#if show_all_link}}
+                            <li>
+                                <a href="{{subsection_url}}">{{lang 'sitemap.show_all_link'}}</a>
+                            </li>
+                            {{/if}}
+                        </ul>
+                    </li>
+                {{/each}}
+                </ul>
+            </div>
+        </main>
+    </div>
+{{/partial}}
+{{> layout/base}}

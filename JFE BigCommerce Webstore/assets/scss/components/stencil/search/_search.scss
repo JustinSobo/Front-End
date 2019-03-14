@@ -1,0 +1,191 @@
+// =============================================================================
+// SEARCH
+// =============================================================================
+
+.search-suggestion {
+    margin-bottom: spacing("single") + spacing("third");
+
+    > :last-child {
+        margin-bottom: 0;
+    }
+}
+
+.suggestion-title {
+    margin-top: 0;
+    text-transform: inherit;
+}
+
+.advancedSearch-form {
+    margin-bottom: spacing("double");
+
+    .form-row {
+        margin-bottom: -(spacing("single"));
+    }
+    #advanced-search-submit {
+        min-width: 180px;
+    }
+}
+
+.quickSearchResults {
+    width: 100%;
+    margin-top: 1px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #ffffff;
+    max-height: 375px;
+    overflow-y: auto;
+    .modal-close {
+        display: none;
+    }
+    .productList {
+        padding: 0;
+        margin: 0;
+        .product {
+            margin: 0;
+            width: 100%;
+            padding: 15px;
+            display: block;
+            transition: all 0.3s ease;
+            border-bottom: 1px solid #eaeaea;
+            &:hover {
+                background-color: #fafafa;
+            }
+            &:last-child {
+                padding-bottom: 15px;
+            }
+            + .product {
+                margin-top: 0;
+            }
+        }
+    }
+    .card {
+        margin: 0;
+        width: 100%;
+        display: table;
+        text-align: left;
+        .card-figure,
+        .card-body {
+            text-align: left;
+            display: table-cell;
+            vertical-align: top;
+        }
+        .card-img-container:before {
+            content: none;
+        }
+        .card-figure {
+            width: 70px;
+            padding-bottom: 0;
+        }
+        .card-body {
+            padding-top: 0;
+            padding-left: 15px;
+            .card-title {
+                margin-bottom: 10px;
+            }
+            .price-wrapper {
+                margin-bottom: 12px;
+            }
+            @media (max-width: 500px){
+                .card-brand {
+                    display: none;
+                }
+            }
+        }
+    }
+    .quickSearch-wrapper {
+        padding: 15px;
+    }
+}
+
+.advancedSearch-separator {
+    display: none;
+}
+
+.advancedSearch-title {
+    margin: 0 0 spacing("single");
+    text-transform: inherit;
+}
+
+.search-price-range {
+    label {
+        display: inline;
+
+        // scss-lint:disable SelectorDepth, NestingDepth
+        input {
+            display: block;
+            padding-left: spacing("single");
+
+            @include breakpoint("small") {
+                display: inline;
+                width: 6rem;
+            }
+        }
+
+        // scss-lint:disable SelectorDepth, NestingDepth
+        span {
+            @include breakpoint("small") {
+                display: inline;
+                padding-left: spacing("single");
+                padding-right: spacing("single");
+            }
+        }
+    }
+}
+
+.category-suggestion-list {
+    @include grid-row($behavior: "nest");
+    list-style-type: none;
+}
+
+.category-suggestion {
+    @include grid-column(4);
+    font-size: fontSize("smaller");
+}
+
+.search-refine {
+    margin-left: spacing("single");
+}
+
+.quickSearchMessage {
+    font-size: fontSize("smaller");
+    margin: spacing("single") 0 0;
+    text-align: center;
+}
+
+.search-suggestion {
+    .category-suggestion {
+        font-size: 12px;
+        line-height: 20px;
+        letter-spacing: 0.5px;
+    }
+}
+
+.suggestion-title {
+    font-weight: 500;
+    font-family: $fontFamily-headings;
+    color: stencilColor('color-textHeading');
+}
+
+.page-type-search {
+    .panel-body {
+        background-color: #fafafa;
+    }
+}
+
+.search-information {
+    list-style: none;
+    margin: 0;
+    > li {
+        + li {
+            margin-top: 30px;
+        }
+        .title {
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+        .description {
+            margin-top: 15px;
+        }
+    }
+}

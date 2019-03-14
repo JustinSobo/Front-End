@@ -1,0 +1,869 @@
+// =============================================================================
+// Stencil Checkout - Customize the Optimized Single-Page Checkout experience
+// =============================================================================
+
+// =============================================================================
+//
+// IMPORTANT DISCLAIMER
+// Please do not nest elements within class selectors, and do not use class selectors other than those given below.
+// Future support is guaranteed only if class selectors' structure and naming are left unchanged.
+//
+// =============================================================================
+
+//
+// Header Section
+// Background, Logo Position
+// -----------------------------------------------------------------------------
+
+*:focus {
+    outline-color: #5696ef;
+}
+
+.optimizedCheckout-header {
+    color: #323232;
+    text-align: left;
+    min-height: 0;
+    border-bottom: none;
+    background-color: #f7f7f7;
+    .checkoutHeader-link img {
+        max-height: 40px;
+    }
+    .checkoutHeader-content {
+        margin-bottom: 0;
+        padding: 50px 0 30px 0;
+    }
+    .checkoutHeader-heading {
+        text-align: left;
+        font-size: 36px;
+        line-height: 1;
+    }
+}
+
+//
+// Primary and Secondary Headings
+// Text Color & Typography
+// .optimizedCheckout-headingPrimary styles top-level headings.
+// .optimizedCheckout-headingSecondary styles certain lower-level elements, such as descriptions of cart items.
+// -----------------------------------------------------------------------------
+
+.optimizedCheckout-headingPrimary {
+    font-weight: 600;
+    font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
+    color: stencilColor('color-textHeading');
+}
+
+.optimizedCheckout-headingSecondary {
+    font-weight: 600;
+    font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
+    color: stencilColor('color-textHeading');
+}
+
+//
+// Body
+// Background & Shipping Method Overlay
+// -----------------------------------------------------------------------------
+
+body,
+.ng-checkout-container {
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 22px;
+    font-family: stencilFontFamily("body-font"), Arial, Helvetica, sans-serif;
+    color: stencilColor('color-textBase');
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    color: stencilColor('color-textHeading');
+    font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
+}
+
+p, ul, ol, dl {
+    font-size: 12px;
+    line-height: 22px;
+    font-weight: 400;
+    color: stencilColor('color-textBase');
+}
+
+.optimizedCheckout-overlay {
+    min-height: 0;
+    color: #323232;
+    font-weight: 600;
+    border-radius: 0;
+    background-color: #fafafa;
+    border-color: #fafafa;
+    p {
+        color: #323232;
+    }
+}
+
+//
+// Primary & Secondary Content
+// Text Color & Typography
+// .optimizedCheckout-contentPrimary styles body text in the Order Summary/Order Confirmation; drop-down-list items; and text that summarizes completed steps.
+// .optimizedCheckout-contentSecondary styles check boxes' text labels, and lower-level text in the Order Summary.
+// -----------------------------------------------------------------------------
+
+.optimizedCheckout-contentPrimary {
+    font-weight: 400;
+    font-family: stencilFontFamily("body-font"), Arial, Helvetica, sans-serif;
+    color: stencilColor('color-textBase');
+}
+
+.optimizedCheckout-contentSecondary {
+    font-weight: 400;
+    font-family: stencilFontFamily("body-font"), Arial, Helvetica, sans-serif;
+    color: stencilColor('color-textBase');
+}
+
+//
+// Primary Button
+// Background & Border & Text Color & Typography
+// Styles the CONTINUE button for each step, & the final confirmation button.
+// -----------------------------------------------------------------------------
+
+.optimizedCheckout-buttonPrimary {
+    color: #ffffff;
+    font-size: 12px;
+    font-weight: 600;
+    padding: 6px 15px;
+    line-height: 24px;
+    border-radius: 40px;
+    letter-spacing: 0.65px;
+    text-transform: uppercase;
+    border: 2px solid #323232;
+    background-color: #323232;
+    transition: all 0.3s ease;
+    font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
+    &.is-loading {
+        color: #323232;
+        background-color: #323232;
+    }
+    &:hover, &:focus, &:active {
+        outline: none;
+        box-shadow: none;
+        border: #323232;
+    }
+    @media (min-width: 415px) {
+        font-size: 13px;
+    }
+    @media (min-width: 1025px) {
+        &:hover, &:focus, &:active {
+            color: #323232;
+            border: 2px solid #323232;
+            background-color: transparent;
+        }
+    }
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus,
+    &[disabled].is-active,
+    &[disabled].active {
+        opacity: 0.7;
+        border: 2px solid #323232;
+        background-color: #323232;
+    }
+    &[disabled].is-loading {
+        opacity: 0.7;
+        color: #323232;
+        background-color: #323232;
+    }
+}
+
+.button {
+    &.dropdown-toggle--select {
+        min-height: 40px;
+        padding: 10px 15px;
+        line-height: 20px;
+        font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
+    }
+}
+
+
+//
+// Secondary Button
+// Background & Border & Text Color & Typography
+// Styles the EDIT button for each step.
+// -----------------------------------------------------------------------------
+
+.optimizedCheckout-buttonSecondary {
+    padding: 0;
+    border: none;
+    color: #5696ef;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    background-color: transparent;
+    box-shadow: none;
+    &:hover, &:focus, &:active {
+        box-shadow: none;
+        border: none;
+        color: #5696ef;
+        background-color: transparent;
+    }
+    &[disabled],
+    &[disabled]:hover,
+    &[disabled]:focus,
+    &[disabled].is-active,
+    &[disabled].is-loading,
+    &[disabled].active {
+        color: #5696ef;
+        border-color: none;
+        background-color: transparent;
+    }
+}
+
+//
+// Order Summary (Mobile Drawer & Modal)
+// Background Color
+// -----------------------------------------------------------------------------
+
+.optimizedCheckout-orderSummary {
+    margin: 0;
+    border-radius: 3px;
+    border-color: #dfdfdf;
+    background-color: #ffffff;
+    box-shadow: 0 1px 5px transparentize(#000000, 0.8);
+    .cart-header {
+        padding: 15px 20px 13px 20px;
+        background-color: #ffffff;
+        .cart-title {
+            font-size: 13px;
+            text-transform: uppercase;
+        }
+        .cart-header-link {
+            color: #5696ef;
+            text-transform: capitalize;
+        }
+    }
+    .cart-section {
+        padding: 20px;
+        border-color: #dfdfdf;
+        .cart-section-heading {
+            color: #2d2d2d;
+            line-height: 1;
+            font-size: 12px;
+            margin-bottom: 20px;
+        }
+        .productList-item {
+            margin-bottom: 30px;
+            &:last-child {
+                margin-bottom: 10px;
+            }
+        }
+        .product {
+            .product-figure {
+                width: 90px;
+                padding-right: 20px;
+            }
+            .product-body {
+                padding: 0;
+                width: calc(75% - 90px);
+            }
+            .product-title {
+                font-size: 12px;
+                font-weight: 400;
+                color: stencilColor('color-textHeading');
+                line-height: 22px;
+                margin-bottom: 10px;
+                font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
+            }
+            .product-options {
+                font-size: 12px;
+                line-height: 25px;
+                color: stencilColor('color-textBase');
+            }
+            .product-price {
+                font-size: 13px;
+                font-weight: 600;
+                color: stencilColor('color-textHeading');
+                font-family: stencilFontFamily("headings-font"), Arial, Helvetica, sans-serif;
+            }
+        }
+        .productImage-giftCertificate {
+            padding-top: 0;
+        }
+        .cart-priceItem {
+            margin-bottom: 15px;
+            .cart-priceItem-label {
+                font-size: 13px;
+                font-weight: 500;
+                color: stencilColor('color-textHeading');
+                text-transform: capitalize;
+            }
+            .cart-priceItem-value {
+                font-size: 13px;
+                color: stencilColor('color-textHeading');
+                font-weight: 600;
+            }
+        }
+        .redeemable-label {
+            font-size: 13px;
+            font-weight: 500;
+            color: stencilColor('color-textHeading');
+            text-transform: capitalize;
+        }
+        .cart-priceItem--total {
+            margin-bottom: 0;
+            .cart-priceItem-label {
+                font-size: 14px;
+                color: stencilColor('color-textHeading');
+                font-weight: 500;
+            }
+            .cart-priceItem-value {
+                font-size: 18px;
+                color: stencilColor('color-textHeading');
+                font-weight: 600;
+            }
+        }
+    }
+}
+
+.form-prefixPostfix {
+    .button {
+        height: auto;
+        color: #323232;
+        font-weight: 600;
+        min-width: 125px;
+        border-radius: 40px;
+        text-transform: uppercase;
+        border: 2px solid #323232;
+        background-color: transparent;
+        @media (min-width: 1025px) {
+            &:hover, &:focus, &:active {
+                color: #ffffff;
+                border: 2px solid #323232;
+                background-color: #323232;
+            }
+        }
+    }
+}
+
+//
+// Form Labels
+// Text Color
+// Styles text labels on form fields.
+// -----------------------------------------------------------------------------
+
+.optimizedCheckout-form-label {
+    font-size: 12px;
+    color: stencilColor('color-textHeading');
+    font-weight: 500;
+    small {
+        color: #646464;
+        font-weight: 400;
+    }
+}
+
+.form-field--error {
+    .optimizedCheckout-form-label,
+    .form-inlineMessage {
+        color: #d14343;
+    }
+}
+//
+// Form Input
+// Background, Border, Shadow and Text Color
+// Styles form fields.
+// -----------------------------------------------------------------------------
+
+$optimizedCheckout-input-boxShadow: inset 0 1px 1px #e5e5e5;
+$optimizedCheckout-input--focus-boxShadow: 0 0 3px transparentize(#5696ef, 0.6);
+$optimizedCheckout-input--error-boxShadow: 0 0 3px transparentize(#d14343, 0.6);
+
+.optimizedCheckout-form-input,
+.optimizedCheckout-form-select {
+    height: 40px;
+    font-size: 12px;
+    padding: 10px 15px;
+    line-height: 20px;
+    border-radius: 3px;
+    box-shadow: none;
+    color: stencilColor('color-textBase');
+    background-color: #ffffff;
+    border-color: #dcdcdc;
+
+    &::placeholder {
+        color: #999999;
+    }
+
+    .form-field--error & {
+        background-color: #ffffff;
+        border-color: #d14343;
+        box-shadow: $optimizedCheckout-input--error-boxShadow, $optimizedCheckout-input-boxShadow;
+    }
+}
+
+.optimizedCheckout-form-input:focus,
+.optimizedCheckout-form-select:focus,
+.optimizedCheckout-form-select:hover {
+    box-shadow: none;
+    border-color: #5696ef;
+    background-color: #ffffff;
+}
+
+.optimizedCheckout-form-label::before {
+    .optimizedCheckout-form-radio + &,
+    .optimizedCheckout-form-checkbox + & {
+        opacity: 1;
+        border-color: #dcdcdc;
+        background-color: #ffffff;
+        box-shadow: $optimizedCheckout-input-boxShadow;
+    }
+
+    .optimizedCheckout-form-radio:checked + &,
+    .optimizedCheckout-form-checkbox:checked + & {
+        background-color: #5696ef;
+        border-color: #5696ef;
+        box-shadow: none;
+    }
+
+    .optimizedCheckout-form-radio:focus + &,
+    .optimizedCheckout-form-checkbox:focus + & {
+        border-color: #5696ef;
+        box-shadow: $optimizedCheckout-input--focus-boxShadow, $optimizedCheckout-input-boxShadow;
+    }
+
+    .optimizedCheckout-form-radio:focus:checked + &,
+    .optimizedCheckout-form-checkbox:focus:checked + & {
+        box-shadow: $optimizedCheckout-input--focus-boxShadow;
+    }
+}
+
+//
+// Discount Banners
+// Background & Text & Icon Color
+// Styles discount banners.
+// -----------------------------------------------------------------------------
+
+.optimizedCheckout-discountBanner {
+    color: #323232;
+    background-color: #e5e5e5;
+    svg {
+        fill: #323232;
+    }
+}
+
+//
+// Form Checklist (Shipping / Payment methods)
+// Background & Border & Text Color
+// Styles form checklists
+// -----------------------------------------------------------------------------
+
+.optimizedCheckout-form-checklist {
+    color: #323232;
+    border-radius: 0;
+    background-color: #ffffff;
+    border: 1px solid #ebebeb;
+    .form-checklist-checkbox ~ .form-label {
+        font-size: 14px;
+        min-height: 0;
+        font-weight: 500;
+    }
+}
+
+.optimizedCheckout-form-checklist-item {
+    border-color: #ebebeb;
+    background-color: #ffffff;
+}
+
+.optimizedCheckout-form-checklist-item:hover,
+.optimizedCheckout-form-checklist-item--selected {
+    border-color: #ebebeb;
+    background-color: #f8f8f8;
+}
+
+.optimizedCheckout-form-checklist-checkbox {
+    ~ .form-label::after,
+    ~ .form-label::before {
+        background-color: #ffffff;
+        border-color: #dcdcdc;
+    }
+
+    &:focus ~ .form-label {
+        box-shadow: inset 0 0 0 1px #5696ef;
+    }
+
+    &:checked ~ .form-label::before {
+        border-color: #5696ef;
+    }
+
+    &:checked ~ .form-label::after {
+        background: #5696ef;
+    }
+}
+
+//
+// Loading Toaster
+// Background & Text Color
+// Styles the Loading Toaster
+// -----------------------------------------------------------------------------
+
+.optimizedCheckout-loadingToaster {
+    color: #ffffff;
+    background-color: #323232;
+}
+
+
+/*=========================================
+=            www.themevale.com            =
+=========================================*/
+
+    /*--------  1.0 Global style  -------*/
+        
+        .form-checkbox + .form-label {
+            font-weight: 400;
+            color: stencilColor('color-textBase');
+            &:before {
+                border-radius: 3px;
+            }
+        }
+
+        .form-field {
+            margin-bottom: 20px;
+        }
+
+        a[data-test="forgot-password-link"] {
+            display: block;
+            margin-top: 10px;
+        }
+
+        .alertBox-message {
+            strong, b {
+                line-height: inherit;
+                display: inline-block;
+                vertical-align: middle;
+            }
+        }
+
+        .layout {
+            padding: 60px 0px;
+            .layout-main {
+                width: 60%;
+                padding: 0 30px 0 0;
+                .checkout-steps {
+                    padding-right: 0;
+                }
+            }
+            .layout-cart {
+                width: 40%;
+                padding: 0;
+            }
+        }
+
+        .checkout-steps {
+            > .checkout-step {
+                padding: 0px;
+                border: none;
+                margin-bottom: 40px;
+                &[checkout-step="customer"],
+                &[checkout-step="shipping"],
+                &[checkout-step="billing"] {
+                    .optimizedCheckout-buttonPrimary {
+                        min-width: 180px;
+                    }
+                }
+            }
+        }
+
+        .stepHeader {
+            padding: 0;
+            flex-wrap: wrap;
+            position: relative;
+            .stepHeader-figure {
+                width: 100%;
+                display: block;
+                height: auto;
+                margin-right: 0;
+                border-bottom: 2px solid #323232;
+                .stepHeader-counter {
+                    width: 45px;
+                    height: 43px;
+                    color: #ffffff;
+                    font-size: 18px;
+                    font-weight: 500;
+                    border-radius: 0;
+                    line-height: 43px;
+                    position: relative;
+                    margin-right: 15px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background-color: #323232;
+                    -webkit-transform: scale(1);
+                    transform: scale(1);
+                    &.stepHeader-counter--complete {
+                       transform: scale(1); 
+                    }
+                }
+                .stepHeader-title {
+                    margin: 0;
+                    padding: 0;
+                    font-size: 18px;
+                    min-width: 350px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    text-transform: capitalize;
+                }
+            }
+            .stepHeader-body {
+                margin-top: 20px;
+                margin-left: 65px;
+                .checkout-address--static .address-entry {
+                    margin-bottom: 5px;
+                }
+            }
+            .stepHeader-actions {
+                position: absolute;
+                right: 0;
+                top: 0;
+                margin: 0;
+                z-index: 10;
+                .button {
+                    line-height: 45px;
+                }
+            }
+            .stepHeader-counter--complete svg {
+                padding: 10px;
+            }
+        }
+
+        .checkout-view-content {
+            margin-top: 30px;
+            .checkout-form {
+                margin-top: 0;
+                margin-right: 0;
+                margin-bottom: 0;
+                max-width: none;
+                .form-body {
+                    p > a,
+                    a[data-test="forgot-password-link"] {
+                        color: #5696ef;
+                        font-weight: 500;
+                    }
+                }
+            }
+            .form-legend {
+                width: auto;
+                color: stencilColor('color-textHeading');
+                font-size: 13px;
+                font-weight: 500;
+                line-height: 24px;
+                padding-bottom: 0px;
+                margin-bottom: 20px;
+                position: relative;
+                display: inline-block;
+                &:before {
+                    left: 0;
+                    bottom: 0;
+                    width: 100%;
+                    height: 1px;
+                    content: "";
+                    opacity: 0.6;
+                    position: absolute;
+                    background-color: stencilColor('color-textHeading');
+                }
+            }
+            .form-body {
+                margin-bottom: 0;
+            }
+        }
+
+        #checkout-shipping-comments {
+            .optimizedCheckout-form-input {
+                min-height: 75px;
+            }
+        }
+
+        #checkout-payment-continue {
+            padding: 13px 30px;
+        }
+
+        .form-checklist-body {
+            .form-checklist-container {
+                padding-top: 0;
+                padding-bottom: 10px;
+                p {
+                    margin-bottom: 0;
+                }
+            }
+        }
+        #checkout-shipping-options {
+            margin-bottom: 20px;
+        }
+
+        .orderConfirmation {
+            padding-top: 0;
+            h1[data-test="order-confirmation-heading"] {
+                margin-bottom: 30px;
+            }
+            #createAccountButton {
+                min-width: 200px;
+            }
+        }
+
+        .socialBadges-header {
+            margin-top: 1.5rem;
+        }
+
+    /*--------  RESPONSIVE  -------------*/
+        @media (max-width: 1024px) {
+            .layout,
+            .optimizedCheckout-header {
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+        @media (max-width: 992px) {
+            .layout {
+                .layout-main {
+                    padding: 0;
+                    width: 100%;
+                }
+                .layout-cart {
+                    padding: 0;
+                    width: 100%;
+                }
+            }
+
+            .stepHeader {
+                .stepHeader-figure {
+                    .stepHeader-counter {
+                        width: 35px;
+                        height: 35px;
+                        line-height: 35px;
+                        margin-right: 10px;
+                        font-size: 16px;
+                        &:before {
+                            font-size: 16px;
+                        }
+                    }
+                    .stepHeader-title {
+                        font-size: 16px;
+                    }
+                }
+                .stepHeader-actions {
+                    .button {
+                        line-height: 35px;
+                    }
+                }
+                .stepHeader-body {
+                    margin-top: 10px;
+                    margin-left: 55px;
+                }
+            }
+
+            .checkout-view-content {
+                margin-top: 10px;
+            }
+
+            .checkout-steps {
+                > .checkout-step {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+
+        @media (max-width: 767px) {
+            .optimizedCheckout-header {
+                .checkoutHeader-link img {
+                    max-height: 30px;
+                }
+                .checkoutHeader-content {
+                    padding: 20px 0;
+                }
+                .checkoutHeader-heading {
+                    text-align: left;
+                    font-size: 30px;
+                    line-height: 1;
+                }
+            }
+            .stepHeader .stepHeader-body,
+            .checkout-view-content .checkout-form {
+                margin-left: 0;
+            }
+            .layout {
+                padding-bottom: 90px;
+            }
+            #checkout-shipping-comments .optimizedCheckout-form-input {
+                min-height: 0;
+            }
+
+            .orderConfirmation {
+                h1[data-test="order-confirmation-heading"] {
+                    font-size: 26px;
+                    margin-bottom: 20px;
+                }
+                .form-body {
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        @media (max-width: 550px) {
+            .customerEmail-body {
+                width: 100%;
+            }
+            .customerEmail-action {
+                width: 100%;
+                padding-left: 0;
+                margin-top: 0;
+            }
+            .optimizedCheckout-orderSummary {
+                margin-left: 15px;
+                margin-right: 15px;
+                margin-bottom: 15px;
+            }
+            #checkout-payment-continue {
+                padding: 8px 15px;
+            }
+            .cart-modal-body {
+                padding-left: 0;
+                padding-right: 0;
+            }
+            .stepHeader {
+                .stepHeader-figure {
+                    .stepHeader-title {
+                        min-width: 0;
+                        font-size: 14px;
+                    }
+                }
+            }
+            .cartDrawer-body {
+                padding-left: 15px;
+                .cartDrawer-items {
+                    font-size: 14px;
+                }
+            }
+            .cartDrawer-total {
+                font-size: 18px;
+            }
+
+            .form-prefixPostfix .button {
+                min-width: 90px;
+            }
+
+            .orderConfirmation {
+                .orderConfirmation-section {
+                    margin-bottom: 20px;
+                    padding-bottom: 20px;
+                }
+            }
+
+            .cart-modal-header {
+                .optimizedCheckout-orderSummary {
+                    margin: 0;
+                    .cart-section .product {
+                        .product-actions {
+                            align-self: flex-start;
+                            -ms-flex-order: 3;
+                            order: 3;
+                            text-align: right;
+                            width: 25%;
+                        }
+                    }
+                }
+            }
+        }
+
+/*=====  End of www.themevale.com  ======*/

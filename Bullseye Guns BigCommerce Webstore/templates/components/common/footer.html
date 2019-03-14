@@ -1,0 +1,109 @@
+{{#if banners.bottom}}
+<div class="banners" data-banner-location="bottom">
+    <div class="banner">
+        {{{limit banners.bottom 1}}}
+    </div>
+</div>
+{{/if}}
+<footer class="footer" role="contentinfo">
+     <!-- Left banner -->
+               <div class="container"> {{> components/cms/brand}}</div>
+        <hr class="foothr">
+    <div class="container">
+        <div class="row">
+            <article class="col-md-4 col-12 fooab" data-section-type="footer-webPages">
+                    <div id="social">
+                    
+                     {{> components/cms/foot-about }}
+                     {{> components/common/social-links}}
+                     
+                 </div>
+            </article>
+            
+        
+        <section class="footer-infon col-md-8 col-12">
+            <div class="row">
+            <article class="col-md-4 col-12 fborder" data-section-type="footer-webPages">
+                <h5 class="footer-info-heading">{{lang 'footer.navigate'}}
+                    <button type="button" class="toggle plus-button collapsed" data-toggle="collapse" data-target="#nevigate"></button>
+                </h5>
+                <ul class="footer-info-list collapse navbar-collapse" id="nevigate">
+                    {{#each pages}}
+                        <li>
+                            <a href="{{url}}">{{name}}</a>
+                        </li>
+                    {{/each}}
+                    <li>
+                        <a href="{{urls.sitemap}}">{{lang 'sitemap.page_title'}}</a>
+                    </li>
+                </ul>
+            </article>
+
+           <!--  <article class="col-lg-3 col-xs-12" data-section-type="footer-categories">
+                <h5 class="footer-info-heading">{{lang 'footer.categories'}}
+                    <button type="button" class="toggle plus-button collapsed" data-toggle="collapse" data-target="#fcate"></button>
+                </h5>
+                <ul class="footer-info-list collapse navbar-collapse" id="fcate">
+                    {{#each categories}}
+                        <li>
+                            <a href="{{url}}">{{name}}</a>
+                        </li>
+                    {{/each}}
+                </ul>
+            </article> -->
+
+            {{#and theme_settings.shop_by_brand_show_footer shop_by_brand.length}}
+            <article class="col-md-4 col-12 fborder" data-section-type="footer-brands">
+                <h5 class="footer-info-heading">{{lang 'footer.brands'}}
+                    <button type="button" class="toggle plus-button collapsed" data-toggle="collapse" data-target="#pbrands"></button>
+                </h5>
+                <ul class="footer-info-list collapse navbar-collapse" id="pbrands">
+                    {{#each shop_by_brand}}
+                        <li>
+                            <a href="{{url}}">{{name}}</a>
+                        </li>
+                    {{/each}}
+                    <li><a href="{{urls.brands}}">{{lang 'common.view_all'}}</a></li>
+                </ul>
+            </article>
+            {{/and}}
+
+            {{#if settings.address}}
+            <article class="col-md-4 col-12 fborder" data-section-type="storeInfo">
+                <h5 class="footer-info-heading">{{lang 'footer.info'}}
+                    <button type="button" class="toggle plus-button collapsed" data-toggle="collapse" data-target="#cinfo"></button>
+                </h5>
+                <div class="collapse navbar-collapse" id="cinfo">
+                    <img class="img-responsive pull-left" src="https://cdn8.bigcommerce.com/s-33xcm4zhia/product_images/uploaded_images/location.png?t=1530191969&_ga=2.183814191.8881157.1530009852-1542549271.1530009852"><address>{{nl2br settings.address}}</address>
+                    {{#if settings.phone_number}}
+                        <img class="img-responsive pull-left" src="https://cdn8.bigcommerce.com/s-33xcm4zhia/product_images/uploaded_images/phone.png?t=1530191970&_ga=2.183814191.8881157.1530009852-1542549271.1530009852"><span class="foot-phone">{{lang 'footer.call_us' phone_number=settings.phone_number}}</span>
+                    {{/if}}
+                    {{> components/common/payment-icons}}
+                </div>
+            </article>
+            {{/if}}
+        </div>
+        </section>
+        {{#if theme_settings.geotrust_ssl_common_name}}
+            <div class="footer-geotrust-ssl-seal">
+                {{> components/common/geotrust-ssl-seal}}
+            </div>
+        {{/if}}
+    </div>
+    </div>
+<div class="footcopy">
+    <div class="container">
+        <div class="foot-bottom text-center"> 
+        {{#if theme_settings.show_powered_by}}
+                <span class="powered-by">Powered by <a href="https://www.bigcommerce.com?utm_source=merchant&amp;utm_medium=poweredbyBC" rel="nofollow">BigCommerce</a></span>
+        {{/if}}
+        {{#if theme_settings.show_copyright_footer}}
+                <span class="powered-by">&copy; {{moment format="YYYY"}} {{settings.store_name}} </span>
+        {{/if}}
+    </div>
+    </div>   
+</div>
+     <a href="" id="scroll" title="Scroll to Top" style="display: block;">
+       <img src="http://bullseyegun.com/product_images/uploaded_images/scroll.png" alt="">
+    </a>
+</footer>

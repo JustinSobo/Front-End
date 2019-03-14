@@ -1,0 +1,50 @@
+
+<div id="brand" class="owl-carousel'>
+		{{#if (lang 'webibrand.logo1.image') '!=' ' '}}
+		<a href="{{url}}"><img class="img-fluid lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="{{cdn (lang 'http://bullseyegun.com/product_images/theme_images/brand-1.jpg')}}"  alt="{{title}}"  /></a>
+		{{else}}
+		<a href="{{url}}"><img class="img-fluid lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="{{cdn (lang 'webibrand.logo1.placeholderImage')}}" alt="{{title}}"  /></a>
+		{{/if}}
+		
+		{{#if (lang 'webibrand.logo1.image') '!=' ' '}}
+		<a href="{{url}}"><img class="img-fluid lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="{{cdn (lang 'http://bullseyegun.com/product_images/theme_images/brand-2.jpg')}}"  alt="{{title}}"  /></a>
+		{{else}}
+		<a href="{{url}}"><img class="img-fluid lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="{{cdn (lang 'webibrand.logo2.placeholderImage')}}" alt="{{title}}"  /></a>
+		{{/if}}
+		
+		{{#if (lang 'webibrand.logo1.image') '!=' ' '}}
+		<a href="{{url}}"><img class="img-fluid lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="{{cdn (lang 'http://bullseyegun.com/product_images/theme_images/brand-3.jpg')}}"  alt="{{title}}"  /></a>
+		{{else}}
+		<a href="{{url}}"><img class="img-fluid lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="{{cdn (lang 'webibrand.logo3.placeholderImage')}}" alt="{{title}}"  /></a>
+		{{/if}}
+		
+		{{#if (lang 'webibrand.logo1.image') '!=' ' '}}
+		<a href="{{url}}"><img class="img-fluid lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="{{cdn (lang 'http://bullseyegun.com/product_images/theme_images/brand-5.jpg')}}"  alt="{{title}}"  /></a>
+		{{else}}
+		<a href="{{url}}"><img class="img-fluid lazyload" data-sizes="auto" src="{{cdn '/assets/img/loading.svg'}}" data-src="{{cdn (lang 'webibrand.logo5.placeholderImage')}}" alt="{{title}}"  /></a>
+		{{/if}}
+		
+		
+	</div>
+</div>
+
+
+
+<script type="text/javascript">
+    $(document).ready(function() {
+    $("#brand").owlCarousel({
+    itemsCustom : [
+    [0, 2],
+    [600, 4],
+    [768, 5],
+    [1200, 6],
+    [1850, 7]
+    ],
+      autoPlay: 2500,
+      loop: true,
+      navigationText: ['<i class="fa fa-angle-left" aria-hidden="true"></i>', '<i class="fa fa-angle-right" aria-hidden="true"></i>'],
+      navigation : false,
+      pagination:false
+    });
+    });
+</script>

@@ -1,0 +1,71 @@
+// =============================================================================
+// PRODUCT VIEW (CSS)
+// =============================================================================
+
+
+// Product view layout
+// -----------------------------------------------------------------------------
+@media(max-width:800px){
+    .modal .productView-title{
+        margin-top:15px;
+        font-size:14px;
+    }
+
+}
+
+.productView {
+    background: $color-white !important;
+    border-radius:4px;
+    padding: 15px 15px;
+
+    .modal & {
+        padding-bottom: 0;
+        padding-top: 0;
+
+    }
+}
+
+.productView--quickView {
+    .socialLinks-item--print {
+        display: none;
+    }
+}
+
+.productView-images {
+    @include grid-column(12);
+    padding-left: spacing("base");
+    padding-right: spacing("base");
+
+    @include breakpoint("medium") {
+        width: grid-calc(6, $total-columns);
+    }
+}
+.tab-content.has-jsContent.is-active{
+    padding-bottom: 0;
+}
+.tabs-contents p,.tabs-contents{
+    color: $color-grey;
+    font-size:13px;
+    text-align: justify;
+}
+.productView-description {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 30px;
+    border-radius: 4px;
+    background-color: $color-white;
+
+    .productView-title {
+        border-bottom: container("border");
+        margin-bottom: spacing("base");
+    }
+
+    .productView-description {
+        @include breakpoint("medium") {
+            clear: both;
+            float: none;
+            width: 100%;
+        }
+    }
+}
+

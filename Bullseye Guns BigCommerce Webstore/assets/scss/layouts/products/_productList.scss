@@ -1,0 +1,332 @@
+// =============================================================================
+// PRODUCT LIST (CSS)
+// =============================================================================
+
+
+// Product list
+// -----------------------------------------------------------------------------
+.productList .product .second-img {
+    top:0;
+    left: 0;
+    margin: 0 auto;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transition: all 400ms ease-in-out 0s;
+    -webkit-transition: all 400ms ease-in-out 0s;
+    -moz-transition: all 400ms ease-in-out 0s;
+    -o-transition: all 400ms ease-in-out 0s;
+    -ms-transition: all 400ms ease-in-out 0s;
+}
+.productList .product:hover .second-img{
+    opacity: 1;
+}
+.productList .allbtn .button-group{
+    opacity:1;
+    position:unset;
+    border-top:none;
+}
+.productList .bcart,.productList .bwish,.productList .bcom,.productList .bquick{
+    background: $color-primary;
+    color: #fff;
+    padding: 8px 9px;
+    transition: 0.3s ease;
+    display:inline-block;
+    margin: 0 3px 0 0 !important;
+    color:$color-white;
+    fill:$color-white;
+    min-width: 35px;
+    height: 35px;
+    text-align: center;
+    border-radius:4px;
+    font-size: 0.9375rem;
+}
+.productList .bcart:hover,.productList .bwish:hover,.productList .bcom:hover,.productList .bquick:hover{
+    background: $color-black;
+    fill:$color-white !important;
+}
+.productList .allbtn:hover svg, .productList .bcart:hover svg, .productList .bwish:hover svg {
+    fill:$color-white !important;
+}
+.productList .allbtn a{
+    color:$color-white;
+}
+.listItem-title a,.listItem-content .proprice span,.listItem-content .pricedis span{
+    font-size: 16px;
+}
+.listItem-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: $color-black;
+    font-size: 16px;
+    margin: 0 0 10px 0;
+    text-transform: capitalize;
+    transition: 0.3s ease;
+    font-weight:500;
+}
+.listItem-title a{
+    color: $color-black;
+}
+.listItem-title a:hover,.listItem-title:hover {
+    color: $color-primary;
+}
+.listdes{
+    color:$color-grey;
+    font-size:0.975rem;
+    max-height: 65px;
+    overflow: hidden;
+    margin-bottom:10px;
+}
+.productList .pricedis div{
+    display: inline-block;
+}
+.productList .proprice{
+    height:auto;
+}
+.productList .allbtn{
+    margin-top:18px;
+}
+.pagination{
+    clear: both;
+}
+@media(min-width:1850px){
+    .listItem-body{
+        width:65%;
+    }
+    .listItem-figure{
+        width:35%;
+    }
+    .productList .product {
+        float:left;
+    }
+}
+@media(min-width:1200px) and (max-width:1849px){
+    .productList .product {
+        max-width:100%;
+    }
+}
+.listItem-content {
+    padding: 0 15px;
+}
+
+// Product list item
+// -----------------------------------------------------------------------------
+.productList {
+    @include u-listBullets("none");
+
+    .product {
+        .listItem{
+              background-color: $color-white;
+              padding:15px;
+              border-radius:4px;
+              margin-bottom: 15px;
+        }
+    }
+}
+.listItem {
+
+    @include breakpoint("small") {
+        display: table;
+    }
+}
+
+.listItem-figure,
+.listItem-body {
+
+    @include breakpoint("small") {
+        display: inline-block;
+        vertical-align: top;
+    }
+
+    @include breakpoint("large") {
+        vertical-align: middle;
+    }
+}
+
+// QuickView button
+// -----------------------------------------------------------------------------
+
+.listItem-button {
+    background-color: $card-figcaption-button-background;
+    border-color: $card-figcaption-button-borderColor;
+    color: $card-figcaption-button-color;
+
+    &:hover {
+        background-color: $card-figcaption-button-backgroundHover;
+        border-color: $card-figcaption-button-borderColor;
+        color: $card-figcaption-button-color;
+    }
+}
+
+
+// List figure
+// -----------------------------------------------------------------------------
+
+.listItem-figure {
+    margin: 0 0 spacing("single");
+    position:relative;
+
+    @include breakpoint("small") {
+        margin-bottom: 0;
+        width: grid-calc(3, $total-columns);
+        float:left;
+    }
+
+    @include breakpoint("large") {
+        position: relative;
+    }
+
+    .listItem-button {
+        margin: spacing("single") 0;
+
+        @include breakpoint("large") {
+            @include verticalPositionMiddle();
+            display: inline-block;
+            margin: 0 0 spacing("single");
+            pointer-events: all;
+            transform-style: preserve-3d;
+        }
+    }
+}
+
+.listItem-figureBody {
+    opacity: 1;
+    text-align: center;
+
+    @include breakpoint("large") {
+        bottom: 0;
+        height: 100%;
+        left: spacing("half");
+        opacity: 0;
+        position: absolute;
+        right: spacing("half");
+        top: 0;
+
+        &:hover {
+            opacity: 1;
+        }
+    }
+}
+
+.listItem-image {
+    width: 100%;
+    border-radius: 4px;
+}
+
+.listItem-body {
+
+    @include breakpoint("small") {
+        width: grid-calc(9, $total-columns);
+    }
+}
+
+
+// List content
+// -----------------------------------------------------------------------------
+
+.listItem-details,
+.listItem-actions {
+
+    @include breakpoint("large") {
+        display: table-cell;
+        vertical-align: top;
+    }
+}
+
+
+// List details
+// -----------------------------------------------------------------------------
+
+.listItem-details {
+
+    @include breakpoint("large") {
+
+        > :last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+.listItem-rating {
+    margin-bottom: 10px;
+}
+
+.listItem-brand {
+    color: color("greys", "light");
+    font-size: fontSize("base");
+    margin: 0 0 spacing("eighth");
+
+    @include breakpoint("medium") {
+        font-size: fontSize("smaller");
+        margin-bottom: 0;
+    }
+}
+
+.listItem-title {
+
+    > a {
+        text-decoration: none;
+    }
+}
+
+.listItem-price {
+    margin-bottom: 10px;
+    font-size: 16px;;
+
+    @include breakpoint("medium") {
+        font-size: 16px;
+    }
+}
+
+
+// List actions
+// -----------------------------------------------------------------------------
+//
+// 1. Magic number width to align closer to the intended design.
+//
+// -----------------------------------------------------------------------------
+
+.listItem-actions {
+
+    @include breakpoint("large") {
+        vertical-align: middle;
+        width: 22%; // 1
+
+        .button--compare {
+            @include buttonSize("small");
+        }
+    }
+
+    .button {
+        margin-bottom: 0;
+
+        @include breakpoint("large") {
+            width: 100%;
+
+            // scss-lint:disable NestingDepth
+            + .button {
+                margin: spacing("half") 0 0;
+            }
+        }
+    }
+}
+
+
+// Product list when sidebar is present
+// -----------------------------------------------------------------------------
+
+.page-sidebar + .page-content {
+
+    .productList {
+
+        // scss-lint:disable SelectorDepth, NestingDepth
+
+        .listItem-actions {
+
+            @include breakpoint("large") {
+                width: 30%;
+            }
+        }
+    }
+}

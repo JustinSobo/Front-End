@@ -1,0 +1,265 @@
+// =============================================================================
+// LOGIN (CSS)
+// =============================================================================
+//
+// Let press Ctrl + f and type of paste the key, then press Enter to search the content
+//
+//  1.0 Login page
+//
+//  2.0 Forgot pass
+//
+//  3.0 Create account
+//
+//  4.0 New password
+//
+//  RESPONSIVE
+//
+//
+// -----------------------------------------------------------------------------
+
+
+/*=========================================
+=            www.themevale.com            =
+=========================================*/
+
+    /*--------  1.0 Login page  ---------*/
+        .login-row {
+            width: 100%;
+            display: block;
+            &:before, &:after {
+                display: table;
+                content: " ";
+            }
+            &:after {
+                clear: both;
+            }
+            .login-form {
+                width: 100%;
+                display: block;
+                margin-bottom: 30px;
+            }
+            .new-customer {
+                width: 100%;
+                display: block;
+                padding: 25px;
+            }
+            @media (min-width: 601px) {
+                .login-form {
+                    width: 50%;
+                    float: left;
+                    padding-top: 30px;
+                    padding-right: 50px;
+                    margin-bottom: 0;
+                }
+                .new-customer {
+                    width: 50%;
+                    float: right;
+                    padding: 30px;
+                }
+            }
+            @media (min-width: 993px) {
+                .login-form {
+                    padding-top: 50px;
+                }
+                .new-customer {
+                    padding: 50px;
+                }
+            }
+            @media (min-width: 1025px) {
+                .login-form {
+                    max-width: 470px;
+                }
+                .new-customer {
+                    float: right;
+                    max-width: 470px;
+                }
+            }
+            @media (min-width: 1281px) {
+                .login-form {
+                    padding-top: 60px
+                }
+                .new-customer {
+                    padding: 60px;
+                    max-width: 570px;
+                }
+            }
+        }
+
+        .login-form {
+            .form-field {
+                input:-webkit-autofill, textarea:-webkit-autofill, select:-webkit-autofill {
+                    -webkit-box-shadow: 0 0 0 30px white inset;
+                }
+            }
+            .form-actions {
+                margin-top: 25px;
+                text-align: left;
+                .button {
+                    min-width: 200px;
+                    max-width: 200px;
+                    display: inline-block;
+                    vertical-align: middle;
+                }
+                .forgot-password {
+                    display: block;
+                    position: relative;
+                    margin-top: 10px;
+                    color: stencilColor('color-textBase');
+                }   
+            }
+            @media (min-width: 601px) {
+                .form-actions .button {
+                    min-width: 170px;
+                }
+            }
+            @media (min-width: 993px) {
+                .form-actions {
+                    .forgot-password {
+                        margin-top: 0;
+                        margin-left: 30px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        &:before {
+                            content: "";
+                            left: 0;
+                            width: 0;
+                            bottom: 0;
+                            height: 1px;
+                            position: absolute;
+                            transition: all 0.3s ease;
+                            background-color: stencilColor('color-textBase--hover');
+                        }
+                        &:hover {
+                            color: stencilColor('color-textBase--hover');
+                            &:before {
+                                width: 100%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    /*--------  2.0 New Customer  -------*/
+        .new-customer {
+            background-color: #fafafa;
+            .panel-header, .panel-body {
+                background-color: transparent;
+            }
+            .panel-header {
+                padding: 0;
+                .panel-title {
+                    font-size: 16px;
+                    line-height: 1;
+                    font-weight: 700;
+                    margin-bottom: 28px;
+                    letter-spacing: 0.8px;
+                    font-family: $fontFamily-headings;
+                    color: stencilColor('color-textHeading');
+                    text-transform: uppercase;
+                }
+            }
+            .panel-body {
+                padding: 0;
+                margin-bottom: 0;
+                ul li {
+                    line-height: 28px;
+                }
+            }
+            .button {
+                margin-top: 10px;
+                min-width: 200px;
+                margin-bottom: 0;
+            }
+            @media (min-width: 601px) {
+                .button {
+                    min-width: 240px;
+                }
+            }
+        }
+
+    /*--------  3.0 Customs page  ---------*/
+        .themevale_account {
+            h2, h3 {
+                font-weight: 600;
+                line-height: 1.2;
+            }
+            p {
+                strong {
+                    font-weight: 600;
+                }
+            }
+            > p, > ol, > ul {
+                line-height: 24px;
+            }
+            .account-body {
+                .account-content {
+                    padding-left: 0;
+                    padding-right: 0;
+                }
+                .g-recaptcha > div {
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+                @include breakpoint("small") {
+                    .g-recaptcha > div {
+                        margin-left: 0;
+                    }
+                    .form-actions {
+                        text-align: left;
+                    }
+                }
+            }
+            .form-prefixPostfix {
+                display: block;
+                .button {
+                    width: auto;
+                    height: auto;
+                    margin-top: 15px;
+                    padding: 6px 30px;
+                }
+                @media (min-width: 1025px) {
+                    display: flex;
+                    .button {
+                        margin-top: 0;
+                        margin-left: 30px;
+                    }
+                }
+            }
+            .form-actions {
+                #gift-certificate-preview,
+                #gift-certificate-submit {
+                    width: 100%;
+                }
+                .button[value="Send Message"],
+                .button[value="Clear"],
+                .button[data-wishlist],
+                .button[data-wishlist-delete],
+                .button[value="Save Address"], {
+                    min-width: 180px;
+                    margin-bottom: 0;
+                }
+                .button[value="Create Account"] {
+                    min-width: 270px;
+                }
+                @media (min-width: 601px) {
+                    #gift-certificate-preview {
+                        width: auto;
+                        min-width: 180px;
+                    }
+                    #gift-certificate-submit {
+                        width: auto;
+                        min-width: 345px;
+                    }
+                }
+            }
+            .gift-certificate-form {
+                @media (min-width: 1025px) {
+                    .form-actions {
+                        text-align: left;
+                    }
+                }
+            }
+        }
+
+/*=====  End of www.themevale.com  ======*/

@@ -1,0 +1,20 @@
+// =============================================================================
+// QUICK VIEW (CSS)
+// =============================================================================
+
+.quickView {
+    @include clearfix();
+}
+
+
+.productView--quickView.themevalte_productView {
+	margin-bottom: 0;
+	@media (min-width: 1024px) {
+		.themevalte_productView-left {
+			width: 44%;
+		}
+		.themevalte_productView-right {
+			width: 56%;
+		}
+	}
+}

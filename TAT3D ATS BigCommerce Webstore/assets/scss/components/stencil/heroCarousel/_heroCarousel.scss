@@ -1,0 +1,282 @@
+// HERO CAROUSEL
+// -----------------------------------------------------------------------------
+//
+// Purpose: Styles the hero carousel component, which basically adds extras to the
+// vendor slick carousel, to specifically display hero images.
+//
+// 1. Use object-fit on the image tag to keep aspect ratio and cover the space
+//    created by the outer div. The JS will detect browsers that do not support
+//    object-fit and instead copy the image src to a the background-image of the
+//    wrapper div and add the compat-object-fit class.
+//
+// 2. Visually overrides the top margin for '.body' defined in _body.scss.
+//    The '.body' top margin creates space between the header and page content.
+//    However, on the homepage, we want the carousel to be flush with the header.
+//
+// 3. Allows image to scale on large screens while preventing the top and bottom
+//    from becoming cut off.
+// -----------------------------------------------------------------------------
+
+
+/*=========================================
+=            www.themevale.com            =
+=========================================*/
+    
+    /*----------  0.Global style  --------*/
+        .heroCarousel {
+            margin-bottom: 30px;
+            .link {
+                vertical-align: top;
+            }
+            .slick-arrow {
+                padding: 0;
+                width: 50px;
+                height: 50px;
+                fill: #323232;
+                border: none;
+                transition: all 0.3s ease;
+                background-color: transparent;
+                color: #777777;
+                &:before {
+                    content: none;
+                }
+                &.slick-prev {
+                    left: 8%;
+                }
+                &.slick-next {
+                    right: 8%;
+                }
+            }
+            .slick-dots {
+                bottom: 40px;
+                li {
+                    padding: 0;
+                    width: auto;
+                    height: auto;
+                    margin: 0 7px;
+                    button {
+                        width: 12px;
+                        height: 12px;
+                        opacity: 0.2;
+                        border: 1px solid #323232;
+                        background-color: #323232;
+                        transition: all 0.3s ease;
+                        &:before {
+                            content: none;
+                        }
+                    }
+                }
+                .slick-active {
+                    button {
+                        opacity: 0.8;
+                        background-color: transparent;
+                    }
+                }
+            }
+            .slick-slide {
+                .heroCarousel-title {
+                    visibility: hidden;
+                    animation-delay: 0ms;
+                    animation-name: fadeOutDown;
+                }
+                .heroCarousel-description {
+                    visibility: hidden;
+                    animation-delay: 0ms;
+                    animation-name: fadeOutDown;
+                }
+                .heroCarousel-action {
+                    visibility: hidden;
+                    animation-delay: 0ms;
+                    animation-name: fadeOutDown;
+                }
+            }
+            .slick-slide.slick-current {
+                .heroCarousel-title {
+                    visibility: visible;
+                    animation-delay: 100ms;
+                    animation-name: fadeInUp;
+                }
+                .heroCarousel-description {
+                    visibility: visible;
+                    animation-delay: 300ms;
+                    animation-name: fadeInUp;
+                }
+                .heroCarousel-action {
+                    visibility: visible;
+                    animation-delay: 500ms;
+                    animation-name: fadeInUp;
+                }
+            }
+            &.slick-dotted {
+                margin-bottom: 30px;
+            }
+            @media (max-width: 1024px) {
+                margin-bottom: 15px;
+                &.slick-dotted {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    
+    /*----------  1.Main style  ----------*/
+        .heroCarousel-slide {
+            position: relative;
+        }
+
+        .heroCarousel-image {
+            z-index: 1;
+            width: 100%;
+            position: relative;
+        }
+
+        .heroCarousel-content {
+            max-width: 33%;
+            margin-left: auto;
+            text-align: left;
+            padding: 5px;
+            .heroCarousel-title {
+                margin: 0 0 5px 0;
+                font-size: 50px;
+                font-weight: 800;
+                line-height: 1.5;
+                letter-spacing: 0.3px;
+                text-transform: uppercase;
+                font-family: $fontFamily-headings;
+                color: #ffffff;
+            }
+            .heroCarousel-description {
+                color: #ffffff;
+                font-size: 18px;
+                line-height: 24px;
+                font-weight: 500;
+                letter-spacing: 0.26px;
+                margin: 0 0 30px 0;
+            }
+            .button {
+                margin: 0;
+                color: #ffffff;
+                min-width: 200px;
+                border-color: #ffffff;
+                background-color: transparent;
+                &:hover,
+                &:focus,
+                &:active {
+                    color: #000000;
+                    background-color: #ffffff;
+                }
+            }
+            @media (max-width: 1024px) {
+                padding: 20px 0 20px 0;
+            }
+        }
+
+        @media (min-width: 1025px) {
+            #slick-slide01 {
+                .heroCarousel-content {
+                    max-width: 33%;
+                    margin-left: auto;
+                    text-align: left;
+                    padding: 5px;
+                    transform: translate3d(0%,-50%, 0);
+                }
+            }
+            .heroCarousel {
+                .slick-arrow {
+                    opacity: 0;
+                }
+                &:hover {
+                    .slick-arrow {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        @media (min-width: 993px) {
+            .heroCarousel-content-wrapper {
+                max-width: 33%;
+                margin-left: auto;
+                text-align: left;
+                padding: 5px;
+                position: absolute;
+                transform: translateX(-50%);
+            }
+
+            .heroCarousel-content {
+                max-width: 33%;
+                margin-left: auto;
+                text-align: left;
+                padding: 5px;
+                padding: 0 15px;
+                position: absolute;
+                transform: translate3d(-50%,-50%, 0);
+            }
+        }
+
+    /*----------  2.Responsive  ----------*/
+        @media (max-width: 1450px) {
+            .heroCarousel {
+                .slick-arrow {
+                    width: 40px;
+                    height: 40px;
+                    &.slick-prev {
+                        left: 30px;
+                    }
+                    &.slick-next {
+                        right: 30px;
+                    }
+                }
+                .slick-dots {
+                    bottom: 20px;
+                }
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .heroCarousel-content {
+                width: 100%;
+                .heroCarousel-title {
+                    font-size: 30px;
+                    line-height: 1.4;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        @media (max-width: 414px) {
+            .heroCarousel-content {
+                .heroCarousel-title {
+                    font-size: 26px;
+                    line-height: 1.2;
+                }
+                .heroCarousel-description {
+                    font-size: 12px;
+                }
+                .button {
+                    min-width: 180px;
+                }
+            }
+            .heroCarousel-image-wrapper {
+                display: block;
+                position: relative;
+                overflow: hidden;
+                background-color: #fafafa;
+                &:before {
+                    content: "";
+                    display: block;
+                    padding-bottom: 50%;
+                }
+                > .heroCarousel-image {
+                    top: 50%;
+                    left: 50%;
+                    z-index: 2;
+                    width: auto;
+                    height: 100%;
+                    max-width: none;
+                    position: absolute;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+/*=====  End of www.themevale.com  ======*/

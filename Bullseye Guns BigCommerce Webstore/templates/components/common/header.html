@@ -1,0 +1,52 @@
+<!-- {{#if banners.top}}
+<div class="banners" data-banner-location="top">
+    <div class="banner">
+        {{{limit banners.top 1}}}
+    </div>
+</div>
+{{/if}} -->
+<header class="header" role="banner">
+        <a href="#" class="mobileMenu-toggle" data-mobile-menu-toggle="menu">
+            <span class="mobileMenu-toggleIcon">Toggle menu</span>
+        </a>
+        <div class="toppati">
+            <div class="container">
+                <div class="row"> 
+                    <div class="col-12 col-md-6">{{> components/cms/head-top}}</div>
+                    <div class="col-6"> 
+                        {{> components/common/head-right}}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="header-middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-3 col-6 headlogo">
+                        {{#if page_type '===' 'default'}}
+                            <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                                {{> components/common/store-logo}}
+                            </div>
+                        {{else}}
+                            <div class="header-logo header-logo--{{theme_settings.logo-position}}">
+                                {{> components/common/store-logo}}
+                            </div>
+                        {{/if}}
+                    </div>
+               
+                    {{> components/common/navigation}}
+                 </div>
+             </div>
+         </div>
+        {{{region name="header_bottom"}}}
+        <div class="webimenu">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4 col-lg-3 col-sm-4 stmenu"></div>
+                    <div class="navPages-container col-md-8 col-lg-9 col-sm-8 stme2" id="menu" data-menu>
+                        {{> components/common/navigation-menu}}
+                    </div>
+                </div>
+            </div>
+        </div>
+</header>

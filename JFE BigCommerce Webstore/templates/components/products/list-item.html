@@ -1,0 +1,71 @@
+<article class="listItem">
+    <figure class="listItem-figure">
+        <img class="listItem-image lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
+        <div class="listItem-figureBody">
+            {{#if show_wishlist}}
+                <a href="/wishlist.php?action=add&product_id={{id}}" class="listItem-button-wishlist wishlist" title="{{lang 'account.wishlists.add_item'}}">
+                    <svg><use xlink:href="#icon-heart" /></svg>
+                </a>
+            {{/if}}
+            {{#unless hide_product_quick_view}}
+                {{#if theme_settings.show_product_quick_view}}
+                    <a href="#" class="listItem-button quickview" data-product-id="{{id}}">{{lang 'products.quick_view'}}</a>
+                {{/if}}
+            {{/unless}}
+        </div>
+    </figure>
+    <div class="listItem-body">
+        <div class="listItem-content">
+            <div class="listItem-details">
+                {{#if brand.name}}
+                <p class="listItem-brand">{{brand.name}}</p>
+                {{/if}}
+                <h4 class="listItem-title">
+                    <a href="{{url}}">{{name}}</a>
+                </h4>
+                <div class="listItem-priceWrapper">
+                    {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                        {{#if price}}
+                            <div class="listItem-price">{{> components/products/price price=price}}</div>
+                        {{/if}}
+                    {{/or}}
+                    {{#if show_rating}}
+                        <p class="listItem-rating" data-test-info-type="productRating">
+                            <span class="rating--small">
+                                {{> components/products/ratings rating=rating}}
+                            </span>
+                        </p>
+                    {{/if}}
+                </div>
+                {{#if summary}}
+                    <p class="listItem-desciption">{{{summary}}}</p>
+                {{/if}}
+            </div>
+            <div class="listItem-actions">
+                {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                    {{#if show_cart_action}}
+                        {{#if has_options}}
+                            <a href="{{url}}" class="button button--small" data-product-id="{{id}}">{{lang 'products.choose_options'}}</a>
+                        {{/if}}
+                        {{#if pre_order}}
+                            <a href="{{pre_order_add_to_cart_url}}" class="button button--primary">{{lang 'products.pre_order'}}</a>
+                        {{/if}}
+                        {{#if add_to_cart_url }}
+                            <a href="{{add_to_cart_url}}" class="button button--primary">{{lang 'products.add_to_cart'}}</a>
+                        {{/if}}
+                        {{#if out_of_stock_message }}
+                            <a href="{{url}}" class="button button--small" data-product-id="{{id}}">{{out_of_stock_message}}</a>
+                        {{/if}}
+                    {{/if}}
+                {{else}}
+                    {{> components/common/login-for-pricing}}
+                {{/or}}
+                {{#if show_compare}}
+                    <label class="listItem-compare" for="compare-{{id}}">
+                        <input type="checkbox" name="products[]" value="{{id}}" id="compare-{{id}}" data-compare-id="{{id}}"> {{lang 'products.compare'}}
+                    </label>
+                {{/if}}
+            </div>
+        </div>
+    </div>
+</article>

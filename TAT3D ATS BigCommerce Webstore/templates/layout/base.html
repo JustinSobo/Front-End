@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html class="no-js" lang="{{ locale_name }}">
+    <head>
+        <title>{{ head.title }}</title>
+        {{{ resourceHints }}}
+        {{{ head.meta_tags }}}
+        {{{ head.config }}}
+        {{#block "head"}} {{/block}}
+        <link href="{{ head.favicon }}" rel="shortcut icon">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <meta name="theme-color" content="#323232">
+        <meta name="Description" content="Moda BigCommerce theme developed by Themevale">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        {{{stylesheet '/assets/css/theme.css'}}}
+        {{{head.scripts}}}
+        {{{head.rsslinks}}}
+        {{inject 'themeSettings' theme_settings}}
+        {{inject 'genericError' (lang 'common.generic_error')}}
+        {{inject 'maintenanceMode' settings.maintenance}}
+        {{inject 'urls' urls}}
+        {{{snippet 'htmlhead'}}}
+    </head>
+    <body class="page-type-{{page_type}}">
+
+        {{{snippet 'header'}}}
+        <div class="icons-svg-sprite">{{> components/common/icons/icon-defs }}</div>
+        {{#if settings.privacy_cookie}}
+            {{> components/common/cookie}}
+        {{/if}}
+
+        <!-- Sidebar mobile -->
+        <div class="themevale_Mobile themevale_MobileSidebar" id="sidebar-mobile">
+            <div class="themevale_close">
+                <a href="javascript:void(0)" class="close">×</a>
+            </div>
+            <div class="themevale_MobileContent"></div>
+        </div>
+        <!-- menu mobile  -->
+        <div class="themevale_Mobile themevale_MobileMenu" id="menu-mobile">
+            <div class="themevale_close">
+                <a href="javascript:void(0)" class="close">×</a>
+            </div>
+            <div class="themevale_MobileContent"></div>
+        </div>
+        <!-- login mobile -->
+        <div class="themevale_Mobile themevale_MobileAccount" id="account-mobile">
+            <div class="themevale_close">
+                <a href="javascript:void(0)" class="close">×</a>
+            </div>
+            <div class="themevale_MobileContent">
+                <ul class="navPages">
+                    {{#if customer}}
+                        <li><a class="navPages-action" href="{{urls.account.index}}">{{lang 'Welcome back,'}} <strong>{{customer.name}}.</strong></a></li>
+                        <li><a class="navPages-action" href="{{urls.account.orders.all}}">{{lang 'account.nav.orders'}}</a></li>
+                        {{#if settings.returns_enabled}}
+                        <li><a class="navPages-action" href="{{urls.account.returns}}">{{lang 'account.nav.returns'}}</a></li>
+                        {{/if}}
+                        <li><a class="navPages-action" href="{{urls.account.inbox}}">{{lang 'account.mobile_nav.messages'}}</a></li>
+                        <li><a class="navPages-action" href="{{urls.account.addresses}}">{{lang 'account.nav.addresses'}}</a></li>
+                        {{#if settings.show_wishlist}}
+                        <li><a class="navPages-action" href="{{urls.account.wishlists.all}}">{{lang 'account.mobile_nav.wishlists'}}</a></li>
+                        {{/if}}
+                        <li><a class="navPages-action" href="{{urls.account.recent_items}}">{{lang 'account.nav.recently_viewed'}}</a></li>
+                        <li><a class="navPages-action" href="{{urls.account.details}}">{{lang 'account.nav.settings'}}</a></li>
+                        <li><a class="navPages-action" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a></li>
+                    {{else}}
+                        <li><a class="navPages-action" href="{{urls.auth.login}}">{{lang 'common.login'}}</a></li>
+                        <li><a class="navPages-action" href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a></li>
+                    {{/if}}
+                    {{#if settings.gift_certificates_enabled}}
+                        <li><a class="navPages-action" href="{{urls.gift_certificate.purchase}}">{{lang 'common.gift_cert'}}</a></li>
+                    {{/if}}
+                </ul>
+            </div>
+        </div>
+
+        {{> components/common/header }}
+        {{> components/common/body }}
+        {{> components/common/footer }}
+
+        <div class="bg-mobile"></div>
+
+        <script>window.__webpack_public_path__ = "{{cdn 'assets/dist/'}}";</script>
+        <script src="{{cdn 'assets/dist/theme-bundle.main.js'}}"></script>
+        <script>
+            window.stencilBootstrap("{{page_type}}", {{jsContext}}).load();
+        </script>
+
+        <!-- Newsletter Popup -->
+        {{#if theme_settings.themevale_NewsletterPopup}}
+            {{> components/themevale/newsletter}}
+            <script>
+                var domain=document.URL,secure_base_url="{{settings.secure_base_url}}",length=secure_base_url.length;0<length&&(domain=domain.substr(0,length)),domain==secure_base_url?window.themevaleNewsletterPopup(1,!1):window.themevaleNewsletterPopup(1,!0);
+            </script>
+        {{else}}
+            <script>
+                window.themevaleNewsletterPopup(1, false);
+            </script>
+        {{/if}}
+
+        {{{footer.scripts}}}
+        {{{snippet 'footer'}}}
+    </body>
+</html>

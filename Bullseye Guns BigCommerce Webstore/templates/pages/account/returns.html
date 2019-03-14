@@ -1,0 +1,31 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+---
+
+{{#partial "page"}}
+
+{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+<h1 class="page-heading">{{lang 'account.returns.heading' }}</h1>
+{{> components/account/navigation account_page='returns'}}
+
+<main class="account account--fixed">
+    <div class="account-body">
+        <section class="account-content">
+            {{#if customer.returns}}
+                {{> components/account/returns-list returns=customer.returns}}
+            {{else}}
+                {{> components/common/alert-info (lang 'account.returns.none')}}
+            {{/if}}
+        </section>
+    </div>
+</main>
+
+{{/partial}}
+{{> layout/base}}

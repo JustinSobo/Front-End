@@ -1,0 +1,33 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+---
+<main class="page col-sm-8 col-lg-9 col-md-8 col-xs-12 crwidth page-content home-top">
+{{#partial "page"}}
+    <div class="account">
+        {{#if settings.show_wishlist}}
+            {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+            <h2 class="page-heading">
+                {{#if forms.wishlist.id}}
+                    {{lang 'account.wishlists.edit'}}
+                {{else}}
+                    {{#if forms.wishlist.action}}
+                        {{lang 'account.wishlists.new'}}
+                    {{else}}
+                        {{lang 'account.wishlists.heading'}}
+                    {{/if}}
+                {{/if}}
+            </h2>
+            {{> components/account/navigation account_page='wishlists'}}
+            {{> components/account/add-wishlist}}
+        {{/if}}
+    </div>
+</main>
+{{/partial}}
+{{> layout/base}}

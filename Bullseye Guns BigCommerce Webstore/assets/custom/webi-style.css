@@ -1,0 +1,43 @@
+body{
+ 	font-family: 'Poppins', Helvetica, sans-serif;
+    color: #222;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: .8px;
+    padding-top: 0;
+ }
+ button:focus{
+    outline: none !important;
+ }
+ :focus {
+    outline: none;
+}
+svg{
+    vertical-align: middle;
+}
+dl, ol, ul{
+    margin: 0;
+}
+@media(min-width: 1410px){
+	.container{
+		max-width: 1380px !important;
+	}
+}
+@media(min-width: 1200px) and (max-width: 1409px){
+    .container{
+        max-width: 1170px !important;
+    }
+}
+@media(max-width: 1199px){
+    .container {
+        max-width: 100%;
+    }
+}
+a:hover{
+    text-decoration: none;
+}
+@media(min-width: 801px){
+    .wb-desktop-hide {
+        display: none;
+    }
+}

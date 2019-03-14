@@ -1,0 +1,75 @@
+<article class="card {{#if alternate}}card--alternate{{/if}} toppro leftpro">
+    <figure class="card-figure">
+        {{#or price.non_sale_price_with_tax price.non_sale_price_without_tax}}
+            {{#if theme_settings.product_sale_badges '===' 'sash'}}
+                <div class="sale-flag-sash">
+                    <span class="sale-text">On Sale!</span>
+                </div>
+            {{else if theme_settings.product_sale_badges '===' 'topleft'}}
+                <div class="sale-flag-side">
+                    <span class="sale-text">On Sale!</span>
+                </div>
+            {{else if theme_settings.product_sale_badges '===' 'burst'}}
+                <div class="starwrap">
+                    <div class="sale-text-burst">On Sale!</div>
+                    <div class="sale-flag-star"></div>
+                </div>
+            {{/if}}
+        {{/or}}
+        <div class="row leftpromar">
+        <div class="image-block col-lg-4 col-sm-5 col-4">
+            {{#if demo}}
+                <div class="card-img-container">
+                    <img class="card-image lazyload mx-auto d-block" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
+                </div>
+            {{else}}
+                <a href="{{url}}">
+                    <div class="card-img-container">
+                        <img class="card-image lazyload mx-auto d-block" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
+                    </div>
+                    {{#each (limit images 2)}}
+                    {{#if @index '>' 0}}
+                        <img src="{{getImage this 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}" class="second-img">
+                    {{/if}}
+                    {{/each}}
+                </a>
+            {{/if}}
+           
+                
+        </div>
+     
+        <div class="card-body col-lg-8 col-sm-7 col-8">
+            <h4 class="card-title">
+                {{#if demo}}
+                    {{name}}
+                {{else}}
+                    <a href="{{url}}">{{name}}</a>
+                {{/if}}
+            </h4>
+            
+           <!--  {{#if brand.name}}
+                <p class="card-text" data-test-info-type="brandName">{{brand.name}}</p>
+            {{/if}} -->
+        <div class="proprore">
+             {{#if show_rating}}
+                <div class="card-text" data-test-info-type="productRating">
+                    <span class="rating--small">
+                        {{> components/products/ratings rating=rating}}
+                    </span>
+                </div>
+            {{/if}}
+            
+            <div class="card-text proprice" data-test-info-type="price">
+                {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                    {{> components/products/price price=price}}
+                {{else}}
+                    {{> components/common/login-for-pricing}}
+                {{/or}}
+                {{> components/products/bulk-discount-rates}}
+            </div>
+        </div>
+        </div>
+        </div>
+    </figure>
+    
+</article>

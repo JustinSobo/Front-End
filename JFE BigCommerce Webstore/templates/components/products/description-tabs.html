@@ -1,0 +1,91 @@
+<section class="themevale_tabToggle productDescription" data-accordion-item>
+    <h4 class="toggle-title">
+        <a href="#productDescription-content" class="toggleLink" data-collapsible>
+          <span class="text">{{lang 'products.description'}}</span>
+          <span class="icon"><svg><use xlink:href="#slick-arrow-next"></use></svg></span>
+        </a>
+    </h4>
+    <div class="toggle-content" id="productDescription-content">
+        {{{product.description}}}
+        {{{snippet 'product_description'}}}
+
+        {{#if product.tags.length}}
+            <ul class="product-tags">
+            {{#each product.tags}}
+                <li>{{name}}</li>
+            {{/each}}
+            </ul>
+        {{/if}}
+    </div>
+</section>
+{{#if product.warranty}}
+    <section class="themevale_tabToggle productWarranty" data-accordion-item>
+        <h4 class="toggle-title">
+          <a href="#productWarranty-content" class="toggleLink" data-collapsible>
+            <span class="text">{{lang 'products.warranty'}}</span>
+            <span class="icon"><svg><use xlink:href="#slick-arrow-next"></use></svg></span>
+          </a>
+      </h4>
+        <div class="toggle-content" id="productWarranty-content">
+            {{{product.warranty}}}
+        </div>
+    </section>
+{{/if}}
+{{#if settings.show_product_reviews}}
+    {{>components/products/reviews reviews=product.reviews product=product urls=urls}}
+{{/if}}
+<section class="themevale_tabToggle productCustomTab" data-accordion-item>
+    <h4 class="toggle-title">
+        <a href="#productCustomTab-content" class="toggleLink" data-collapsible>
+          <span class="text">Shipping & Returns</span>
+          <span class="icon"><svg><use xlink:href="#slick-arrow-next"></use></svg></span>
+        </a>
+    </h4>
+    <div class="toggle-content" id="productCustomTab-content" aria-hidden="false">
+        <h6>Shipping Policy</h6>
+        
+        
+        <p>You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).
+<br><br>
+You should expect to receive your refund within four weeks of giving your package to the return shipper, however, in many cases you will receive a refund more quickly. This time period includes the transit time for us to receive your return from the shipper (5 to 10 business days), the time it takes us to process your return once we receive it (3 to 5 business days), and the time it takes your bank to process our refund request (5 to 10 business days).
+<br><br>
+If you need to return an item, please Contact Us with your order number and details about the product you would like to return. We will respond quickly with instructions for how to return items from your order.</p>
+
+
+<h6>Returns Policy</h6>
+        
+        
+        <p>We can ship to virtually any address in the world. Note that there are restrictions on some products, and some products cannot be shipped to international destinations.
+<br><br>
+When you place an order, we will estimate shipping and delivery dates for you based on the availability of your items and the shipping options you choose. Depending on the shipping provider you choose, shipping date estimates may appear on the shipping quotes page.
+<br><br>
+Please also note that the shipping rates for many items we sell are weight-based. The weight of any such item can be found on its detail page. To reflect the policies of the shipping companies we use, all weights will be rounded up to the next full pound.
+<br><br>
+All firearms, magazines, receivers and restricted law enforcement items are sold and shipped in accordance with all existing federal, state and local laws and regulations. Many of the firearms, magazines and parts for sale on this website may be restricted or prohibited in your area. Please check your local and state regulations before ordering.</p>
+        
+        
+    </div>
+    
+    
+    
+        
+    </div>
+</section>
+<!---
+<section class="themevale_tabToggle productCustomTab2" data-accordion-item>
+    <h4 class="toggle-title">
+        <a href="#productCustomTab-content2" class="toggleLink" data-collapsible>
+          <span class="text">Custom Tab</span>
+          <span class="icon"><svg><use xlink:href="#slick-arrow-next"></use></svg></span>
+        </a>
+    </h4>
+    <div class="toggle-content" id="productCustomTab-content2" aria-hidden="false">
+        <h6>Returns Policy</h6>
+        <p>Vestibulum non quam luctus, gravida est sed, volutpat magna. Mauris vel tempor felis. Ut dignissim odio sed tortor venenatis mattis. Donec eget commodo lectus. Maecenas ornare ornare lectus et auctor. Phasellus pretium nulla ex, vel eleifend ante molestie nec. Sed non justo neque. In vitae efficitur erat. Nunc sed mauris dictum, iaculis odio ac</p>
+        <p>Duis venenatis tortor tellus, nec luctus sapien lacinia sit amet. Sed volutpat a massa quis euismod. Aliquam felis tellus, varius et odio a, posuere consequat massa. Ut sed lorem condimentum.</p>
+    </div>
+</section>
+--->
+{{#if product.videos}}
+    {{>components/products/videos product.videos}}
+{{/if}}

@@ -1,0 +1,40 @@
+
+
+    
+         <div class="col-sm-7 col-lg-7 col-12 hsearch" id="quickSearch" aria-hidden="true" tabindex="-1" data-prevent-quick-search-close>
+            {{> components/common/quick-search}}
+        </div>
+       <!--  <li class="navUser-item">
+            <a class="navUser-action navUser-action--quickSearch" href="#" data-search="quickSearch" aria-controls="quickSearch" aria-expanded="false">{{lang 'common.search'}}</a>
+        </li> -->
+        <div class="text-right col-sm-2 col-lg-2 top-right">
+            <li class="navUser-item head-user user-info list-inline-item huserb">
+                <a class="navUser-action userinfoa" data-cart-preview="" data-dropdown="account-dropdown" data-options="align:right">
+                    <ul class="navUser-item-cartLabel list-inline text-left">
+                        <svg width="24px" height="24px"><use xlink:href="#user"></use></svg>
+                    </ul>
+                </a>
+                <div class="dropdown-menu user-down" id="account-dropdown" data-dropdown-content aria-hidden="false" >
+                        {{#if customer}}
+                            <a class="navUser-action dropdown-menu-item" href="{{urls.account.index}}">{{lang 'common.account'}}</a>
+                            <a class="navUser-action dropdown-menu-item" href="{{urls.auth.logout}}">{{lang 'common.logout'}}</a>
+                        {{else}}
+                            <a class="navUser-action dropdown-menu-item" href="{{urls.auth.login}}">{{lang 'common.login'}}</a>
+                            {{#if settings.account_creation_enabled}}
+                                <a class="navUser-action dropdown-menu-item" href="{{urls.auth.create_account}}">{{lang 'common.sign_up'}}</a>
+                            {{/if}}
+                        {{/if}}
+                </div>
+            </li><li class="navUser-item navUser-item--cart">
+                <a
+                    class="navUser-action"
+                    data-cart-preview
+                    data-dropdown="cart-preview-dropdown"
+                    data-options="align:right"
+                    href="{{urls.cart}}">
+                    <span class="navUser-item-cartLabel"><svg width="28px" height="26px"><use xlink:href="#hcart"></use></svg></span> <span class="countPill{{#if cart.items}} countPill--positive{{/if}} cart-quantity">{{cart.quantity}}</span>
+                </a>
+
+                <div class="dropdown-menu" id="cart-preview-dropdown" data-dropdown-content aria-hidden="true"></div>
+            </li>
+        </div>

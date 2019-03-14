@@ -1,0 +1,83 @@
+---
+products:
+    new:
+        limit: {{theme_settings.homepage_new_products_count}}
+    featured:
+        limit: {{theme_settings.homepage_featured_products_count}}
+    top_sellers:
+        limit: {{theme_settings.homepage_top_products_count}}
+carousel: {{theme_settings.homepage_show_carousel}}
+---
+
+
+{{#partial "page"}}
+<div class="row">
+
+        <aside class="page-sidebar col-sm-4 col-lg-3 col-md-4 col-xs-12 ">
+            <div class="left-category-menu">
+                {{> components/common/webicategorylist}}
+            </div>
+             <!-- prodcut -->
+            {{#if products.top_sellers}}
+                    {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+           {{/if}}
+            <!-- top rated -->
+            {{#if products.featured}}
+                    {{> components/products/toprated products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+            {{/if}}
+           
+        </aside>
+
+<div class="login page col-sm-8 col-lg-9 col-md-8 col-xs-12 crwidth page-content home-top">
+    {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+    <div class="allpagebg">
+    <h1 class="page-heading">{{lang 'login.heading' }}</h1>
+    {{#if forms.login.error}}
+        {{> components/common/alert-error forms.login.error}}
+    {{/if}}
+    {{#if forms.login.success}}
+        {{> components/common/alert-success forms.login.success}}
+    {{/if}}
+    <div class="login-row">
+        <form class="login-form form" action="{{urls.auth.check_login}}" method="post">
+            {{inject 'useValidEmail' (lang 'forms.validate.common.email_address')}}
+            {{inject 'enterPass' (lang 'forms.validate.common.password')}}
+            <div class="form-field">
+                <label class="form-label" for="login_email">{{lang 'login.field_email'}}</label>
+                <input class="form-input" name="login_email" id="login_email" type="email">
+            </div>
+            <div class="form-field">
+                <label class="form-label" for="login_pass">{{lang 'login.field_password'}}</label>
+                <input class="form-input" id="login_pass" type="password" name="login_pass">
+            </div>
+            <a class="forgot-password" href="{{urls.auth.forgot_password}}">{{lang 'login.forgot_password' }}</a>
+            <div class="form-actions">
+                <input type="submit" class="button button--primary" value="{{lang 'login.submit_value' }}">
+            </div>
+        </form>
+        {{#if settings.account_creation_enabled}}
+            <div class="new-customer">
+                <div class="panel">
+                    <div class="panel-header">
+                        <h2 class="panel-title">{{lang 'login.new_customer.heading' }}</h2>
+                    </div>
+                    <div class="panel-body">
+                        <p class="new-customer-intro">{{lang 'login.new_customer.intro' }}</p>
+                        <ul class="new-customer-fact-list">
+                            <li class="new-customer-fact">{{lang 'login.new_customer.fact1' }}</li>
+                            <li class="new-customer-fact">{{lang 'login.new_customer.fact2' }}</li>
+                            <li class="new-customer-fact">{{lang 'login.new_customer.fact3' }}</li>
+                            <li class="new-customer-fact">{{lang 'login.new_customer.fact4' }}</li>
+                            <li class="new-customer-fact">{{lang 'login.new_customer.fact5' }}</li>
+                        </ul>
+                        <a href="{{urls.auth.create_account}}"><button class="button button--primary">{{lang 'login.new_customer.create_account' }}</button></a>
+                    </div>
+                </div>
+            </div>
+        {{/if}}
+    </div>
+</div>
+</div>
+</div>
+{{/partial}}
+{{> layout/base}}

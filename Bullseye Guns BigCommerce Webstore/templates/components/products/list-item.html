@@ -1,0 +1,85 @@
+<article class="listItem">
+    <figure class="listItem-figure">
+        <img class="listItem-image lazyload" data-sizes="auto" src="{{cdn 'img/loading.svg'}}" data-src="{{getImage image 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{image.alt}}" title="{{image.alt}}">
+        {{#each (limit images 2)}}
+                {{#if @index '>' 0}}
+                    <img src="{{getImage this 'productgallery_size' (cdn theme_settings.default_image_product)}}" alt="{{this.alt}}" title="{{this.alt}}" class="second-img">
+                {{/if}}
+                {{/each}}
+    </figure>
+    <div class="listItem-body">
+        <div class="listItem-content">
+            <div>
+                
+               <!--  {{#if brand.name}}
+                <p class="listItem-brand">{{brand.name}}</p>
+                {{/if}} -->
+                <h4 class="listItem-title">
+                    <a href="{{url}}">{{name}}</a>
+                </h4>
+                {{#if summary}}
+                    <p class="listdes">{{{summary}}}</p>
+                {{/if}}
+                {{#if price}}
+                    <div class="listItem-price">{{> components/products/price price=price}}</div>
+                {{/if}}
+                {{#if show_rating}}
+                    <p class="listItem-rating">{{> components/products/ratings rating=rating}}</p>
+                {{/if}}
+                
+            </div>
+        <figcaption class="allbtn">
+            <div class="button-group">
+                 {{#or customer (if theme_settings.restrict_to_login '!==' true)}}
+                    {{#if show_cart_action}}
+                        {{#if has_options}}
+                        <div class="bcart">
+                            <span><a href="{{url}}" class="" data-product-id="{{id}}">{{lang 'products.choose_options'}}</a></span>
+                        </div>
+                        {{/if}}
+                        {{#if pre_order}}
+                        <div class="bcart">
+                            <span><a href="{{pre_order_add_to_cart_url}}" class="">{{lang 'products.pre_order'}}</a></span>
+                        </div>
+                        {{/if}}
+                        {{#if add_to_cart_url }}
+                        <div class="bcart">
+                            <span><a href="{{add_to_cart_url}}" class="">{{lang 'products.add_to_cart'}}</a></span>
+                        </div>
+                        {{/if}}
+                        {{#if out_of_stock_message }}
+                        <div class="bcart">
+                            <span><a href="{{url}}" class="" data-product-id="{{id}}">{{out_of_stock_message}}</a></span>
+                        </div>
+                        {{/if}}
+                    {{/if}}
+                {{/or}}
+               
+
+                <div class="bwish">
+                    <form action="{{add_to_wishlist_url}}" class="form-wishlist form-action" data-wishlist-add method="post">     
+                         <button type="submit" value="{{lang 'account.wishlists.add_to_default'}}">
+                            <svg width="20px" height="20px"><use xlink:href="#wishlist"></use></svg>
+                        </button>
+                    </form>
+                </div>
+                 <label class="bcom" for="compare-{{id}}" title="{{lang 'products.compare'}}">
+                    <!-- {{lang 'products.compare'}} --> <input type="checkbox" name="products[]" value="{{id}}" id="compare-{{id}}" data-compare-id="{{id}}"><svg width="20px" height="20px"><use xlink:href="#pcom"></use></svg>
+                </label>
+                 
+                {{#unless hide_product_quick_view}}
+                    {{#if theme_settings.show_product_quick_view}}
+                        {{#unless demo}}
+                        <div class="bquick">
+                            
+                            <a href="#" class="quickview" data-product-id="{{id}}" title="{{lang 'products.quick_view'}}"><svg width="20px" height="20px"><use xlink:href="#pquick"></use></svg><!-- {{lang 'products.quick_view'}} --></a>
+                        </div>
+                        {{/unless}}
+                    {{/if}}
+                {{/unless}}
+                
+            </div>
+        </figcaption>
+        </div>
+    </div>
+</article>

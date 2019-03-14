@@ -1,0 +1,420 @@
+// =============================================================================
+// CARDS (CSS)
+// =============================================================================
+//
+// 1. Allow users to click the anchor tag on the image in the figcaption empty
+//    space. This provides a much larger and simpler hit state for navigating
+//    to the product details page. (Does not work in IE10 or earlier).
+// 2. Using translate3d to counter a chrome specific bug: When using a masonry
+//    styled layout via CSS column-count etc, transforms applied to descendants
+//    are made invisible, except for 3d transforms...
+//
+// -----------------------------------------------------------------------------
+.heading-home,.page-heading {
+    color: $color-black;
+    font-size: 16px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 15px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.heading-home::after,.page-heading::after {
+    border-bottom: 3px solid $color-primary;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 90px;
+}
+.left-home {
+    color: $color-black;
+    font-size: 14px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-bottom: 1px solid #f5f5f5;
+    padding-bottom: 15px;
+    position: relative;
+    margin-bottom: 20px;
+}
+.left-home::after {
+    border-bottom: 2px solid $color-primary;
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -1px;
+    width: 90px;
+}
+/* toppro */
+.leftpromar{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-bottom: 1px solid $color-greyLight;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.bestpro .slick-slide div:last-child .productCarousel-slide .leftpromar {
+    border-bottom: none;
+    margin-bottom:0;
+}
+.leftpro .card-body {
+    padding-top: 0 !important;
+    padding-left: 10px !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+    text-align:left;
+}
+.toppromar .card-body {
+    padding-left: 10px !important;
+    padding-right: 0 !important;
+    padding-bottom: 0 !important;
+}
+.toppromar .card-title{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 500;
+}
+.leftpro .card-title{
+    margin-bottom:5px !important;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    font-weight: 500;
+}
+.card-title:hover{
+    color: $color-primary;
+}
+.card-title{
+    transition: all 0.3s ease-in-out;
+}
+.toppro .proprice,.toppro .pricedis{
+    margin-top: 5px;
+    height: auto;
+    position: unset;
+}
+.toppro .button {
+    border: 1px solid #e7e7e7;
+    background-color: #fff;
+    color: #000000;
+    margin-top: 3px;
+}
+.toppro .button:hover{
+    background-color: $color-primary;
+    border: 1px solid $color-primary;
+    color: $color-white;
+}
+.card.toppro{
+    border:none;
+    cursor:pointer;
+}
+.toppro .price-section{
+    display:inline-block;
+}
+.toppro .image-block {
+    padding: 0;
+}
+.toppromar{
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    margin-bottom: 30px;
+}
+.tabpro {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 30px 15px 0px 15px;
+    margin-top:30px;
+}
+.page-sidebar .tabpro {
+    padding: 20px 20px 0px 15px;
+}
+.proprore i{
+    color: $color-primary;
+    font-size: 13px;
+}
+.proprice span,.pricedis span{
+    color: $color-black;
+    font-weight:500;
+    letter-spacing: 0.5px;
+    margin-bottom: 0;
+    font-size:14px;
+}
+
+.proprice span.price--non-sale,.pricedis span.price--non-sale{
+    color:$color-grey;
+}
+.cardpro .button--primary{
+    padding: 8px 20px 8px 20px;
+    font-size: 12px;
+    border: none;
+    text-transform: uppercase;
+    transition: 0.3s all ease;
+    letter-spacing: 0.8px;
+    font-weight: 500;
+    margin-bottom:0;
+}
+.bcom{
+    margin: 15px 0;
+}
+@media(min-width:801px){
+    .cardpro:hover .bcart {
+        opacity: 1;
+        bottom: 42px;
+    }
+    .cardpro .bcart {
+        position: absolute;
+        bottom: 35px;
+        opacity: 0;
+        cursor: pointer;
+        text-align: center;
+        transition: 0.3s all ease;
+        left: 0;
+        vertical-align: sub;
+    }
+    .cardpro:hover .card-title,.cardpro:hover .rating--small {
+        opacity: 0;
+
+    }
+    .cardpro .card-title,.cardpro .rating--small {
+        transition: 0.3s all ease;
+    }
+    .cardpro:hover .topbutton,.toppro:hover .topbutton{
+        opacity: 1;
+    }
+    .cardpro .topbutton,.toppro .topbutton{
+        transition: 0.3s all ease;
+        opacity: 0;
+    }
+    .proprice{
+        position: relative;
+        bottom: -2px;
+        transition: 0.3s all ease;
+        display: flow-root;
+        height: 42px;
+    }
+    .cardpro:hover .proprice {
+        bottom: 4px;
+        margin-top: -12px;
+    }
+    .cardpro:hover .pricedis {
+        top: -13px;
+        margin-top: -12px;
+    }
+    .cardpro .pricedis {
+        position: relative;
+        transition: 0.3s all ease;
+        display: flow-root;
+        top: -4px;
+        height: 42px;
+    }
+}
+/* button */
+.bcom input {
+    position: absolute;
+    opacity: 0;
+    display: none;
+}
+.bwish,.bcom,.bquick {
+    display: block;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+.bwish button{
+    padding:0;
+}
+.topbutton {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.bcom:hover svg,.bwish:hover svg,.bquick:hover svg{
+    fill: $color-primary;
+}
+@media(min-width:1590px){
+    .quickSearchResults .productGrid .product{
+        max-width:33.33% !important;
+        flex: 0 0 33.33% !important;
+        width: 33.33% !important;
+        float: left;
+    }
+    .quickSearchResults .bcart span{
+        text-transform:capitalize;
+    }
+}
+@media(min-width:992px) and (max-width:1199px){
+    .quickSearchResults .productGrid .product{
+        max-width:50% !important;
+        flex: 0 0 50% !important;
+        width: 50% !important;
+    }
+}
+@media(min-width:600px) and (max-width:800px){
+    .quickSearchResults .productGrid .product{
+        max-width:50% !important;
+        flex: 0 0 50% !important;
+        width: 50% !important;
+    }
+}
+@media(min-width:801px) and (max-width:991px){
+    .quickSearchResults .productGrid .product{
+        max-width:100% !important;
+        flex: 0 0 100% !important;
+        width: 100% !important;
+    }
+}
+
+.card-figure:hover .second-img{
+    opacity: 1;
+}
+.card-figure .second-img{
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    opacity: 0;
+    position: absolute;
+    right: 0;
+    transition: all 400ms ease-in-out 0s;
+    -webkit-transition: all 400ms ease-in-out 0s;
+    -moz-transition: all 400ms ease-in-out 0s;
+    -o-transition: all 400ms ease-in-out 0s;
+    -ms-transition: all 400ms ease-in-out 0s;
+}
+
+// .card.cardpro:hover .card-figure{
+//     box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.2);
+//     padding-bottom: 50px;
+//     margin-bottom: -50px;
+//     z-index: 2;
+// }
+.card-figure{
+    transition: 0.3s ease-in-out;
+    border-radius: 4px;
+}
+.card-figure img{
+    border-radius: 4px;
+}
+.card.cardpro{
+    border:none;
+}
+.card{
+     display: block !important;
+    }  
+.card-figure {
+    margin-top: $card-figure-marginTop;
+    position: relative;
+    &:hover {
+
+        // scss-lint:disable NestingDepth
+        .card-figcaption {
+            opacity: 1;
+        }
+    }
+}
+
+.card-img-container {
+    max-width: get-width(stencilString('productgallery_size'));
+
+  
+}
+
+.card-figcaption-body {
+    display: $card-figcaption-body-display;
+    pointer-events: all; // 1
+    transform: translate3d(0, -50%, 0); // 2
+}
+
+.card-image {
+    border: 0;
+    width: auto;
+    max-height: 100%;
+}
+
+.cardpro .card-title {
+    padding-bottom: 2px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    color: $color-black;
+    font-size: 14px;
+    margin: 0 0 0px 0;
+    text-transform: capitalize;
+    transition: 0.3s ease;
+    font-weight: 500;
+    margin: $card-title-margin;
+    text-align: left;
+    max-width: 180px;
+
+     &:hover {
+            color: $color-primary;
+        }
+
+    > a {
+        color: $color-black;
+        transition: 0.3s ease;
+        text-decoration: $card-title-textDecoration;
+
+        // scss-lint:disable NestingDepth
+        &:hover {
+            color: $color-primary;
+        }
+    }
+}
+
+.card-text {
+
+    abbr {
+        border: 0;
+        color: inherit;
+        font-size: inherit;
+    }
+}
+
+.card-figcaption-button {
+    border: $card-figcaption-button-border;
+    margin: $card-figcaption-button-margin;
+
+    &:active {
+        background-color: $card-figcaption-button-backgroundHover;
+        border: $card-figcaption-button-border;
+    }
+
+    + .card-figcaption-button {
+        margin: $card-figcaption-button-margin;
+    }
+}
+
+.card-body {
+    text-align: center;
+    padding:10px 0!important;
+
+    @include breakpoint("small") {
+        text-align: left;
+    }
+}
+
+
+//
+// Alternate card
+//
+// Purpose: Used to give the card alternative styling
+// -----------------------------------------------------------------------------
+
+.card--alternate {
+    border: 3px solid stencilColor("card--alternate-borderColor");
+    transition: all 0.15s ease;
+
+    .card-body {
+        background-color: stencilColor("card--alternate-backgroundColor");
+        padding: spacing("half");
+        transition: all 0.15s ease;
+
+        @include breakpoint("small") {
+            padding: spacing("single");
+        }
+    }
+}

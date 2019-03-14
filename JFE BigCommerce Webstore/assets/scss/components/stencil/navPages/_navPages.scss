@@ -1,0 +1,409 @@
+// Page Navigation
+// -----------------------------------------------------------------------------
+//
+// Purpose: Contains the styles for the page navigation, deals with 2 viewsdue to
+// responsive layout of that navigation
+//
+// 1. It's not exactly a grid row, as it's a little further down the DOM tree, but
+// I use it here to grab the max width centering.
+// 2. Prevent document scrolling by clipping its body
+// 3. Prevent inertia scrolling of document
+//
+// -----------------------------------------------------------------------------
+
+
+//
+// When navPages is open
+// -----------------------------------------------------------------------------
+
+.has-activeNavPages {
+    // scss-lint:disable VendorPrefix
+    overflow: hidden; // 2
+    -webkit-overflow-scrolling: auto; // 3
+}
+
+//
+// Top level Pages navigation container
+// -----------------------------------------------------------------------------
+
+.navPages-container {
+    background: transparent;
+    height: auto;
+    padding: 0;
+    position: relative;
+    display: none;
+    .themevale_navPages-item {
+        &.text-left,
+        &.text-right {
+            display: none;
+        }
+    }
+    @media (min-width: 1025px) {
+        display: block;
+    }
+}
+
+//
+// Top level Pages navigation list styles
+// -----------------------------------------------------------------------------
+
+.navPages {
+    padding: 0;
+    width: 100%;
+    font-size: 0;
+    margin: 0 auto;
+    max-width: 1170px;
+    background: none;
+    text-align: center;
+    overflow-y: visible;
+    .navPages-item {
+        float: left;
+    }
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+    .navPage-subMenu-list {
+        padding: 0;
+        margin: 0 auto;
+        list-style: none;
+        @include grid-row();
+
+    }
+    @media (max-width: 1024px) {
+        list-style: none;
+        text-align: left;
+        li {
+            border-top: 1px solid #eaeaea;
+        }
+        .navPages-list {
+            width: 100%;
+            > li:first-child {
+                border-top: 0;
+            }
+            > li:last-child {
+                border-bottom: 1px solid #eaeaea;
+            }
+        }
+        .navPages-item {
+            float: none;
+            .socialLinks {
+                padding-top: 10px;
+                padding-bottom: 5px;
+                .socialLinks-item {
+                    border: none;
+                }
+            }
+        }
+    }
+}
+
+.navPages-list {
+    margin: 0;
+    float: none;
+    vertical-align: top;
+    display: inline-block;
+}
+
+.navPages-list-mobile {
+    margin-top: 70px !important;
+    @media (min-width: 1025px) {
+        margin: 0;
+        display: none;
+    }
+}
+
+.subMenu-is-open {
+    .is-hidden {
+        display: none;
+        @media (min-width: 1025px) {
+            display: inline-block;
+        }
+    }
+    .navPages-item-page {
+        display: none;
+        @media (min-width: 1025px) {
+            display: inline-block;
+        }
+    }
+}
+
+
+.navPages-action-depth-max.has-subMenu.is-open {
+    border-bottom: 0;
+    text-align: left;
+}
+
+.navPages-action {
+    color: #ffffff;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 10px 15px 15px 15px;
+    background-color: transparent;
+    &:hover {
+        color: #c4c4c4;
+
+        // scss-lint:disable NestingDepth
+        svg {
+            fill: stencilColor("navPages-color-hover");
+            stroke: stencilColor("navPages-color-hover");
+        }
+    }
+    svg {
+        fill: stencilColor("navPages-color");
+        stroke: stencilColor("navPages-color");
+        transition: all 0.15s ease;
+    }
+    > .text {
+        margin-left: 7px;
+    }
+    @media (max-width: 1024px) {
+        font-size: 13px;
+        font-weight: 600;
+        display: block;
+        padding: 10px 0;
+        text-transform: capitalize;
+        &.is-open + .navPage-subMenu,
+        &.is-open + .navPage-childList {
+            display: block;
+        }
+    }
+}
+
+.navPages-action-moreIcon {
+    @include square(8px);
+    transform: none;
+    margin-left: spacing("quarter");
+    transition: all 0.3s ease;
+    svg {
+        pointer-events: none;
+    }
+    @media (max-width: 1024px) {
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        width: 40px;
+        z-index: 10;
+        height: 100%;
+        position: absolute;
+        &:before {
+            content: "+";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            font-style: normal;
+            font-size: 24px;
+            font-weight: 300;
+            text-align: center;
+            line-height: 40px;
+            color: #bababa;
+        }
+        svg {
+            display: none;
+        }
+        .is-open > & {
+            &:before {
+                content: "-";
+                font-size: 30px;
+            }
+        }
+    }
+}
+
+
+// Sub page navigation and children of sub pages
+// -----------------------------------------------------------------------------
+
+.navPage-childList {
+    border: 0;
+    display: none;
+    @media (min-width: 1025px) {
+        display: block;
+    }
+}
+
+
+// Sub menu, first level down from top level categories
+// -----------------------------------------------------------------------------
+//
+// 1. navBar mixin has lots of decendant child selectors to deal with
+//
+// -----------------------------------------------------------------------------
+
+.navPage-subMenu {
+    outline: 0;
+    display: none;
+    text-align: left;
+    @media (min-width: 1025px) {
+        position: absolute;
+        padding: 30px 0 50px;
+        background-color: stencilColor("navPages-subMenu-backgroundColor");
+    }
+}
+
+.navPage-subMenu-horizontal {
+    @media (min-width: 1025px) {
+        top: inherit;
+        height: auto;
+        left: inherit;
+        margin: auto;
+        width: 220px;
+        padding: 0 !important;
+        .navPage-subMenu-horizontal {
+            top: 0;
+            height: auto;
+            margin-left: 221px;
+        }
+    }
+}
+
+.navPage-subMenu-item {
+    @media (min-width: 1025px) {
+        @include grid-column(3);
+        padding: 0 15px;
+        .navPages-action {
+            width: 100%;
+            font-size: $body-fontSize;
+            color: #646464;
+            padding: 6px 0;
+            font-weight: 400;
+            text-transform: none;
+            &:hover {
+                color: #323232;
+            }
+        }
+        > .navPage-subMenu-action {
+            font-size: 13px;
+            color: #323232;
+            font-weight: 600;
+            padding: 0 0 8px 0;
+            text-transform: capitalize;
+            border-bottom: 1px solid stencilColor("navPages-subMenu-separatorColor");
+            margin-bottom: spacing("half") + spacing("quarter");
+            .navPages-action-moreIcon {
+                display: none;
+            }
+        }
+        .navPage-childList .navPage-childList-action {
+            width: auto;
+            display: inline-block;
+            vertical-align: top;
+            position: relative;
+            &:before {
+                left: 0;
+                bottom: 5px;
+                height: 1px;
+                width: 0;
+                content: "";
+                position: absolute;
+                background-color: #646464;
+                transition: all 0.3s ease;
+            }
+            &:hover {
+                &:before {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+.navPage-subMenu-item-child,
+.navPage-subMenu-item-parent {
+    width: 100%;
+    position: relative;
+    .navPage-subMenu-action {
+        width: 100%;
+        padding: spacing("base") spacing("single");
+        @media (min-width: 1025px) {
+            &:hover {
+                background-color: #f0f0f0;
+            }
+        }
+    }
+}
+
+.navPage-subMenu-action,
+.navPage-childList-action {
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.navPage-subMenu-action {
+    @media (min-width: 1025px) {
+        .navPages-action-moreIcon {
+            transform: rotate(-90deg);
+        }
+    }
+}
+
+
+/*=========================================
+=            www.themevale.com            =
+=========================================*/
+
+    @media (min-width: 1025px) {
+        .navPages-item:hover {
+            > .has-subMenu {
+                + .navPage-subMenu {
+                    left: 0;
+                    width: 100%;
+                    display: block;
+                }
+                + .navPage-subMenu-horizontal {
+                    left: auto;
+                    width: 220px;
+                }
+            }
+        }
+        .navPage-subMenu-item-child:hover {
+            > .has-subMenu {
+                + .navPage-subMenu-horizontal {
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .themevale_MobileMenu {
+        .navPages-action {
+            &.is-hidden {
+                display: none;
+            }
+        }
+        .navPage-subMenu-item-child,
+        .navPage-subMenu-item {
+            .navPages-action {
+                font-size: $body-fontSize;
+                color: #646464;
+                font-weight: 400;
+            }
+        }
+        .navPage-subMenu {
+            ul {
+                .navPages-action {
+                    padding-left: 15px;
+                }
+                ul {
+                    .navPages-action {
+                        padding-left: 30px;
+                    }
+                }
+            }
+        }
+    }
+
+    #currency_dropdown {
+        .navPages-action-moreIcon {
+            pointer-events: none;
+        }
+    }
+
+/*=====  End of www.themevale.com  ======*/

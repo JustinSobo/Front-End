@@ -1,0 +1,1 @@
+{"components/themevale/sidebar/side-custom-image":"<div class=\"sidebarBlock\" id=\"sideBannerImage\">\r\n\t<div class=\"side-cms-content\">\r\n\t\t<a class=\"cms-image\" href=\"#\">\r\n\t\t\t<img data-src=\"/product_images/uploaded_images/banner-4.jpg\" class=\"lazyload\" src=\"{{cdn 'img/loading.svg'}}\" alt=\"Side Banner1\">\r\n\t\t</a>\r\n\t</div>\r\n</div>\r\n"}

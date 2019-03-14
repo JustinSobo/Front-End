@@ -1,0 +1,276 @@
+// =============================================================================
+// FOOTER (CSS)
+// =============================================================================
+
+
+// Layout and columns
+// -----------------------------------------------------------------------------
+//
+// 1. To enable the grid's display: inline-block; to work properly, we need to
+//    remove the white-space that it creates between columns with font-size: 0;
+// 2. Re-set the font-size that was reduced to 0 in point 1 for children.
+//
+// -----------------------------------------------------------------------------
+
+/*=========================================
+=            www.themevale.com            =
+=========================================*/
+    
+    /*--------  1.0 Global style  -------*/
+        .footer {
+            color: stencilColor('footer-textColor');
+            line-height: 24px;
+            background-color: stencilColor('footer-backgroundColor');
+            a, h1, h2, h3, h4, h5, h6 {
+                color: stencilColor('footer-textColor');
+            }
+            a, p, .store-address, .store-call {
+                opacity: 0.8;
+            }
+            a:hover {
+                opacity: 1;
+            }
+            .socialLinks {
+                margin-top: 25px;
+                .icon {
+                    opacity: 1;
+                    svg {
+                        fill: stencilColor('footer-textColor');
+                    }
+                }
+            }
+            .form {
+                margin-bottom: 40px;
+                .form-field {
+                    margin-bottom: 0;
+                    .form-prefixPostfix {
+                        padding: 2px 0;
+                        overflow: hidden;
+                        border-radius: 40px;
+                        background-color: rgba(255,255,255,0.3);
+                        display: block;
+                        width: 100%;
+                        font-size: 0;
+                        .form-input {
+                            font-size: 12px;
+                            width: calc(100% - 115px);
+                            border: none;
+                            color: stencilColor('footer-textColor');
+                            display: inline-block;
+                            vertical-align: middle;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            background-color: transparent;
+                        }
+                        .form-prefixPostfix-button--postfix {
+                            font-size: 12px;
+                            margin: 0;
+                            width: 115px;
+                            border: none;
+                            height: auto;
+                            display: inline-block;
+                            vertical-align: middle;
+                            padding-left: 20px;
+                            padding-right: 20px;
+                            background-color: transparent;
+                            &:hover {
+                                border: none;
+                                background-color: transparent;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .footer-info-heading {
+            color: stencilColor('footer-textColor');
+            font-size: 13px;
+            font-weight: 600;
+            line-height: 24px;
+            position: relative;
+            margin: 0 0 20px 0;
+            letter-spacing: 0.65px;
+            text-transform: uppercase;
+        }
+
+        .footer-info-list {
+            margin: 0;
+            list-style: none;
+            > li {
+                margin-bottom: 8px;
+                text-transform: capitalize;
+                &:last-child {
+                    margin-bottom: 0;
+                }
+            }
+            @media (max-width: 992px) {
+                margin-bottom: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .footer-dropdownmobile {
+                .footer-info-heading {
+                    padding: 3px 0;
+                    border-bottom: 1px solid rgba(255,255,255,0.15);
+                    &:before {
+                        right: 0;
+                        top: 5px;
+                        z-index: 2;
+                        content: "+";
+                        color: inherit;
+                        font-size: 20px;
+                        line-height: 1;
+                        font-weight: 500;
+                        position: absolute;
+                    }
+                }
+                &.open-dropdown {
+                    .footer-info-heading:before {
+                        font-weight: 600;
+                        content: "-";
+                    }
+                }
+            }
+        }
+
+    /*--------  2.0 Footer top  ---------*/
+        .themevale_topFooter {
+            padding: 15px 0;
+            + .themevale_middleFooter {
+                border-top: 1px solid rgba(255,255,255,0.15);
+            }
+        }
+
+        .themevale_service {
+            .service-item {
+                position: relative;
+            }
+            .service-wrapper {
+                margin: 0 auto;
+                font-size: 13px;
+                font-weight: 600;
+                max-width: 290px;
+                line-height: 24px;
+                padding: 9px 30px 7px 30px;
+                text-align: center;
+                position: relative;
+                letter-spacing: 0.65px;
+                text-transform: uppercase;
+                border: 1px solid rgba(255,255,255,0.15);
+                p {
+                    margin-bottom: 0;
+                }
+            }
+            .slick-arrow,
+            .slick-arrow:hover {
+                fill: stencilColor('footer-textColor');
+            }
+            .slick-dots {
+                li button {
+                    border-color: stencilColor('footer-textColor');
+                    background-color: stencilColor('footer-textColor');
+                }
+                .slick-active button {
+                    background-color: transparent;
+                }
+            }
+            
+            @media (min-width: 601px) {
+                .service-wrapper {
+                    border: none;
+                    padding: 4px 15px 2px 15px;
+                    font-size: 11px;
+                }
+                .slick-slide + .slick-slide {
+                    .service-item:before {
+                        top: 0;
+                        left: 0;
+                        bottom: 0;
+                        width: 1px;
+                        height: 100%;
+                        content: "";
+                        z-index: 2;
+                        position: absolute;
+                        background-color: rgba(255,255,255,0.15);
+                    }
+                }
+            }
+            @media (min-width: 768px) {
+                .service-wrapper {
+                    font-size: 13px;
+                }
+            }
+        }
+
+/*--------  3.0 Footer middle  ------*/
+        .themevale_middleFooter {
+            padding: 50px 0;
+            @media (max-width: 992px) {
+                padding-top: 30px;
+            }
+        }
+
+        .themevale-logoFooter {
+            display: none;
+            text-align: center;
+            margin-bottom: 30px;
+            > a {
+                font-size: 0;
+                opacity: 1;
+                display: inline-block;
+            }
+            .logo-footer {
+                font-size: 30px;
+                line-height: 1;
+                font-weight: 600;
+                display: inline-block;
+            }
+            .logo-footer-image {
+                max-height: 30px;
+                display: inline-block;
+            }
+            @media (min-width: 415px) {
+                .logo-footer {
+                    font-size: 40px;
+                }
+                .logo-footer-image {
+                    max-height: 40px;
+                }
+            }
+            @media (min-width: 993px) {
+                margin-bottom: 50px;
+            }
+        }
+
+        .themevale-infoFooter {
+            display: block;
+            font-size: 0;
+            margin: 0 -8px;
+            .footer-info-col {
+                width: 100%;
+                padding: 0 8px;
+                margin-bottom: 0px;
+                vertical-align: top;
+                display: inline-block;
+                font-size: $body-fontSize;
+            }
+            @media (min-width: 993px) {
+                .footer-info-col {
+                    width: 33.333333%;
+                    &.footer-info-col--small {
+                        width: 16.666667%;
+                    }
+                }
+            }
+            @media (min-width: 1025px) {
+                margin: 0 -15px;
+                .footer-info-col {
+                    padding: 0 15px;
+                }
+            }
+        }
+
+    
+    

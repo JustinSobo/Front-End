@@ -1,0 +1,39 @@
+// =============================================================================
+// TAGS (CSS)
+// =============================================================================
+//
+// 1. Set to 0 so that the tags can be centred with an unknown width.
+//
+// -----------------------------------------------------------------------------
+
+.tags {
+    @include u-listBullets("none");
+    font-size: 0; // 1
+    text-align: center;
+}
+
+.tag {
+    display: inline-block;
+    vertical-align: top;
+    font-size: $body-fontSize;
+    margin: 0 5px;
+    margin-bottom: 10px;
+    a {
+        color: #979797;
+        line-height: 24px;
+        padding: 3px 20px;
+        border-radius: 32px;
+        display: inline-block;
+        vertical-align: top;
+        text-decoration: none;
+        background-color: #ffffff;
+        border: 1px solid #ebebeb;
+        @media (min-width: 1025px) {
+            &:hover {
+                color: #ffffff;
+                border-color: #646464;
+                background-color: #646464;
+            }
+        }
+    }
+}

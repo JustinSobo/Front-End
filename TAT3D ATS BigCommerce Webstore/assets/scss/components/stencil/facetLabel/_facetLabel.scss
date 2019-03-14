@@ -1,0 +1,17 @@
+// =============================================================================
+// FACET LABEL (CSS)
+// =============================================================================
+
+.facetLabel {
+    background: #fafafa;
+    border-radius: 40px;
+    padding: 3px 15px !important;
+    text-decoration: none;
+    .icon {
+        @include square(12px);
+        display: inline-block;
+        fill: $facetLabel-removeIcon-color;
+        position: relative; // Vertical align the icon
+        top: -1px; // Vertical align the icon
+    }
+}

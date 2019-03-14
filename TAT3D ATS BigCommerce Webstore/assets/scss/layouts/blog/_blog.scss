@@ -1,0 +1,196 @@
+// =============================================================================
+// BLOG
+// =============================================================================
+
+
+// Blog post
+// -----------------------------------------------------------------------------
+
+.blog {
+    margin: auto;
+    width: 100%;
+    max-width: 870px;
+    + .blog {
+        border-top: 1px solid #eeeeee;
+        margin-top: 30px;
+        padding-top: 30px;
+    }
+
+    .tags {
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .socialLinks {
+        text-align: center;
+    }
+
+    // scss-lint:disable SelectorFormat
+    .addthis_toolbox {
+        margin-top: 20px;
+    }
+    // scss-lint:enable SelectorFormat
+    @include breakpoint("small") {
+        .tags,
+        .addthis_toolbox {
+            margin-top: 40px;
+        }
+        + .blog {
+            margin-top: 50px;
+            padding-top: 50px;
+        }
+    }
+}
+
+.blog-title {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.5;
+    margin: 0 0 7px 0;
+    font-family: $fontFamily-headings;
+    a {
+        text-decoration: none;
+    }
+    @include breakpoint("small") {
+        font-size: 16px;
+        margin: 0 0 10px 0;
+    }
+}
+
+.blog-date,
+.blog-author {
+    margin: 0;
+    color: #848484;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+.blog-author {
+    margin-bottom: spacing("single") + spacing("base");
+}
+
+.blog-post {
+    text-align: left;
+    line-height: 22px;
+    font-size: $body-fontSize;
+    > a {
+        border-bottom: 1px solid #b7b7b7;
+    }
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        color: stencilColor('color-textHeading');
+    }
+    h5, h6 {
+        text-transform: capitalize;
+    }
+    blockquote {
+        font-size: 12px;
+        line-height: 22px;
+        padding: 15px;
+        margin-bottom: 2.25rem;
+        background-color: #fafafa;
+    }
+    ul.style-number {
+        list-style-type: decimal;
+    }
+    @include breakpoint("medium") {
+        blockquote {
+            padding: 30px 30px 30px 70px;
+            q {
+                position: relative;
+                quotes: "“" " ";
+                &:before {
+                    top: 15px;
+                    left: -30px;
+                    color: #979797;
+                    font-size: 60px;
+                    line-height: 20px;
+                    position: absolute;
+                }
+            }
+        }
+    }
+    @include breakpoint("large") {
+        blockquote {
+            padding: 30px 70px;
+        }
+    }
+    @media (max-width: 800px) {
+        blockquote {
+            q {
+                &:before,
+                &:after {
+                    content: none;
+                }
+            }
+        }
+    }
+}
+
+.blog-thumbnail {
+    margin: 0;
+    position: relative;
+    > a {
+        position: relative;
+        display: inline-block;
+    }
+    @media (min-width: 1025px) {
+        > a {
+            &:before {
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                z-index: 2;
+                content: "";
+                width: 100%;
+                height: 100%;
+                transform: scale(0);
+                position: absolute;
+                transition: transform 0.4s ease 0s;
+                background-color: rgba(0, 0, 0, 0.1);
+            }
+            &:hover {
+                &:before {
+                    transform: scale(1);
+                }
+            }
+        }
+    }
+}
+
+.blog-post-figure {
+    display: block;
+    margin: auto;
+    text-align: center;
+    + .blog-post-body {
+        margin-top: 20px;
+    }
+    @include breakpoint("small") {
+        + .blog-post-body {
+            margin-top: 30px;
+        }
+    }
+}
+
+.blog-post-body {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    + .blog-post-figure {
+        margin-top: 20px;
+    }
+    @include breakpoint("small") {
+        + .blog-post-figure {
+            margin-top: 30px;
+        }
+    }
+}
+
+
+.page-type-blog {
+    .blog-post {
+        text-align: center;
+    }
+}

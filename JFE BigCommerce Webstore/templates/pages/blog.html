@@ -1,0 +1,23 @@
+---
+blog:
+    posts:
+        limit: 5
+        pages: 3
+        summary: 380
+---
+{{#partial "page"}}
+<div class="page-heading-wrapper-2">
+	{{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+	<h1 class="page-heading">{{ blog.name }}</h1>
+</div>
+<main class="page">
+    <div class="themevale_container">
+	    {{#each blog.posts}}
+	        {{> components/blog/post post=this settings=../settings}}
+	    {{/each}}
+
+	    {{> components/common/paginator pagination.blog}}
+	</div>
+</main>
+{{/partial}}
+{{> layout/base}}

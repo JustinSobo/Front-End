@@ -1,0 +1,74 @@
+<section class="homeBlogCarousel"
+    data-slick='{
+        "dots": false,
+        "infinite": false,
+        "mobileFirst": true,
+        "slidesToShow": 1,
+        "slidesToScroll": 1,
+        "responsive": [
+            {
+                "breakpoint": 1199,
+                "settings": {
+                    "slidesToScroll": 1,
+                    "slidesToShow": 3
+                }
+            },
+            {
+                "breakpoint": 991,
+                "settings": {
+                    "slidesToScroll": 1,
+                    "slidesToShow": 2
+                }
+            },
+            {
+                "breakpoint": 800,
+                "settings": {
+                    "slidesToScroll": 1,
+                    "slidesToShow": 2
+                }
+            },
+            {
+                "breakpoint": 599,
+                "settings": {
+                    "slidesToScroll": 1,
+                    "slidesToShow": 2
+                }
+            }
+        ]
+    }'
+>
+    {{#each blog}}
+    {{#if thumbnail}}
+        <!-- <div class="col-12"> -->
+            <figure class="blog-thumbnail">
+            <div class="blog-hover">          
+                <a href="{{url}}" class="wb-blog-img">
+                    <img src="{{getImage thumbnail 'blog_size'}}" alt="{{thumbnail.alt}}" title="{{thumbnail.alt}}">
+                </a>
+                <div class="webi_post_hover">
+                    <div class="blog-ic">
+                        <a class="icon readmore_link" title="all blog" href="{{ all_blogs }}"><i class="fa fa-link"></i></a>
+                    </div>
+                </div>
+            </div>
+
+                <div class="blog-con">
+                <div class="wb-blog-title">
+                   <a href="{{url}}"> {{title}}</a>
+                </div>
+                <div class="auther-date">    
+                <span class="blog-date">{{date_published}}</span><span class="seper">*</span><span class="wb-blog-author">{{author}}</span>
+                 </div>
+                 
+                <!--  <div class="wb-blog-desc">
+                  {{summary}}   
+                 </div> -->
+
+                 <!-- <a href="{{url}}" class="wb-blog-read-more btn-ef"> Read More</a> -->
+                </div>
+            </figure>
+        <!-- </div> -->
+        {{/if}}
+        
+    {{/each}}
+</section>

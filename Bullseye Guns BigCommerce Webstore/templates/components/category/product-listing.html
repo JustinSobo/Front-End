@@ -1,0 +1,17 @@
+<div class="row cate-top">
+	<div class="col-md-6 col-3 wb-grid-list">
+		<span id="gridProduct" class="active"><svg width="20px" height="20px"><use xlink:href="#cgrid"></use> </svg></span>
+   		<span id="listProduct"><svg width="20px" height="20px"><use xlink:href="#list"/><svg width="20px" height="20px"><use xlink:href="#clist"></use> </svg></svg></span>
+   	</div>
+   	<div class="col-md-6 col-9" {{> components/products/filter sort=pagination.category.sort}}</div>
+</div>
+<div class="xs-filter"></div>
+<form action="{{urls.compare}}" method='POST' data-product-compare>
+   
+        {{> components/products/grid products=category.products show_compare=category.show_compare theme_settings=theme_settings}}
+   
+        {{> components/products/list products=category.products show_compare=category.show_compare theme_settings=theme_settings}}
+   
+</form>
+
+{{> components/common/paginator pagination.category}}

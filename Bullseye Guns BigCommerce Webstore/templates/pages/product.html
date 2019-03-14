@@ -1,0 +1,61 @@
+---
+product:
+    videos:
+        limit: {{theme_settings.productpage_videos_count}}
+    reviews:
+        limit: {{theme_settings.productpage_reviews_count}}
+    related_products:
+        limit: {{theme_settings.productpage_related_products_count}}
+    similar_by_views:
+        limit: {{theme_settings.productpage_similar_by_views_count}}
+---
+{{#partial "page"}}
+    
+
+    {{#each product.shipping_messages}}
+        {{> components/common/alert-info message}}
+    {{/each}}
+
+    <div class="row">
+        <aside class="page-sidebar col-sm-4 col-lg-3 col-md-4 col-xs-12 ">
+            <div class="left-category-menu">
+                {{> components/common/webicategorylist}}
+            </div>
+             <!-- Left banner -->
+                {{> components/cms/Leftbanner}}
+             <!-- prodcut -->
+            {{#if products.top_sellers}}
+                    {{> components/products/top products=products.top_sellers columns=theme_settings.homepage_top_products_column_count}}
+           {{/if}}
+
+            <!-- Testimonial -->
+            {{> components/cms/Testimonial}}
+            <!-- top rated -->
+            {{#if products.featured}}
+                    {{> components/products/toprated products=products.featured columns=theme_settings.homepage_featured_products_column_count}}
+            {{/if}}
+           <!-- newsletter -->
+            {{#if settings.show_newsletter_box}}
+                    {{> components/common/subscription-form}}
+            {{/if}}
+           
+        </aside>
+
+        <div itemscope itemtype="http://schema.org/Product" class="col-sm-8 col-lg-9 col-md-8 col-xs-12 crwidth page-content home-top">
+            {{> components/common/breadcrumbs breadcrumbs=breadcrumbs}}
+            {{> components/products/product-view schema=true}}
+
+            {{#if product.videos.list.length}}
+                {{> components/products/videos product.videos}}
+            {{/if}}
+
+            {{#if settings.show_product_reviews}}
+                {{> components/products/reviews reviews=product.reviews product=product urls=urls}}
+            {{/if}}
+
+            {{> components/products/tabs}}
+        </div>
+    </div>
+
+{{/partial}}
+{{> layout/base}}

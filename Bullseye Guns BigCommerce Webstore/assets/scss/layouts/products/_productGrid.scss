@@ -1,0 +1,237 @@
+// =============================================================================
+// PRODUCT GRID (CSS)
+// =============================================================================
+
+
+// Product grid view
+// -----------------------------------------------------------------------------
+//
+// 1. Re-set the font-size, as we're reducing it to 0 in the .products class.
+//
+// -----------------------------------------------------------------------------
+@media(min-width:801px) and (max-width:991px){
+    .productGrid .product{
+        max-width:50%;
+        flex:0 0 50%;
+    }
+    .cate-top .col-md-6.wb-grid-list{
+        max-width:30%;
+        flex:0 0 30%;
+    }
+    .cate-top .col-md-6{
+        max-width:70%;
+        flex:0 0 70%;
+    }
+}
+// .productGrid .allbtn{
+//     margin-top:0;
+// }
+.cate-des {
+    margin-bottom: 30px;
+    position: relative;
+    background-color: $color-white;
+    padding: 15px;
+    border-radius:4px;
+}
+.cate-des img{
+    border-radius:4px;
+}
+.cate-des h1{
+    font-size: 18px;
+    color: $color-primary;
+    text-align:left;
+    margin-bottom:15px;
+    letter-spacing: 0.5px;
+    margin-top: 0;
+    text-transform: capitalize;
+}
+.cate-des p{
+    font-size: 13px;
+    color: $color-grey;
+    line-height: 25px;
+    letter-spacing: 0.8px;
+    text-transform: capitalize;
+}
+.productGrid{
+    margin: 0 !important;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 15px 5px;
+}
+.accordion--navList .accordion-indicator{
+    visibility: visible;
+}
+.actionBar-section .form-field{
+    margin-bottom:0;
+}
+.productGrid .card{
+    margin-bottom:0px;
+}
+.form.removewish {
+    position: absolute;
+    top: 5px;
+}
+.cate-top{
+    padding: 10px 0px;
+    background-color: $color-white;
+    margin-left:0px !important;
+    margin-right:0px !important;
+    margin-bottom:30px;
+    border-radius:4px;
+}
+.wb-grid-list span.active {
+    border: 1px solid $color-primary;
+}
+.wb-grid-list span {
+    padding: 3px 3px 3px 3px;
+    cursor: pointer;
+    border: 1px solid transparent;
+    display:inline-block;
+    margin-top:2px;
+}
+.productGrid .product{
+    overflow:unset;
+}
+@media(min-width:1590px){
+    .productGrid .product {
+        max-width: 25% !important;
+        width: 25% !important;
+        flex: 0 0 25%;
+    }
+}
+.productGrid {
+    font-size: 0; // 1
+    margin-bottom: spacing("single");
+
+    .product {
+        display: inline-block;
+        font-size: fontSize("base"); // 1
+        vertical-align: top;
+        padding: 0 10px;
+        position: relative;
+
+    }
+}
+.wishproduct .productGrid{
+    margin: 0 -10px !important;
+}
+
+// Product when sidebar is present
+// -----------------------------------------------------------------------------
+//
+// 1. When the sidebar is visible, reduce products to 3 across.
+//
+// -----------------------------------------------------------------------------
+
+.page-sidebar + .page-content {
+
+    .productGrid {
+        // scss-lint:disable SelectorDepth, NestingDepth
+        .product { // 1
+            @include breakpoint("small") {
+            }
+        }
+    }
+
+}
+
+
+//
+// Product Grid with masonry layout
+//
+// Purpose: Display products in a masonry grid, with a display inline-block for
+// older browsers that don't support css multicolumn
+//
+// 1. Some older browser support. This class comes from Modernizr
+// -----------------------------------------------------------------------------
+
+.productMasonry {
+    column-count: 2;
+    column-fill: auto;
+    column-gap: remCalc(20px);
+    margin: 0 0 spacing("single");
+    overflow: hidden;
+
+    @include breakpoint("small") {
+        column-count: 3;
+    }
+
+    @include breakpoint("medium") {
+        column-count: 4;
+    }
+
+    .product {
+        break-inside: avoid;
+        display: block;
+        margin-bottom: spacing("double");
+        padding: 0;
+        width: 100%;
+    }
+
+    .card {
+        margin: 0;
+    }
+
+    .no-csscolumns & { // 1
+        @include u-listBullets("none");
+        @include grid-row($behavior: "nest");
+        font-size: 0;
+
+        // scss-lint:disable SelectorDepth, NestingDepth
+        .product {
+            @include grid-column(3, $float: none);
+            display: inline-block;
+            font-size: fontSize("base"); // 1
+            vertical-align: top;
+        }
+
+        .card {
+            margin: 0;
+        }
+    }
+}
+
+
+// Product grid view variation
+// -----------------------------------------------------------------------------
+
+.productGrid--maxCol6 {
+    .no-csscolumns & {
+        // scss-lint:disable SelectorDepth, NestingDepth
+        .product {
+            @include breakpoint("medium") {
+                width: grid-calc(2, $total-columns);
+            }
+        }
+    }
+
+    .csscolumns & {
+        @include breakpoint("medium") {
+            column-count: 6;
+        }
+    }
+}
+
+.productGrid--maxCol3 {
+    .no-csscolumns & {
+        // scss-lint:disable SelectorDepth, NestingDepth
+        .product {
+            @include breakpoint("medium") {
+                width: grid-calc(4, $total-columns);
+            }
+        }
+    }
+
+    .csscolumns & {
+        @include breakpoint("medium") {
+            @include grid-column(12);
+
+            float: none;
+
+            // scss-lint:disable SelectorDepth, NestingDepth
+            .product {
+                @include grid-column(4, $float: none);
+            }
+        }
+    }
+}
