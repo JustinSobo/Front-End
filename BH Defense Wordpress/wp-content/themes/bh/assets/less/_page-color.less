@@ -1,0 +1,45 @@
+/* ==========================================================================
+   Page Color Mixin
+  
+   ========================================================================== */
+.page-color-variant(@page-color-variant;){
+    .navbar-brand {
+    background: @page-color-variant;
+    }
+    h1,h2,h4,.icon-arrow-down,a{
+      color: @page-color-variant;
+    }
+    .btn{
+      background-color: @page-color-variant;
+      color: @white;
+      border-color: @page-color-variant;
+    }
+    .nav-overlay .navbar-nav>li{
+      &.active a {
+        color: @page-color-variant;
+      }
+      a:hover{
+        color: @page-color-variant;
+      }
+    }
+    #nprogress {
+      .bar {
+        background: @page-color-variant;
+      }
+      .peg {
+        box-shadow: 0 0 10px @page-color-variant, 0 0 5px @page-color-variant;
+      }
+      .spinner {
+        background: @page-color-variant;
+      }
+
+      .spinner-icon {
+        border-top-color: @white;
+        border-left-color: @white;
+      }
+    }
+}//end page color variant
+
+// .body_class//  .about{
+//   .page-color-variant(@blue;);
+// }

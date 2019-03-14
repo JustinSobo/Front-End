@@ -1,0 +1,234 @@
+/* ==========================================================================
+   BUILDER
+   ========================================================================== */
+
+
+.page-template-template-builder-php{
+   .content {
+   margin-bottom: -30px;
+   }
+}
+
+.blue,.gray,.white,.blue,.default{
+   overflow: hidden;
+   position: relative;
+   .container{
+      position: relative;
+      color: @white;
+      padding-left: 20px;
+      padding-right: 20px;
+   }
+   &:before {
+      .cover;
+      content: "";
+      display: block;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      -moz-transition: background .3s linear;
+      -webkit-transition: background .3s linear;
+      -ms-transition: background .3s linear;
+      -o-transition: background .3s linear;
+      transition: background .3s linear;
+   }
+}
+
+
+.blue{
+   background-color: @brand-primary;
+
+   .btn{
+      //background: @gray;
+   }
+   &:before {
+     background: @blue-trans;
+   }
+}
+
+.gray{
+   background-color: @gray-darker;
+   .btn{
+      //background: @brand-primary;
+   }
+   &:before {
+      background: @black-trans;
+   }
+}
+
+.white{
+   background-color: @white;
+   .row{
+      color: @gray-darker;
+   }
+   .btn{
+      //background: @brand-primary;
+   }
+   &:before {
+      background: @white-trans;
+   }
+}
+
+.blue{
+   background-color: @blue;
+   .row{
+      color: @white;
+   }
+   .btn{
+      background: @gray-darker;
+   }
+   &:before {
+      background: @blue-trans;
+   }
+}
+
+
+.default{
+   background-color: #f1f1f1;
+   .cover;
+   .container{
+      color: @text-color;
+   }
+   &:before {
+      background: @white-trans;
+   }
+}
+
+.lt-ie9 {
+   .blue:before{
+
+      background-image: @blue-trans-img;
+   }
+   .gray:before{
+      background-image: @black-trans-img;
+   }
+}
+
+.module-wrap{
+   overflow: hidden;
+   position: relative;
+   img{
+      margin: 20px;
+   }
+   h1,h2,h3,h4{
+      //text-transform: uppercase;
+   }
+   .btn{
+      margin-top: 15px;
+   }
+   .gray,.blue {
+      a{
+      color: @white;
+      text-decoration: none;         
+      }
+      h1,h2,h3,h4,h5,h6,p,span{
+         //color: @white;
+      }
+   }
+   .container{
+      position: relative;
+      padding: 15px 0;
+      position: relative;
+      z-index: 2;
+   }
+   .pad{
+      border-color: transparent;
+      margin: 80px 0;
+   }
+   .col-md-4{
+      margin: 3%;
+      .make-md-column(3);
+   }
+   .well{
+      background-color: rgba(0,0,0,0.1);
+      border: none;
+      //padding: 4em 0;
+      //margin-bottom: 0;
+   }
+   .jumbotron{
+      background-color: rgba(0,0,0,0.1);
+      border-radius: 0;
+      border: none;
+      padding: 4em 0;
+      margin-bottom: 0;
+   }
+   .border{
+      background-color: transparent;
+      border-radius: 0;
+      border: 4px solid;
+   }
+   .featurette-heading {
+   font-size: 20px;
+   //font-weight: 900;
+   line-height: 2em;
+   letter-spacing: 14px;
+   border: 2px solid;
+   padding: 10px;
+   text-align: center;
+   margin-bottom: 65px;
+   }
+   .col-md-6 .featurette-heading {
+   font-size: 36px;
+   //font-weight: 300;
+   border: none;
+   text-align: right;
+   line-height: 1.6em;
+   }
+
+   &.b-cta{
+      .lead{
+         margin-bottom: 0;
+         font-family: @font-family-base;
+         font-size: 1.8em;
+         padding-top: 1em;
+         padding-bottom: 1em;
+      }
+   }
+
+}
+
+.default{
+   background: #f1f1f1;
+   .well{
+      color: @white;
+   }
+}
+   .default{ i[class*='icon-']{
+      color: @brand-primary;
+      font-size: 2.2em;
+      position: absolute;
+      left: -50px;
+      margin-top: auto;
+   }
+}
+
+
+.default .btn{
+   color: @white;
+}
+.b-cta, .b-two, .b-full,.b-well{
+   .row {
+   padding: 45px 0;
+   }
+}
+.b-two .row{
+padding: 135px 0;
+}
+
+
+
+/* ==========================================================================
+   Mobile
+   ========================================================================== */
+
+
+@media (min-width: @screen-sm-min){
+
+}
+
+@media (max-width: @screen-xs-max){ 
+   .module-wrap .container {
+   padding: 25px 20px;
+   }
+}

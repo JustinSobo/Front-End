@@ -1,0 +1,25 @@
+1429260872|message|Full speed mode completed & generated ZIP file.
+1429260872|message|Backup ZIP file successfully created.
+1429260872|details|Chmod to 0644 succeeded.
+1429260872|details|Database Server connection status verified.
+1429260872|details|Finished function `backup_zip_files`.
+1429260872|details|Peak memory usage: 8.092 MB
+1429260872|details|Scheduling Cron
+1429260877|details|(Started new PHP page load process.)
+1429260877|details|Setting greedy script limits.
+1429260877|details|Attempted to increase maximum PHP runtime. Original: 45; New: 7200.
+1429260877|details|Set memory limit to 256M. Previous value < 256M.
+1429260877|details|Original PHP memory limit: 128; New: 256M.
+1429260877|details|Finished greedy script limits.
+1429260877|details|Peak memory usage: 8.034 MB
+1429260877|message|Cleaning up after backup.
+1429260877|details|Removing temp data directory.
+1429260877|details|Removing temp zip directory.
+1429260877|details|Trimming old archives (if needed).
+1429260877|details|Sending manual backup email notification.
+1429260877|message|Finished cleaning up.
+1429260877|action|archive_url^http://bhdefense.com/wp-content/uploads/backupbuddy_backups/backup-bhdefense_com-2015_04_17-gea2u5gc15.zip
+1429260877|message|Backup completed successfully in 19 seconds. Done.
+1429260877|action|finish_backup
+1429260877|details|Finished function `post_backup`.
+1429260877|details|Peak memory usage: 8.063 MB

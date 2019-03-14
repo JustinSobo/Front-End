@@ -1,0 +1,91 @@
+/* ==========================================================================
+   Page Header
+   ========================================================================== */
+
+.page-header{
+   overflow: hidden;
+   padding: 130px 0 30px;
+   margin: 0;
+   background: #111;
+   color:@white;
+   border: 0px;
+   z-index: 1;
+   .cover;
+   position: relative;
+   .container{
+      z-index: 1000;
+      position: relative;
+   }
+   .fill{
+      opacity: .1;
+      position: absolute;
+      top: 0;
+      background-repeat: no-repeat;
+   }
+   &.none .fill{
+      opacity: 1;
+   }
+   &.large{
+
+   }
+   h3{
+      font-weight: lighter;
+      font-family: @sans;
+      letter-spacing: 3px;
+      font-weight: 400;
+      text-transform: uppercase;
+      font-style: italic;
+   }
+}
+.jumbotron{
+   h1{
+ text-transform: uppercase;
+    font-weight: 200;
+    font-size: 4em;
+    text-shadow: none;
+    font-family: @title;
+    text-align: center;
+    background: @black-trans;
+    letter-spacing: .3em;
+    padding: 15px;
+   }
+   h3{
+    font-family: @sans; 
+    font-weight: 400;
+    font-size: 1.2em;
+    background: @brand-primary;
+    text-align: left;
+    padding: 10px 60px;
+    display: inline;
+    position: absolute;
+    left: 0;
+    top: -25px;
+    text-shadow: none;
+   }
+
+}
+@media (max-width: @screen-sm-max){
+   
+}
+.scroll-content {
+   color: @white;
+   font-size: 2em;
+   position: absolute;
+   left: 50%;
+   margin-left: -26px;
+   bottom:0;
+   background: @black-trans;
+   line-height: 1em;
+   padding: 5px;
+}
+
+.control-btn-header{
+   span {
+   font-size: .5em;
+   font-weight: 100;
+   top: -10px;
+   position: relative;
+   margin-left: 20px;
+   color: @white;
+   }
+}

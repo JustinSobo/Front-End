@@ -1,0 +1,49 @@
+/*
+ * Base structure
+ */
+
+html,
+body {
+  height: 100%;
+}
+
+/* Extra markup and styles for table-esque vertical and horizontal centering */
+.wrap {
+  //display: table;
+  width: 100%;
+  //height: 100%; /* For at least Firefox */
+  //min-height: 100%;
+  position: relative;
+
+}
+.wrap-inner {
+  display: table-cell;
+  vertical-align: top;
+}
+
+/*
+ * Affix and center
+ */
+
+@media (min-width: 768px) {
+  /* Pull out the header and footer */
+
+  /* Start the vertical centering */
+  .wrap-inner {
+    vertical-align: middle;
+  }
+  /* Handle the widths */
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+  }
+}
+
+@media (min-width: 992px) {
+  .masthead,
+  .mastfoot,
+  .cover-container {
+    width: 700px;
+  }
+}

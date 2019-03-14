@@ -1,0 +1,77 @@
+
+@import "../../../../plugins/gravityforms/css/formreset.css";
+@import "../../../../plugins/gravityforms/css/datepicker.css";
+@import "../../../../plugins/gravityforms/css/formsmain.css";
+@import "../../../../plugins/gravityforms/css/readyclass.css";
+@import "../../../../plugins/gravityforms/css/browsers.css";
+
+
+//
+// Forms
+// --------------------------------------------------
+/**
+ * Gravity Forms styles with Bootstrap 3 mixins
+ *
+ * GF settings: 
+ * - Output CSS = No
+ * - Output HTML5 = Yes
+ */
+ 
+.gform_wrapper ul {
+  .list-unstyled();
+}
+.gform_wrapper li {
+  .form-group();
+}
+.gform_wrapper form {
+  margin-bottom: 0;
+}
+.gform_wrapper .gfield_label {
+}
+.gform_wrapper .gfield_required {
+  padding-left: 1px;
+  color: @state-danger-text;
+}
+.ginput_container input,
+.ginput_container select,
+.ginput_container textarea {
+  .form-control();
+}
+.ginput_container textarea {
+  height: auto;
+}
+.gform_button {
+  .btn();
+  .btn-primary();
+  .btn-block;
+}
+.gform_wrapper .gfield_error {
+  .gfield_label {
+    color: @state-danger-text;
+  }
+  input,
+  select,
+  textarea {
+    border-color: @alert-danger-border;
+    background-color: @alert-danger-bg;
+    color: @alert-danger-text;
+    .form-control-focus(@alert-danger-text);
+  }
+}
+.validation_error {
+  .alert();
+  .alert-danger();
+}
+#gforms_confirmation_message {
+  .alert();
+}
+
+.gform_wrapper {
+  input[type=text],input[type=url], input[type=email], input[type=tel], input[type=number], input[type=password] {
+    font-size: 1em!important;
+    font-family: inherit!important;
+    padding: 5px 5px 5px 5px !important;
+    letter-spacing: normal !important;
+    color:@green;
+  }
+}

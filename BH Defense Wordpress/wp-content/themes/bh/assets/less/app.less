@@ -1,0 +1,222 @@
+/*!
+ * 
+ */
+
+@import "bootstrap/bootstrap";
+@import "_variables";
+
+@import "_fonts";
+@import "_navbar";
+@import "_builder";
+@import "_animations";
+@import "_page-header";
+@import "_footer";
+@import "_helpers";
+@import "_cover";
+@import "_welcome";
+@import "_loading";
+@import "_forms";
+
+@import "_pages";
+@import "_blog";
+
+@import "_page-color";
+
+@import "_mobile";
+
+@import "_ie";
+
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+
+body {
+  .transition(opacity 500ms ease);
+  &.home{
+    height: 100%;
+    //background: #000;
+  }
+}
+
+a, a:hover{
+ text-decoration: none;
+}
+
+.wrap{
+  //max-width: 1600px;
+  margin: 0 auto;
+  //position: relative;
+}
+
+
+.row.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+.row.no-gutters [class^="col-"],
+.row.no-gutters [class*=" col-"]{
+  padding-right: 0;
+  padding-left: 0;
+}
+
+.btn-primary{
+  border:3px solid @blue;
+  text-transform: uppercase;
+  font-style: italic;
+  padding: 8px 30px;
+  border-radius: 0px;
+}
+
+
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.banner { }
+
+
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.content { 
+  position: relative;
+  z-index: 1;
+  //background-image: @white-noise-bg;
+  background-color: @white;
+  background-repeat: repeat;
+
+    h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+      font-family: @title;
+      color: @blue;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+}
+
+
+
+/* ==========================================================================
+   Primary Content
+   ========================================================================== */
+.home .main, .page-template-template-builder-php .main  { 
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+.main { 
+  margin-top:50px;
+  margin-bottom:50px;
+}
+
+/* Gallery Shortcode */
+
+.gallery-row { 
+  padding: 15px 0; 
+}
+
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar { 
+  margin-top: 50px;
+  .menu{
+    .list-unstyled;
+    li{
+      background: @gray-lighter;
+      .transition(all 400s ease-in-out);
+      a{
+        padding: 20px;
+        text-align: center;
+        font-size: 1.2em;
+        font-family: @title;
+        font-style: italic;
+        text-transform: uppercase;
+        color: @blue;
+        display: block;
+        .transition(all 400s ease-in-out);
+        &:hover{
+          background: @gray;
+        }        
+      }
+      &.active{
+        box-shadow: inset 0 0 0 5px @blue;
+        background-color: @black;
+      }
+    }
+  }
+  .title-fx{
+    background: @gray;
+  }
+  .title-fx-front{
+    color: white;
+    margin: 45px 0;
+    padding-left: 20px;
+    font-family: @sans;
+  }
+  .title-fx-back{
+    top: 0;
+    hyphens: auto;
+  }
+}
+
+/* ==========================================================================
+   Posts
+   ========================================================================== */
+
+.hentry header { }
+.hentry time { }
+.hentry .byline { }
+.hentry .entry-content { }
+.hentry footer { }
+
+.alert.alert-warning {
+display: none;
+}
+
+
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.content-info { }
+
+
+
+/* ==========================================================================
+   Form
+   ========================================================================== */
+
+
+input#gform_submit_button_1 {
+  color: #000000;
+}
+
+/* ==========================================================================
+   WordPress Generated Classes
+   See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
+   ========================================================================== */
+
+.aligncenter { display: block; margin: 0 auto; }
+.alignleft { float: left; }
+.alignright { float: right; }
+figure.alignnone { margin-left: 0; margin-right: 0; }
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media (min-width: @screen-sm-min) { }
+
+@media (min-width: @screen-md-min) { }
+
+@media (min-width: @screen-lg-min) { }

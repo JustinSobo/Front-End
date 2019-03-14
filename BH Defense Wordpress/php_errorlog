@@ -1,0 +1,1144 @@
+[25-Aug-2014 15:39:24 UTC] PHP Fatal error:  Call to undefined function get_field() in /home/kmdig/public_html/client/bhdefense/wp-content/themes/bh/templates/page-header.php on line 3
+[25-Aug-2014 15:39:24 UTC] PHP Fatal error:  Call to undefined function get_field() in /home/kmdig/public_html/client/bhdefense/wp-content/themes/bh/templates/page-header.php on line 3
+[25-Aug-2014 15:39:52 UTC] PHP Fatal error:  Call to undefined function get_field() in /home/kmdig/public_html/client/bhdefense/wp-content/themes/bh/templates/page-header.php on line 3
+[25-Aug-2014 15:40:45 UTC] PHP Fatal error:  Call to undefined function get_field() in /home/kmdig/public_html/client/bhdefense/wp-content/themes/bh/templates/page-header.php on line 3
+[25-Aug-2014 19:15:22 UTC] PHP Fatal error:  Call to undefined function get_field() in /home/kmdig/public_html/client/bhdefense/wp-content/themes/bhdefense/templates/color.php on line 2
+[25-Aug-2014 19:15:48 UTC] PHP Fatal error:  Call to undefined function get_field() in /home/kmdig/public_html/client/bhdefense/wp-content/themes/bhdefense/templates/color.php on line 2
+[25-Aug-2014 19:16:20 UTC] PHP Fatal error:  Call to undefined function get_field() in /home/kmdig/public_html/client/bhdefense/wp-content/themes/bhdefense/templates/color.php on line 2
+[25-Aug-2014 19:18:08 UTC] PHP Fatal error:  Call to undefined function get_field() in /home/kmdig/public_html/client/bhdefense/wp-content/themes/bhdefense/templates/color.php on line 2
+[25-Aug-2014 19:18:30 UTC] PHP Fatal error:  Call to undefined function get_field() in /home/kmdig/public_html/client/bhdefense/wp-content/themes/bhdefense/templates/color.php on line 2
+[25-Aug-2014 19:18:33 UTC] PHP Fatal error:  Call to undefined function get_field() in /home/kmdig/public_html/client/bhdefense/wp-content/themes/bhdefense/templates/color.php on line 2
+[29-Sep-2014 22:00:02 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[13-Oct-2014 17:09:36 UTC] Array
+(
+    [/] => 
+)
+
+[14-Oct-2014 07:56:35 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[14-Oct-2014 11:57:59 UTC] Array
+(
+    [registration] => disabled
+)
+
+[14-Oct-2014 07:27:01 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[14-Oct-2014 17:45:31 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[14-Oct-2014 21:12:38 UTC] Array
+(
+    [lang] => en
+)
+
+[15-Oct-2014 06:37:31 UTC] Array
+(
+    [registration] => disabled
+)
+
+[15-Oct-2014 15:50:31 UTC] Array
+(
+    [/] => 
+)
+
+[15-Oct-2014 16:47:55 UTC] Array
+(
+    [/] => 
+)
+
+[15-Oct-2014 22:56:12 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[16-Oct-2014 11:54:41 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[17-Oct-2014 10:44:55 UTC] Array
+(
+    [registration] => disabled
+)
+
+[17-Oct-2014 19:24:51 UTC] Array
+(
+    [/] => 
+)
+
+[18-Oct-2014 02:05:04 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[18-Oct-2014 11:15:29 UTC] Array
+(
+    [registration] => disabled
+)
+
+[18-Oct-2014 12:18:18 UTC] Array
+(
+    [registration] => disabled
+)
+
+[19-Oct-2014 07:30:37 UTC] Array
+(
+    [registration] => disabled
+)
+
+[19-Oct-2014 07:48:42 UTC] Array
+(
+    [registration] => disabled
+)
+
+[19-Oct-2014 09:20:36 UTC] Array
+(
+    [registration] => disabled
+)
+
+[19-Oct-2014 13:46:05 UTC] Array
+(
+    [/] => 
+)
+
+[19-Oct-2014 14:14:11 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[19-Oct-2014 20:58:56 UTC] PHP Warning:  trim() expects parameter 1 to be string, array given in /home/bhd/public_html/wp-includes/query.php on line 1570
+[20-Oct-2014 05:26:00 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[20-Oct-2014 09:02:29 UTC] Array
+(
+    [registration] => disabled
+)
+
+[20-Oct-2014 23:58:09 UTC] Array
+(
+    [registration] => disabled
+)
+
+[21-Oct-2014 09:46:50 UTC] Array
+(
+    [myyvw2] => 
+)
+
+[21-Oct-2014 11:48:18 UTC] Array
+(
+    [/] => 
+)
+
+[21-Oct-2014 16:31:42 UTC] Array
+(
+    [registration] => disabled
+)
+
+[21-Oct-2014 20:10:40 UTC] Array
+(
+    [registration] => disabled
+)
+
+[22-Oct-2014 01:37:00 UTC] Array
+(
+    [registration] => disabled
+)
+
+[22-Oct-2014 04:05:39 UTC] Array
+(
+    [myyvw2] => 
+)
+
+[22-Oct-2014 23:49:05 UTC] Array
+(
+    [myyvw2] => 
+)
+
+[23-Oct-2014 02:21:11 UTC] Array
+(
+    [registration] => disabled
+)
+
+[23-Oct-2014 04:39:34 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[23-Oct-2014 05:50:06 UTC] Array
+(
+    [registration] => disabled
+)
+
+[23-Oct-2014 11:42:59 UTC] Array
+(
+    [/] => 
+)
+
+[23-Oct-2014 21:58:12 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[24-Oct-2014 03:47:45 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[24-Oct-2014 12:55:35 UTC] Array
+(
+    [registration] => disabled
+)
+
+[24-Oct-2014 13:40:20 UTC] Array
+(
+    [registration] => disabled
+)
+
+[25-Oct-2014 16:46:12 UTC] Array
+(
+    [/] => 
+)
+
+[26-Oct-2014 05:03:50 UTC] Array
+(
+    [registration] => disabled
+)
+
+[26-Oct-2014 19:35:02 UTC] Array
+(
+    [myyvw2] => 
+)
+
+[27-Oct-2014 03:46:42 UTC] Array
+(
+    [registration] => disabled
+)
+
+[27-Oct-2014 06:02:21 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[27-Oct-2014 07:47:41 UTC] Array
+(
+    [registration] => disabled
+)
+
+[27-Oct-2014 18:01:18 UTC] Array
+(
+    [registration] => disabled
+)
+
+[27-Oct-2014 18:30:57 UTC] Array
+(
+    [registration] => disabled
+)
+
+[27-Oct-2014 19:56:08 UTC] Array
+(
+    [registration] => disabled
+)
+
+[27-Oct-2014 20:05:23 UTC] Array
+(
+    [registration] => disabled
+)
+
+[28-Oct-2014 02:05:24 UTC] Array
+(
+    [registration] => disabled
+)
+
+[28-Oct-2014 03:40:31 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[28-Oct-2014 09:58:35 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[28-Oct-2014 18:22:08 UTC] Array
+(
+    [registration] => disabled
+)
+
+[29-Oct-2014 03:56:18 UTC] Array
+(
+    [registration] => disabled
+)
+
+[29-Oct-2014 15:44:37 UTC] Array
+(
+    [/] => 
+)
+
+[31-Oct-2014 01:38:56 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[31-Oct-2014 19:05:39 UTC] Array
+(
+    [/] => 
+)
+
+[31-Oct-2014 19:23:13 UTC] Array
+(
+    [myyvw2] => 
+)
+
+[31-Oct-2014 22:54:34 UTC] Array
+(
+    [registration] => disabled
+)
+
+[01-Nov-2014 00:42:40 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[01-Nov-2014 19:33:27 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:33:27 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:33:49 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:33:49 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:39:07 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:39:07 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:43:41 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:43:42 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:44:11 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:44:11 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:45:00 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:58:06 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 19:58:06 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 20:00:20 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-Nov-2014 20:00:20 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[02-Nov-2014 10:26:55 UTC] Array
+(
+    [registration] => disabled
+)
+
+[02-Nov-2014 13:29:28 UTC] Array
+(
+    [registration] => disabled
+)
+
+[02-Nov-2014 13:29:52 UTC] Array
+(
+    [registration] => disabled
+)
+
+[02-Nov-2014 13:53:52 UTC] Array
+(
+    [registration] => disabled
+)
+
+[02-Nov-2014 16:57:35 UTC] Array
+(
+    [/] => 
+)
+
+[03-Nov-2014 02:32:27 UTC] Array
+(
+    [registration] => disabled
+)
+
+[03-Nov-2014 05:15:23 UTC] Array
+(
+    [registration] => disabled
+)
+
+[03-Nov-2014 05:36:29 UTC] Array
+(
+    [registration] => disabled
+)
+
+[04-Nov-2014 01:45:06 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[04-Nov-2014 05:50:03 UTC] Array
+(
+    [registration] => disabled
+)
+
+[04-Nov-2014 14:16:15 UTC] Array
+(
+    [registration] => disabled
+)
+
+[04-Nov-2014 20:21:00 UTC] Array
+(
+    [/] => 
+)
+
+[04-Nov-2014 23:43:30 UTC] Array
+(
+    [registration] => disabled
+)
+
+[05-Nov-2014 02:52:46 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[05-Nov-2014 07:49:43 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[05-Nov-2014 08:48:15 UTC] Array
+(
+    [registration] => disabled
+)
+
+[06-Nov-2014 17:05:15 UTC] Array
+(
+    [/] => 
+)
+
+[06-Nov-2014 21:16:13 UTC] Array
+(
+    [/] => 
+)
+
+[07-Nov-2014 22:29:39 UTC] Array
+(
+    [registration] => disabled
+)
+
+[08-Nov-2014 06:43:55 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[08-Nov-2014 19:37:08 UTC] Array
+(
+    [/] => 
+)
+
+[09-Nov-2014 17:33:31 UTC] Array
+(
+    [registration] => disabled
+)
+
+[10-Nov-2014 01:03:21 UTC] Array
+(
+    [registration] => disabled
+)
+
+[10-Nov-2014 09:37:36 UTC] Array
+(
+    [registration] => disabled
+)
+
+[10-Nov-2014 18:46:45 UTC] Array
+(
+    [/] => 
+)
+
+[11-Nov-2014 06:08:56 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[11-Nov-2014 15:51:54 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[11-Nov-2014 21:23:12 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[11-Nov-2014 23:48:36 UTC] Array
+(
+    [registration] => disabled
+)
+
+[12-Nov-2014 22:00:46 UTC] Array
+(
+    [/] => 
+)
+
+[12-Nov-2014 22:25:57 UTC] Array
+(
+    [registration] => disabled
+)
+
+[14-Nov-2014 14:01:17 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[14-Nov-2014 14:48:51 UTC] Array
+(
+    [/] => 
+)
+
+[14-Nov-2014 20:11:53 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[14-Nov-2014 22:12:51 UTC] Array
+(
+    [/] => 
+)
+
+[15-Nov-2014 12:22:26 UTC] Array
+(
+    [registration] => disabled
+)
+
+[15-Nov-2014 22:09:23 UTC] Array
+(
+    [action] => register
+)
+
+[15-Nov-2014 22:09:24 UTC] Array
+(
+    [registration] => disabled
+)
+
+[15-Nov-2014 22:09:24 UTC] Array
+(
+    [action] => register
+)
+
+[15-Nov-2014 22:09:25 UTC] Array
+(
+    [registration] => disabled
+)
+
+[15-Nov-2014 22:09:26 UTC] Array
+(
+    [action] => register
+)
+
+[15-Nov-2014 22:09:27 UTC] Array
+(
+    [registration] => disabled
+)
+
+[16-Nov-2014 13:34:33 UTC] Array
+(
+    [action] => register
+)
+
+[16-Nov-2014 13:34:34 UTC] Array
+(
+    [registration] => disabled
+)
+
+[16-Nov-2014 19:47:36 UTC] Array
+(
+    [action] => register
+)
+
+[16-Nov-2014 19:47:36 UTC] Array
+(
+    [registration] => disabled
+)
+
+[16-Nov-2014 20:02:50 UTC] Array
+(
+    [Command] => GetFolders
+    [Type] => File
+    [CurrentFolder] => %2F
+)
+
+[16-Nov-2014 20:02:51 UTC] Array
+(
+    [Command] => GetFolders
+    [Type] => File
+    [CurrentFolder] => %2F
+)
+
+[16-Nov-2014 20:02:51 UTC] Array
+(
+    [Command] => GetFolders
+    [Type] => File
+    [CurrentFolder] => %2F
+)
+
+[16-Nov-2014 20:02:51 UTC] Array
+(
+    [Command] => GetFolders
+    [Type] => File
+    [CurrentFolder] => %2F
+)
+
+[16-Nov-2014 20:02:51 UTC] Array
+(
+    [Command] => GetFolders
+    [Type] => File
+    [CurrentFolder] => %2F
+)
+
+[16-Nov-2014 20:02:52 UTC] Array
+(
+    [Command] => GetFolders
+    [Type] => File
+    [CurrentFolder] => %2F
+)
+
+[16-Nov-2014 20:02:52 UTC] Array
+(
+    [Command] => GetFolders
+    [Type] => File
+    [CurrentFolder] => %2F
+)
+
+[16-Nov-2014 22:58:13 UTC] Array
+(
+    [action] => register
+)
+
+[16-Nov-2014 22:58:13 UTC] Array
+(
+    [registration] => disabled
+)
+
+[17-Nov-2014 15:24:11 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[17-Nov-2014 21:59:56 UTC] Array
+(
+    [registration] => disabled
+)
+
+[18-Nov-2014 02:55:49 UTC] Array
+(
+    [registration] => disabled
+)
+
+[18-Nov-2014 10:44:08 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[18-Nov-2014 20:45:57 UTC] Array
+(
+    [/] => 
+)
+
+[19-Nov-2014 01:10:23 UTC] Array
+(
+    [registration] => disabled
+)
+
+[20-Nov-2014 21:55:54 UTC] Array
+(
+    [/] => 
+)
+
+[21-Nov-2014 02:22:44 UTC] Array
+(
+    [registration] => disabled
+)
+
+[21-Nov-2014 02:39:38 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[21-Nov-2014 17:34:20 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[22-Nov-2014 09:14:02 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[22-Nov-2014 20:57:20 UTC] Array
+(
+    [/] => 
+)
+
+[23-Nov-2014 07:22:44 UTC] Array
+(
+    [page] => 2
+)
+
+[24-Nov-2014 19:49:32 UTC] Array
+(
+    [/] => 
+)
+
+[24-Nov-2014 23:27:11 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[25-Nov-2014 06:26:59 UTC] Array
+(
+    [registration] => disabled
+)
+
+[25-Nov-2014 23:12:21 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[26-Nov-2014 05:36:34 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[26-Nov-2014 16:03:49 UTC] Array
+(
+    [/] => 
+)
+
+[28-Nov-2014 10:51:17 UTC] Array
+(
+    [registration] => disabled
+)
+
+[28-Nov-2014 12:09:00 UTC] Array
+(
+    [/] => 
+)
+
+[29-Nov-2014 04:27:10 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[29-Nov-2014 05:29:35 UTC] Array
+(
+    [registration] => disabled
+)
+
+[29-Nov-2014 11:20:09 UTC] Array
+(
+    [my8qtz] => 
+)
+
+[29-Nov-2014 13:52:32 UTC] Array
+(
+    [registration] => disabled
+)
+
+[29-Nov-2014 15:12:31 UTC] Array
+(
+    [registration] => disabled
+)
+
+[29-Nov-2014 23:53:31 UTC] Array
+(
+    [my8qtz] => 
+)
+
+[30-Nov-2014 04:37:39 UTC] Array
+(
+    [registration] => disabled
+)
+
+[30-Nov-2014 18:28:22 UTC] Array
+(
+    [/] => 
+)
+
+[01-Dec-2014 03:43:55 UTC] Array
+(
+    [option] => com_jce
+    [task] => plugin
+    [plugin] => imgmanager
+    [file] => imgmanager
+    [version] => 1576
+    [cid] => 20
+)
+
+[01-Dec-2014 05:50:03 UTC] Array
+(
+    [my8m1a] => 
+)
+
+[01-Dec-2014 10:26:57 UTC] Array
+(
+    [registration] => disabled
+)
+
+[02-Dec-2014 03:18:25 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[02-Dec-2014 04:37:29 UTC] Array
+(
+    [registration] => disabled
+)
+
+[02-Dec-2014 19:55:57 UTC] Array
+(
+    [/] => 
+)
+
+[03-Dec-2014 17:24:16 UTC] Array
+(
+    [page] => 5
+)
+
+[03-Dec-2014 20:49:38 UTC] Array
+(
+    [myqljp] => 
+)
+
+[04-Dec-2014 19:51:36 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[05-Dec-2014 05:04:40 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[05-Dec-2014 19:19:12 UTC] Array
+(
+    [/] => 
+)
+
+[06-Dec-2014 04:39:51 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[06-Dec-2014 08:54:11 UTC] Array
+(
+    [/] => 
+)
+
+[06-Dec-2014 14:42:54 UTC] Array
+(
+    [/] => 
+)
+
+[06-Dec-2014 22:32:44 UTC] Array
+(
+    [registration] => disabled
+)
+
+[07-Dec-2014 04:13:31 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[08-Dec-2014 00:56:31 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[08-Dec-2014 22:00:56 UTC] Array
+(
+    [/] => 
+)
+
+[09-Dec-2014 02:16:05 UTC] Array
+(
+    [registration] => disabled
+)
+
+[09-Dec-2014 16:24:49 UTC] Array
+(
+    [page] => 4
+)
+
+[10-Dec-2014 02:46:44 UTC] Array
+(
+    [registration] => disabled
+)
+
+[10-Dec-2014 16:45:38 UTC] Array
+(
+    [/] => 
+)
+
+[11-Dec-2014 09:30:50 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[12-Dec-2014 17:57:22 UTC] Array
+(
+    [/] => 
+)
+
+[12-Dec-2014 22:54:44 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[13-Dec-2014 19:08:43 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[14-Dec-2014 03:21:05 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[14-Dec-2014 09:17:32 UTC] Array
+(
+    [registration] => disabled
+)
+
+[14-Dec-2014 18:56:54 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[14-Dec-2014 19:55:22 UTC] Array
+(
+    [/] => 
+)
+
+[15-Dec-2014 11:15:03 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[15-Dec-2014 18:09:53 UTC] Array
+(
+    [sid] => 1727
+    [ts] => 1410796654
+)
+
+[15-Dec-2014 19:39:28 UTC] Array
+(
+    [myr9c9] => 
+)
+
+[16-Dec-2014 01:42:25 UTC] Array
+(
+    [mwwm7e] => 
+)
+
+[16-Dec-2014 19:46:40 UTC] Array
+(
+    [/] => 
+)
+
+[16-Dec-2014 22:27:02 UTC] Array
+(
+    [mwwm7e] => 
+)
+
+[16-Dec-2014 23:01:15 UTC] Array
+(
+    [myr9c9] => 
+)
+
+[18-Dec-2014 19:45:05 UTC] Array
+(
+    [/] => 
+)
+
+[20-Dec-2014 15:14:28 UTC] Array
+(
+    [/] => 
+)
+
+[22-Dec-2014 19:31:47 UTC] Array
+(
+    [/] => 
+)
+
+[23-Dec-2014 13:27:44 UTC] Array
+(
+    [registration] => disabled
+)
+
+[24-Dec-2014 07:08:21 UTC] Array
+(
+    [width] => 100
+    [] => 
+    [height] => 100
+)
+
+[24-Dec-2014 13:22:39 UTC] Array
+(
+    [/] => 
+)
+
+[24-Dec-2014 20:30:06 UTC] Array
+(
+    [file] => ../../../../../../wp-config.php
+)
+
+[24-Dec-2014 20:30:06 UTC] Array
+(
+    [file] => ../../../../../../wp-config.php
+)
+
+[25-Dec-2014 12:59:57 UTC] Array
+(
+    [registration] => disabled
+)
+
+[26-Dec-2014 15:13:54 UTC] Array
+(
+    [/] => 
+)
+
+[28-Dec-2014 17:13:49 UTC] Array
+(
+    [/] => 
+)
+
+[30-Dec-2014 16:04:30 UTC] Array
+(
+    [/] => 
+)
+
+[31-Dec-2014 23:13:00 UTC] Array
+(
+    [registration] => disabled
+)
+
+[01-Jan-2015 15:39:05 UTC] Array
+(
+    [/] => 
+)
+
+[03-Jan-2015 10:27:42 UTC] Array
+(
+    [path] => ../../
+    [filename] => wp-config.php
+    [action] => download
+)
+
+[03-Jan-2015 19:09:20 UTC] Array
+(
+    [/] => 
+)
+
+[04-Jan-2015 01:56:13 UTC] Array
+(
+    [registration] => disabled
+)
+
+[04-Jan-2015 04:59:06 UTC] Array
+(
+    [m] => search
+)
+
+[04-Jan-2015 04:59:06 UTC] Array
+(
+    [m] => wap
+)
+
+[04-Jan-2015 04:59:07 UTC] Array
+(
+    [m] => admin
+)
+
+[04-Jan-2015 04:59:08 UTC] Array
+(
+    [m] => admin
+    [c] => index
+    [a] => login
+    [pc_hash] => 
+)
+
+[06-Jan-2015 02:39:38 UTC] Array
+(
+    [path] => ../../
+    [filename] => wp-config.php
+    [action] => download
+)
+
+[06-Jan-2015 02:39:39 UTC] Array
+(
+    [file] => ../../../../../../wp-config.php
+)
+
+[06-Jan-2015 02:39:41 UTC] Array
+(
+    [file] => ../../../../../../wp-config.php
+)
+
+[07-Jan-2015 15:47:17 UTC] Array
+(
+    [/] => 
+)
+
+[07-Jan-2015 17:26:01 UTC] Array
+(
+    [registration] => disabled
+)
+
+[24-Feb-2015 19:15:01 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[31-Mar-2015 11:35:01 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[26-Apr-2015 07:20:15 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-May-2015 02:00:01 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[01-May-2015 07:06:27 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[03-May-2015 07:19:53 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[03-May-2015 07:23:09 CST6CDT] PHP Fatal error:  PHP Startup: UID: 570: apc_fcntl_create: failed to determine username: getpwuid(geteuid()) failed: Success. in Unknown on line 0
+[28-Sep-2015 03:06:13 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHwp-includes/load.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-settings.php on line 21
+[05-Oct-2015 22:14:30 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHwp-includes/load.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-settings.php on line 21
+[07-Jul-2016 18:05:24 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHwp-includes/load.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-settings.php on line 21
+[19-Jul-2016 14:06:06 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHwp-includes/load.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-settings.php on line 21
+[08-Aug-2016 10:53:06 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHwp-includes/load.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-settings.php on line 21

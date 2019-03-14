@@ -1,0 +1,179 @@
+/* ==========================================================================
+   Sidenav
+   ========================================================================== */
+
+
+.admin-bar.body, .admin-bar .top-nav,.admin-bar .nav-overlay{
+  padding-top: 32px;
+}
+
+.nav{
+	 > li > a {
+	color: #fff;
+	}
+}
+
+.nav-top{
+	background: black;
+	li{
+		float:right;
+		a{
+			float: none;
+		}
+	}
+}
+
+.nav-bottom{
+	text-transform: uppercase;
+	font-family: @title;
+	> li{
+		> a {
+			padding: 20px 15px;
+			font-size: 1.2em;
+			font-weight: 100;
+			.transition(all 300ms ease-in-out);
+			&:hover{
+				background-color: @gray;
+				box-shadow: inset 0 0 0 2px @blue;
+			}
+		}
+		&.active{
+			a{
+				background-color: @gray;
+				box-shadow: 0 -1px 0 0 @blue;
+			}
+			
+		}
+	} 
+}
+
+@media (min-width: 768px){
+	.logged-in .navbar {
+	top: 32px;
+	}
+	.navbar-header{
+		overflow: hidden;
+		box-shadow: 0;
+		.transition(all 300ms ease-in-out);
+		&:hover{
+			box-shadow: inset 0 0 0 4px @blue;
+		}
+	}
+	.navbar {
+	margin-bottom: 0;
+	border: none;
+	height: 120px;
+	min-height: 120px;
+	//background-color: @black;
+	//background-color: @black-trans;
+	background: url(../img/bg-nav.png) top center repeat-y transparent;
+
+		 > li > a {
+		color: @white;
+		}
+	> .container .navbar-brand, > .container-fluid .navbar-brand {
+	margin-left: 0;
+	}
+	}
+	.navbar-collapse{
+
+	}
+	.navbar-brand {
+	background: @gray-trans;
+	padding: 0;
+	height: 120px;
+	}
+	.nav-top{
+	height: 50px;
+	width: 100%;
+	text-align: right;
+	position: absolute;
+	right: 0;
+	background: black;
+	padding-right: 30px;
+		 > li > a {
+		padding-top: 15px;
+		padding-bottom: 15px;
+		float: right;
+		text-transform: uppercase;
+		font-size: .8em;
+		font-weight: 600;
+			&:hover{
+				color: @gray-light;
+				background: @gray;
+
+			}
+		}
+	}
+	.nav-bottom{
+		top: 50px;
+		position: relative;
+		margin-left: 2px;
+		> li{
+			> a {
+				position: relative;
+				display: block;
+				padding: 18px 15px;
+				margin-left: 2px;
+			}
+		} 
+	}
+}
+
+//search
+#btn-search{
+   .transition ( all .7s ease-in-out);
+	background-color: transparent;
+	margin-top: 11px;
+	margin-right: 15px;
+	padding-left: 20px;
+	position: absolute;
+	right: 0;
+	border:none;
+   &.active{
+      //opacity: 0;
+      left: 80px;
+   }
+   .icon-search{
+      color: @white;
+      //font-size: 1.2em;
+      background-color: transparent;
+   }
+   &:hover{
+      icon-search{
+         color: lighten(@blue,10%);
+
+      }
+   }
+}
+.container-search{
+   overflow: hidden;
+}
+
+#search-big{
+   .transition ( all .7s ease-in-out);
+   position: absolute;
+   background-color: transparent;
+   right: -250px;
+   top: 10px;
+   visibility: hidden;
+    &.active{
+      visibility: visible;
+      right: 5px;
+   } 
+   #searchsubmit{
+      background-color: transparent;
+      .icon-search{
+         background-color: transparent;
+         border-left: 2px solid @white;
+         padding: 5px 0 5px 15px;
+
+      }
+   } 
+   .search-input{
+      background-color: lighten(@gray-darker,10%);
+      border: none;
+      padding: 7px;
+      font-size: 1.1em;
+   }
+}

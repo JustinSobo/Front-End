@@ -1,0 +1,55 @@
+/* vim: set ts=2 sw=2 sts=2 et: */
+
+/**
+ * GDPR consent
+ *
+ * Copyright (c) 2011-present Qualiteam software Ltd. All rights reserved.
+ * See https://www.x-cart.com/license-agreement.html for license details.
+ */
+
+#cookie-consent-popup {
+  position: fixed;
+  left: 20px;
+  bottom: 20px;
+  z-index: 10050;
+  padding: @rhythmic-unit;
+  background: #25c5df;
+  box-shadow: 2px 3px 5px rgba(0,0,0,0.14);
+  width: 35rem;
+
+  .note {
+    display: inline;
+    line-height: 24px;
+    text-align: left;
+    color: #fff;
+
+    a {
+      color: #ccf8ff;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  .btn {
+    display: block;
+    height: 100%;
+    margin-top: 20px;
+    border-color: #fff;
+    margin-left: auto;
+    margin-right: 0;
+
+    span {
+      color: #fff;
+    }
+
+    &:hover {
+      background: #fff;
+
+      span {
+        color: #25c5df;
+      }
+    }
+  }
+}

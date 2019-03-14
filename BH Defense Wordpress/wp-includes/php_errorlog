@@ -1,0 +1,172 @@
+[24-Jun-2015 23:04:29 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/nav-menu-template.php on line 16
+[24-Jun-2015 23:04:32 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rdf.php on line 8
+[24-Jun-2015 23:04:38 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-atom.php on line 8
+[24-Jun-2015 23:04:45 CST6CDT] PHP Fatal error:  Call to undefined function is_robots() in /home/bhd/public_html/wp-includes/template-loader.php on line 28
+[24-Jun-2015 23:04:53 CST6CDT] PHP Fatal error:  Call to undefined function add_filter() in /home/bhd/public_html/wp-includes/default-filters.php on line 17
+[24-Jun-2015 23:04:56 CST6CDT] PHP Fatal error:  Class 'WP_Widget' not found in /home/bhd/public_html/wp-includes/default-widgets.php on line 14
+[24-Jun-2015 23:05:27 CST6CDT] PHP Fatal error:  Call to undefined function is_admin() in /home/bhd/public_html/wp-includes/vars.php on line 23
+[24-Jun-2015 23:05:29 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss.php on line 8
+[24-Jun-2015 23:05:31 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss-functions.php on line 8
+[24-Jun-2015 23:05:41 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss2.php on line 8
+[24-Jun-2015 23:06:01 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/functions.php on line 8
+[24-Jun-2015 23:06:12 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class.wp-dependencies.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/script-loader.php on line 25
+[24-Jun-2015 23:06:19 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss.php on line 19
+[01-Aug-2015 05:11:04 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-atom-comments.php on line 8
+[01-Aug-2015 05:11:05 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss2-comments.php on line 8
+[01-Aug-2015 05:11:05 CST6CDT] PHP Fatal error:  Call to undefined function add_shortcode() in /home/bhd/public_html/wp-includes/media.php on line 815
+[01-Aug-2015 05:11:05 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/class-snoopy.php on line 6
+[01-Aug-2015 05:11:06 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss.php on line 19
+[01-Aug-2015 05:11:06 CST6CDT] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/bhd/public_html/wp-includes/class-wp-image-editor-gd.php on line 17
+[01-Aug-2015 05:11:06 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/registration-functions.php on line 7
+[01-Aug-2015 05:11:08 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class.wp-dependencies.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/script-loader.php on line 25
+[01-Aug-2015 05:11:08 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/SimplePie/Misc.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/class-simplepie.php on line 5
+[01-Aug-2015 05:11:08 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-atom.php on line 8
+[01-Aug-2015 05:11:09 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/nav-menu-template.php on line 16
+[01-Aug-2015 05:11:09 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rdf.php on line 8
+[01-Aug-2015 05:11:09 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/comment-template.php on line 1662
+[01-Aug-2015 05:11:09 CST6CDT] PHP Fatal error:  Call to undefined function add_filter() in /home/bhd/public_html/wp-includes/default-filters.php on line 17
+[01-Aug-2015 05:11:09 CST6CDT] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class-simplepie.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/class-feed.php on line 4
+[01-Aug-2015 05:11:09 CST6CDT] PHP Fatal error:  Class 'IXR_Client' not found in /home/bhd/public_html/wp-includes/class-wp-http-ixr-client.php on line 9
+[01-Aug-2015 05:11:10 CST6CDT] PHP Fatal error:  Call to undefined function add_filter() in /home/bhd/public_html/wp-includes/class-wp-embed.php on line 26
+[01-Aug-2015 05:11:10 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/functions.php on line 8
+[01-Aug-2015 05:11:11 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/post-template.php on line 1292
+[01-Aug-2015 05:11:11 CST6CDT] PHP Fatal error:  Class 'WP_Widget' not found in /home/bhd/public_html/wp-includes/default-widgets.php on line 14
+[01-Aug-2015 05:11:11 CST6CDT] PHP Fatal error:  Call to undefined function add_action() in /home/bhd/public_html/wp-includes/ms-default-filters.php on line 17
+[01-Aug-2015 05:11:14 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss2.php on line 8
+[01-Aug-2015 05:11:14 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss.php on line 8
+[01-Aug-2015 05:11:14 CST6CDT] PHP Fatal error:  Call to undefined function is_main_site() in /home/bhd/public_html/wp-includes/update.php on line 666
+[01-Aug-2015 05:11:14 CST6CDT] PHP Fatal error:  Call to undefined function is_robots() in /home/bhd/public_html/wp-includes/template-loader.php on line 28
+[01-Aug-2015 05:11:15 CST6CDT] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/ms-load.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/ms-settings.php on line 14
+[01-Aug-2015 05:11:15 CST6CDT] PHP Fatal error:  Class 'WP_Dependencies' not found in /home/bhd/public_html/wp-includes/class.wp-scripts.php on line 19
+[01-Aug-2015 05:11:16 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/registration.php on line 7
+[01-Aug-2015 05:11:16 CST6CDT] PHP Fatal error:  Call to undefined function add_action() in /home/bhd/public_html/wp-includes/ms-default-constants.php on line 153
+[01-Aug-2015 05:11:18 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss-functions.php on line 8
+[01-Aug-2015 05:11:18 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/category-template.php on line 912
+[01-Aug-2015 05:11:19 CST6CDT] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/bhd/public_html/wp-includes/class-wp-image-editor-imagick.php on line 17
+[01-Aug-2015 05:11:19 CST6CDT] PHP Fatal error:  Class 'IXR_Server' not found in /home/bhd/public_html/wp-includes/class-wp-xmlrpc-server.php on line 23
+[01-Aug-2015 05:11:19 CST6CDT] PHP Fatal error:  Class 'WP_Dependencies' not found in /home/bhd/public_html/wp-includes/class.wp-styles.php on line 19
+[01-Aug-2015 05:11:19 CST6CDT] PHP Fatal error:  Call to undefined function is_admin() in /home/bhd/public_html/wp-includes/vars.php on line 23
+[07-Nov-2015 14:13:13 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-atom.php on line 8
+[07-Nov-2015 14:13:13 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-atom-comments.php on line 8
+[07-Nov-2015 14:13:13 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/nav-menu-template.php on line 16
+[07-Nov-2015 14:13:13 CST6CDT] PHP Fatal error:  Call to undefined function add_action() in /home/bhd/public_html/wp-includes/ms-default-filters.php on line 16
+[07-Nov-2015 14:13:13 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/category-template.php on line 967
+[07-Nov-2015 14:13:14 CST6CDT] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/ms-load.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/ms-settings.php on line 14
+[07-Nov-2015 14:13:15 CST6CDT] PHP Fatal error:  Call to undefined function is_admin() in /home/bhd/public_html/wp-includes/vars.php on line 23
+[07-Nov-2015 14:13:15 CST6CDT] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class-simplepie.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/class-feed.php on line 4
+[07-Nov-2015 14:13:19 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/registration-functions.php on line 7
+[07-Nov-2015 14:13:20 CST6CDT] PHP Fatal error:  Class 'WP_Widget' not found in /home/bhd/public_html/wp-includes/default-widgets.php on line 14
+[07-Nov-2015 14:13:21 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss.php on line 8
+[07-Nov-2015 14:13:22 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss-functions.php on line 8
+[07-Nov-2015 14:13:22 CST6CDT] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/bhd/public_html/wp-includes/class-wp-image-editor-imagick.php on line 17
+[07-Nov-2015 14:13:22 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss2.php on line 8
+[07-Nov-2015 14:13:22 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss2-comments.php on line 8
+[07-Nov-2015 14:13:24 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rdf.php on line 8
+[07-Nov-2015 14:13:24 CST6CDT] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/bhd/public_html/wp-includes/class-wp-image-editor-gd.php on line 17
+[07-Nov-2015 14:13:25 CST6CDT] PHP Fatal error:  Class 'IXR_Client' not found in /home/bhd/public_html/wp-includes/class-wp-http-ixr-client.php on line 9
+[07-Nov-2015 14:13:26 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class.wp-dependencies.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/script-loader.php on line 25
+[07-Nov-2015 14:13:26 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/functions.php on line 8
+[07-Nov-2015 14:13:27 CST6CDT] PHP Fatal error:  Class 'WP_Dependencies' not found in /home/bhd/public_html/wp-includes/class.wp-styles.php on line 19
+[07-Nov-2015 14:13:28 CST6CDT] PHP Fatal error:  Class 'IXR_Server' not found in /home/bhd/public_html/wp-includes/class-wp-xmlrpc-server.php on line 23
+[07-Nov-2015 14:13:30 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/comment-template.php on line 1680
+[07-Nov-2015 14:13:31 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/registration.php on line 7
+[07-Nov-2015 14:13:32 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss.php on line 19
+[07-Nov-2015 14:13:34 CST6CDT] PHP Fatal error:  Call to undefined function add_shortcode() in /home/bhd/public_html/wp-includes/media.php on line 831
+[07-Nov-2015 14:13:35 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/SimplePie/Misc.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/class-simplepie.php on line 5
+[07-Nov-2015 14:13:36 CST6CDT] PHP Fatal error:  Call to undefined function is_main_site() in /home/bhd/public_html/wp-includes/update.php on line 678
+[07-Nov-2015 14:13:38 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/post-template.php on line 1325
+[07-Nov-2015 14:13:39 CST6CDT] PHP Fatal error:  Class 'WP_Dependencies' not found in /home/bhd/public_html/wp-includes/class.wp-scripts.php on line 19
+[07-Nov-2015 14:13:41 CST6CDT] PHP Fatal error:  Call to undefined function add_filter() in /home/bhd/public_html/wp-includes/class-wp-embed.php on line 28
+[07-Nov-2015 14:13:48 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/class-snoopy.php on line 6
+[07-Nov-2015 14:13:50 CST6CDT] PHP Fatal error:  Call to undefined function add_filter() in /home/bhd/public_html/wp-includes/default-filters.php on line 17
+[07-Nov-2015 14:34:19 CST6CDT] PHP Fatal error:  Call to undefined function is_robots() in /home/bhd/public_html/wp-includes/template-loader.php on line 28
+[27-Nov-2015 11:41:48 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss-functions.php on line 8
+[04-Jan-2016 22:24:55 CST6CDT] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/ms-load.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/ms-settings.php on line 14
+[04-Jan-2016 22:25:07 CST6CDT] PHP Fatal error:  Class 'IXR_Server' not found in /home/bhd/public_html/wp-includes/class-wp-xmlrpc-server.php on line 23
+[04-Jan-2016 22:25:07 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/registration.php on line 7
+[04-Jan-2016 22:25:08 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class.wp-dependencies.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/script-loader.php on line 25
+[04-Jan-2016 22:25:10 CST6CDT] PHP Fatal error:  Class 'IXR_Client' not found in /home/bhd/public_html/wp-includes/class-wp-http-ixr-client.php on line 9
+[04-Jan-2016 22:25:11 CST6CDT] PHP Fatal error:  Call to undefined function add_action() in /home/bhd/public_html/wp-includes/ms-default-filters.php on line 16
+[04-Jan-2016 22:25:11 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-atom.php on line 8
+[04-Jan-2016 22:25:12 CST6CDT] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/bhd/public_html/wp-includes/class-wp-image-editor-gd.php on line 17
+[04-Jan-2016 22:25:12 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/class-snoopy.php on line 6
+[04-Jan-2016 22:25:20 CST6CDT] PHP Fatal error:  Class 'WP_Widget' not found in /home/bhd/public_html/wp-includes/default-widgets.php on line 14
+[04-Jan-2016 22:25:21 CST6CDT] PHP Fatal error:  Class 'WP_Dependencies' not found in /home/bhd/public_html/wp-includes/class.wp-scripts.php on line 19
+[04-Jan-2016 22:25:25 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss.php on line 19
+[04-Jan-2016 22:25:28 CST6CDT] PHP Fatal error:  Class 'WP_Dependencies' not found in /home/bhd/public_html/wp-includes/class.wp-styles.php on line 19
+[04-Jan-2016 22:25:28 CST6CDT] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class-simplepie.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/class-feed.php on line 4
+[04-Jan-2016 22:25:33 CST6CDT] PHP Fatal error:  Call to undefined function is_robots() in /home/bhd/public_html/wp-includes/template-loader.php on line 28
+[04-Jan-2016 22:25:35 CST6CDT] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/bhd/public_html/wp-includes/class-wp-image-editor-imagick.php on line 17
+[04-Jan-2016 22:25:36 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rdf.php on line 8
+[04-Jan-2016 22:25:36 CST6CDT] PHP Fatal error:  Call to undefined function add_filter() in /home/bhd/public_html/wp-includes/class-wp-embed.php on line 28
+[04-Jan-2016 22:25:38 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/registration-functions.php on line 7
+[04-Jan-2016 22:25:40 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/comment-template.php on line 1680
+[04-Jan-2016 22:25:41 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss2.php on line 8
+[04-Jan-2016 22:25:41 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss.php on line 8
+[04-Jan-2016 22:25:48 CST6CDT] PHP Fatal error:  Call to undefined function add_filter() in /home/bhd/public_html/wp-includes/default-filters.php on line 17
+[04-Jan-2016 22:25:49 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss-functions.php on line 8
+[04-Jan-2016 22:25:50 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-atom-comments.php on line 8
+[04-Jan-2016 22:25:51 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/post-template.php on line 1325
+[04-Jan-2016 22:25:51 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/category-template.php on line 967
+[04-Jan-2016 22:25:54 CST6CDT] PHP Fatal error:  Call to undefined function is_admin() in /home/bhd/public_html/wp-includes/vars.php on line 23
+[04-Jan-2016 22:25:55 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/SimplePie/Misc.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/class-simplepie.php on line 5
+[04-Jan-2016 22:25:58 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/functions.php on line 8
+[04-Jan-2016 22:26:00 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss2-comments.php on line 8
+[04-Jan-2016 22:26:03 CST6CDT] PHP Fatal error:  Call to undefined function is_main_site() in /home/bhd/public_html/wp-includes/update.php on line 678
+[04-Jan-2016 22:32:15 CST6CDT] PHP Fatal error:  Call to undefined function add_shortcode() in /home/bhd/public_html/wp-includes/media.php on line 831
+[04-Jan-2016 22:37:44 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/nav-menu-template.php on line 16
+[09-Feb-2016 10:15:38 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/comment-template.php on line 1680
+[09-Feb-2016 10:15:38 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rdf.php on line 8
+[09-Feb-2016 10:15:41 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-atom-comments.php on line 8
+[09-Feb-2016 10:15:41 CST6CDT] PHP Fatal error:  Class 'WP_Dependencies' not found in /home/bhd/public_html/wp-includes/class.wp-styles.php on line 19
+[09-Feb-2016 10:15:41 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-atom.php on line 8
+[09-Feb-2016 10:15:43 CST6CDT] PHP Fatal error:  Call to undefined function add_action() in /home/bhd/public_html/wp-includes/ms-default-filters.php on line 16
+[09-Feb-2016 10:15:43 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/SimplePie/Misc.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/class-simplepie.php on line 5
+[09-Feb-2016 10:15:44 CST6CDT] PHP Fatal error:  Class 'IXR_Server' not found in /home/bhd/public_html/wp-includes/class-wp-xmlrpc-server.php on line 23
+[09-Feb-2016 10:15:44 CST6CDT] PHP Fatal error:  Class 'IXR_Client' not found in /home/bhd/public_html/wp-includes/class-wp-http-ixr-client.php on line 9
+[09-Feb-2016 10:15:50 CST6CDT] PHP Fatal error:  Call to undefined function add_shortcode() in /home/bhd/public_html/wp-includes/media.php on line 831
+[09-Feb-2016 10:15:51 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/registration.php on line 7
+[09-Feb-2016 10:15:51 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss.php on line 8
+[09-Feb-2016 10:15:52 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss2-comments.php on line 8
+[09-Feb-2016 10:15:52 CST6CDT] PHP Fatal error:  Call to undefined function add_filter() in /home/bhd/public_html/wp-includes/class-wp-embed.php on line 28
+[09-Feb-2016 10:15:52 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/class-snoopy.php on line 6
+[09-Feb-2016 10:15:53 CST6CDT] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/ms-load.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/ms-settings.php on line 14
+[09-Feb-2016 10:15:53 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class.wp-dependencies.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/script-loader.php on line 25
+[09-Feb-2016 10:15:54 CST6CDT] PHP Fatal error:  Call to undefined function add_filter() in /home/bhd/public_html/wp-includes/default-filters.php on line 17
+[09-Feb-2016 10:15:55 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/functions.php on line 8
+[09-Feb-2016 10:15:55 CST6CDT] PHP Fatal error:  Call to undefined function is_admin() in /home/bhd/public_html/wp-includes/vars.php on line 23
+[09-Feb-2016 10:15:58 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/registration-functions.php on line 7
+[09-Feb-2016 10:15:58 CST6CDT] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/bhd/public_html/wp-includes/class-wp-image-editor-gd.php on line 17
+[09-Feb-2016 10:15:58 CST6CDT] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class-simplepie.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/class-feed.php on line 4
+[09-Feb-2016 10:15:59 CST6CDT] PHP Fatal error:  Class 'WP_Dependencies' not found in /home/bhd/public_html/wp-includes/class.wp-scripts.php on line 19
+[09-Feb-2016 10:16:00 CST6CDT] PHP Fatal error:  Call to undefined function feed_content_type() in /home/bhd/public_html/wp-includes/feed-rss2.php on line 8
+[09-Feb-2016 10:16:01 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/nav-menu-template.php on line 16
+[09-Feb-2016 10:16:02 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss-functions.php on line 8
+[09-Feb-2016 10:16:02 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/category-template.php on line 967
+[09-Feb-2016 10:16:03 CST6CDT] PHP Fatal error:  Call to undefined function is_robots() in /home/bhd/public_html/wp-includes/template-loader.php on line 28
+[09-Feb-2016 10:16:03 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss.php on line 19
+[09-Feb-2016 10:16:03 CST6CDT] PHP Fatal error:  Class 'WP_Image_Editor' not found in /home/bhd/public_html/wp-includes/class-wp-image-editor-imagick.php on line 17
+[09-Feb-2016 10:16:03 CST6CDT] PHP Fatal error:  Call to undefined function is_main_site() in /home/bhd/public_html/wp-includes/update.php on line 678
+[09-Feb-2016 10:16:04 CST6CDT] PHP Fatal error:  Class 'WP_Widget' not found in /home/bhd/public_html/wp-includes/default-widgets.php on line 14
+[09-Feb-2016 10:16:04 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/post-template.php on line 1325
+[31-May-2016 09:13:40 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss-functions.php on line 8
+[12-Jun-2016 08:57:41 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss-functions.php on line 8
+[19-Jun-2016 02:41:38 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/nav-menu-template.php on line 16
+[19-Jun-2016 02:41:54 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/class-walker-page.php on line 17
+[19-Jun-2016 02:41:55 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/class-walker-page-dropdown.php on line 17
+[19-Jun-2016 02:42:07 CST6CDT] PHP Fatal error:  Call to undefined function add_filter() in /home/bhd/public_html/wp-includes/default-filters.php on line 17
+[19-Jun-2016 02:42:08 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/class-walker-comment.php on line 16
+[19-Jun-2016 02:42:10 CST6CDT] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/widgets/class-wp-widget-pages.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/default-widgets.php on line 11
+[19-Jun-2016 02:42:37 CST6CDT] PHP Fatal error:  Call to undefined function is_admin() in /home/bhd/public_html/wp-includes/vars.php on line 23
+[19-Jun-2016 02:42:55 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/random_compat/random.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/compat.php on line 338
+[19-Jun-2016 02:42:59 CST6CDT] PHP Fatal error:  Call to undefined function add_action() in /home/bhd/public_html/wp-includes/formatting.php on line 4820
+[19-Jun-2016 02:43:08 CST6CDT] PHP Fatal error:  require_once() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/customize/class-wp-customize-nav-menus-panel.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/class-wp-customize-panel.php on line 388
+[19-Jun-2016 02:43:09 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/functions.php on line 8
+[19-Jun-2016 02:43:17 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/class.wp-dependencies.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/script-loader.php on line 25
+[19-Jun-2016 02:43:33 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/rss.php on line 19
+[19-Jun-2016 02:43:36 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/class-walker-category-dropdown.php on line 17
+[19-Jun-2016 02:43:39 CST6CDT] PHP Fatal error:  Class 'Walker' not found in /home/bhd/public_html/wp-includes/class-walker-category.php on line 17
+[27-Dec-2016 16:31:51 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/registration-functions.php on line 7
+[30-Dec-2016 21:52:36 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/registration-functions.php on line 7
+[01-Jan-2017 08:03:24 CST6CDT] PHP Fatal error:  Call to undefined function _deprecated_file() in /home/bhd/public_html/wp-includes/session.php on line 8
+[01-Jan-2017 09:13:44 CST6CDT] PHP Fatal error:  require() [<a href='function.require'>function.require</a>]: Failed opening required 'ABSPATHWPINC/option.php' (include_path='.:/usr/local/php53/pear') in /home/bhd/public_html/wp-includes/functions.php on line 8
